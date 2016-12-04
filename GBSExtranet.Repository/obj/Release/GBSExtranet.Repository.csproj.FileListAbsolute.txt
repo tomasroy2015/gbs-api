@@ -1,0 +1,45 @@
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.dll
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.pdb
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.dll
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.xml
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.dll
+D:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.pdb
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.dll
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.pdb
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.dll
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.xml
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.dll
+D:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.pdb
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.dll
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.pdb
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.dll
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.xml
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.dll
+D:\Back Up Files\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.pdb
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.dll
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.pdb
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.dll
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.dll
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.xml
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.xml
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.dll
+F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.pdb
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.dll
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.pdb
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.dll
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.xml
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.dll
+D:\Back Up Files\gbs-extranet-api\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.pdb

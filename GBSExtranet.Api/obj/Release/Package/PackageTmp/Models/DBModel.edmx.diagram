@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="94ee679ec3804537ad3e5b8256ecfda2" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_Culture" Width="1.5" PointX="16.5" PointY="287.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_Error" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_MailQueue" Width="1.5" PointX="18.75" PointY="366.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_MailTemplate" Width="1.5" PointX="16.5" PointY="301.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_Message" Width="1.5" PointX="16.5" PointY="296.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_Page" Width="1.5" PointX="16.5" PointY="311.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_PageControl" Width="1.5" PointX="18.75" PointY="371.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_Parameter" Width="1.5" PointX="16.5" PointY="318.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_Security" Width="1.5" PointX="16.5" PointY="323.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_SecurityGroup" Width="1.5" PointX="16.5" PointY="328.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_SecurityGroupRight" Width="1.5" PointX="18.75" PointY="379.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_Table" Width="1.5" PointX="16.5" PointY="333.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_TableColumn" Width="1.5" PointX="18.75" PointY="383" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_TableSecurityGroupRight" Width="1.5" PointX="21.75" PointY="377.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_User" Width="1.5" PointX="14.25" PointY="386.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_UserBusinessPartner" Width="1.5" PointX="16.5" PointY="409.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_UserHistory" Width="1.5" PointX="27.75" PointY="503.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_UserHotel" Width="1.5" PointX="21" PointY="424.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_UserOperation" Width="1.5" PointX="24.75" PointY="463.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_UserRight" Width="1.5" PointX="21.75" PointY="381.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.BizTbl_UserSession" Width="1.5" PointX="22.5" PointY="416.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.dtproperty" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.ELMAH_Error" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Attribute" Width="1.5" PointX="18.75" PointY="494" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_AttributeHeader" Width="1.5" PointX="16.5" PointY="343" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Bank" Width="1.5" PointX="3" PointY="417.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BankHistory" Width="1.5" PointX="6" PointY="416.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartner" Width="1.5" PointX="9" PointY="410.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartnerCancelPolicy" Width="1.5" PointX="19.5" PointY="411.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartnerCancelPolicyHistory" Width="1.5" PointX="19.5" PointY="405.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartnerHistory" Width="1.5" PointX="12" PointY="411.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartnerPax" Width="1.5" PointX="16.5" PointY="413.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartnerPaxHistory" Width="1.5" PointX="16.5" PointY="405.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartnerRegion" Width="1.5" PointX="22.5" PointY="412.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_BusinessPartnerRegionHistory" Width="1.5" PointX="22.5" PointY="408.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ChannelManager" Width="1.5" PointX="16.5" PointY="359.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Continents" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Country" Width="1.5" PointX="3" PointY="406.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_CreditCardsDetails" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Currency" Width="1.5" PointX="0.75" PointY="408.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Date" Width="1.5" PointX="42" PointY="445.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Deal" Width="1.5" PointX="30.75" PointY="419.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_DealHistory" Width="1.5" PointX="33.75" PointY="417.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_DealReservation" Width="1.5" PointX="36" PointY="443.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_DealReservationHistory" Width="1.5" PointX="39" PointY="440.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_DealReservationPromotion" Width="1.5" PointX="39" PointY="418.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_EmailList" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ExchangeRate" Width="1.5" PointX="16.5" PointY="417.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ExchangeRateHistory" Width="1.5" PointX="19.5" PointY="401.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_FAQ" Width="1.5" PointX="16.5" PointY="371.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Firm" Width="1.5" PointX="24.75" PointY="504.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_FirmHistory" Width="1.5" PointX="21.75" PointY="503.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_FirmRequest" Width="1.5" PointX="30" PointY="449.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_FirmRequestHistory" Width="1.5" PointX="33" PointY="446.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_GuestUser" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HitCount" Width="1.5" PointX="27.75" PointY="477.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Hotel" Width="1.5" PointX="18.75" PointY="444.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelAttribute" Width="1.5" PointX="21" PointY="519" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelAttributeHistory" Width="1.5" PointX="24" PointY="517.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelAvailability" Width="1.5" PointX="27.25" PointY="464" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelAvailabilityHistory" Width="1.5" PointX="32.25" PointY="464.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelCancelPolicy" Width="1.5" PointX="36.75" PointY="427.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelCancelPolicyHistory" Width="1.5" PointX="33.75" PointY="431.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelComission" Width="1.5" PointX="24" PointY="427.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelComissionHistory" Width="1.5" PointX="21" PointY="428.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelCreditCard" Width="1.5" PointX="25" PointY="423.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelCreditCardHistory" Width="1.5" PointX="28" PointY="426.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelHistory" Width="1.5" PointX="21.75" PointY="443.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelMinumumAccommodation" Width="1.5" PointX="24" PointY="431.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelPromotion" Width="1.5" PointX="21" PointY="432.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelPromotionFreebie" Width="1.5" PointX="30.25" PointY="442.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelPromotionHistory" Width="1.5" PointX="30" PointY="434.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelPromotionRoom" Width="1.5" PointX="26.25" PointY="459" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRate" Width="1.5" PointX="26.25" PointY="469" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRateHistory" Width="1.5" PointX="29.25" PointY="471.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRegion" Width="1.5" PointX="27.75" PointY="422.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRegionHistory" Width="1.5" PointX="36.75" PointY="432.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelReservation" Width="1.5" PointX="39" PointY="508.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelReservationHistory" Width="1.5" PointX="42" PointY="505" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelReservationPromotion" Width="1.5" PointX="41.25" PointY="450.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelReservationRate" Width="1.5" PointX="44.25" PointY="448.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelReservationRateHistory" Width="1.5" PointX="44.25" PointY="452.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRoom" Width="1.5" PointX="24" PointY="523.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRoomAttribute" Width="1.5" PointX="35.25" PointY="468" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRoomAttributeHistory" Width="1.5" PointX="32.25" PointY="469.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRoomBed" Width="1.5" PointX="38.25" PointY="468.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRoomBedHistory" Width="1.5" PointX="35.25" PointY="472.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelRoomHistory" Width="1.5" PointX="21" PointY="524.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelSearch" Width="1.5" PointX="24" PointY="452.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelSearchHistory" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_HotelSearchParameter" Width="1.5" PointX="30.75" PointY="401.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Invoice" Width="1.5" PointX="27" PointY="452.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_InvoiceDetail" Width="1.5" PointX="31" PointY="415.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_InvoiceDetailHistory" Width="1.5" PointX="36" PointY="422.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_InvoiceHistory" Width="1.5" PointX="30" PointY="455.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_IPToNation" Width="1.5" PointX="19.5" PointY="417.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_LatestNews" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Message" Width="1.5" PointX="21.75" PointY="495" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Messenger" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Part" Width="1.5" PointX="25.5" PointY="475.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Period" Width="1.5" PointX="16.5" PointY="400.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Photo" Width="1.5" PointX="25.5" PointY="409.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Promotion" Width="1.5" PointX="36.75" PointY="402.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Region" Width="1.5" PointX="25.5" PointY="392.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Reservation" Width="1.5" PointX="27.75" PointY="430.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ReservationHistory" Width="1.5" PointX="24.75" PointY="435.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ReservationReview" Width="1.5" PointX="30" PointY="503.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ReservationReviewDetail" Width="1.5" PointX="32.25" PointY="487.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ReservationReviewDetailHistory" Width="1.5" PointX="35.25" PointY="484.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ReservationReviewHistory" Width="1.5" PointX="36" PointY="516.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_ReservationStatusHistory" Width="1.5" PointX="36.75" PointY="418.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Subscription" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Tour" Width="1.5" PointX="27.75" PointY="513.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TourAttribute" Width="1.5" PointX="33" PointY="458.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TourHistory" Width="1.5" PointX="30.75" PointY="510.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TourRegion" Width="1.5" PointX="33" PointY="453.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TourRegionHistory" Width="1.5" PointX="30" PointY="461.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TourReservation" Width="1.5" PointX="35.75" PointY="455.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TourReservationHistory" Width="1.5" PointX="38.75" PointY="456.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TourReservationPromotion" Width="1.5" PointX="39" PointY="424.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Transfer" Width="1.5" PointX="30.75" PointY="407.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TransferHistory" Width="1.5" PointX="33.75" PointY="407.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TransferPeriod" Width="1.5" PointX="22.5" PointY="403.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TransferReservation" Width="1.5" PointX="33.75" PointY="506.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TransferReservationHistory" Width="1.5" PointX="36.75" PointY="503.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TransferReservationPromotion" Width="1.5" PointX="39" PointY="451.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeAttribute" Width="1.5" PointX="16.5" PointY="433.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeBed" Width="1.5" PointX="16.5" PointY="438.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeBusinessPartner" Width="1.5" PointX="16.5" PointY="443.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeCancel" Width="1.5" PointX="25.5" PointY="414.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeCreditCard" Width="1.5" PointX="16.5" PointY="455.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeData" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeDay" Width="1.5" PointX="16.5" PointY="460" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeDeposit" Width="1.5" PointX="16.5" PointY="465.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeFirmRequest" Width="1.5" PointX="22.5" PointY="397.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeFirmRequestStatus" Width="1.5" PointX="16.5" PointY="479" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeFreebie" Width="1.5" PointX="16.5" PointY="484.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeHotel" Width="1.5" PointX="16.5" PointY="489.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeHotelAccommodation" Width="1.5" PointX="16.5" PointY="498.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeHotelBudget" Width="1.5" PointX="22.5" PointY="420.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeHotelChain" Width="1.5" PointX="33.75" PointY="403.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeHotelClass" Width="1.5" PointX="16.5" PointY="506.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeHotelSearchSort" Width="1.5" PointX="16.5" PointY="512.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeInvoiceStatus" Width="1.5" PointX="16.5" PointY="517.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeMessageStatus" Width="1.5" PointX="16.5" PointY="522.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeMessageSubject" Width="1.5" PointX="16.5" PointY="528.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeMonth" Width="1.5" PointX="16.5" PointY="533.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeOperation" Width="1.5" PointX="16.5" PointY="538.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypePenaltyRate" Width="1.5" PointX="28.5" PointY="408.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypePricePolicy" Width="1.5" PointX="16.5" PointY="550" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeRegion" Width="1.5" PointX="16.5" PointY="555.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeReservationOperation" Width="1.5" PointX="28.5" PointY="400.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeReservationStatus" Width="1.5" PointX="28.5" PointY="414.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeReview" Width="1.5" PointX="16.5" PointY="421.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeReviewEvaluation" Width="1.5" PointX="16.5" PointY="582" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeReviewScale" Width="1.5" PointX="16.5" PointY="587.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeReviewStatus" Width="1.5" PointX="16.5" PointY="592.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeRoom" Width="1.5" PointX="16.5" PointY="598.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeSalutation" Width="1.5" PointX="16.5" PointY="603.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeSmoking" Width="1.5" PointX="16.5" PointY="610.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeStatus" Width="1.5" PointX="16.5" PointY="616.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeSubRegion" Width="1.5" PointX="16.5" PointY="622.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeTourFrequency" Width="1.5" PointX="16.5" PointY="627.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeTraveller" Width="1.5" PointX="16.5" PointY="633.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeVehicle" Width="1.5" PointX="16.5" PointY="639.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_TypeView" Width="1.5" PointX="16.5" PointY="644.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_Unit" Width="1.5" PointX="16.5" PointY="650.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.TB_WishLists" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBSHotelsModel.tblAuditLog" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_Culture_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_BizTbl_Culture" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_BizTbl_Culture" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_BizTbl_Culture" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_BizTbl_Culture" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_MailQueue_BizTbl_MailTemplate" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_MailQueue_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_MailTemplate_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_Message_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_Page_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_PageControl_BizTbl_Page" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_PageControl_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_Parameter_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_Security_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_SecurityGroupRight_BizTbl_Security" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_SecurityGroup_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_SecurityGroupRight_BizTbl_SecurityGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_TableSecurityGroupRight_BizTbl_SecurityGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserRight_BizTbl_SecurityGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_SecurityGroupRight_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_Table_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_TableFieldCaption_BizTbl_Table" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_TableSecurityGroupRight_BizTbl_Table" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_TableFieldCaption_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_TableSecurityGroupRight_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_TB_Region1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_User_TB_TypeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserBusinessPartner_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserBusinessPartner_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHotel_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHotel_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserRight_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserRight_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Attribute_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_AttributeHeader_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Bank_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BankHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BankHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicy_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicyHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicyHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_BizTbl_User2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerPax_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerPaxHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerPaxHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerRegion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerRegionHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerRegionHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Country_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationPromotion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ExchangeRate_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ExchangeRateHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ExchangeRateHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FAQ_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Firm_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Firm_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequest_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequest_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequestHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequestHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequestHistory_BizTbl_User2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttribute_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttributeHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttributeHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAvailabilityHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAvailabilityHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAvailabilityPolicy_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicy_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicyHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicyHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelComission_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelComissionHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelComissionHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCreditCard_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCreditCardHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCreditCardHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHotelRateHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelMinumumAccommodation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPricePolicy_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotion_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionFreebie_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionFreebie_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionHistory_BizTbl_User2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionRoom_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionRoom_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRateHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRateHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRegion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRegionHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRegionHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationPromotion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRateHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRateHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomAttribute_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomAttributeHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomAttributeHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomBed_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomBedHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomBedHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Invoice_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceDetail_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceDetailHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceDetailHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_IpToNation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Message_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Period_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Photo_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Photo_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Region_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_BizTbl_User2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_BizTbl_User2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReview_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetail_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetailHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetailHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationStatusHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Salutation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourAttribute_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistoryRoute_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRegion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRegionHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRegionHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationPromotion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRoute_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_BizTbl_User2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferPeriod_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_BizTbl_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationPromotion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeAttribute_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeBed_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeBusinessPartner_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeCancel_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeChannelManager_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeCreditCard_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeCurrency_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeDay_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeDeposit_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeFirmRequest_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeFirmRequestStatus_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeFirmReviewStatus_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeFreebie_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotel_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotelAccommodation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotelBudget_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotelChain_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotelClass_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotelSearchSort_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeInvoiceStatus_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeMessageStatus_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeMessageSubject_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeMonth_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeOperation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypePenaltyRate_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypePricePolicy_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypePromotion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeRegion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReservationOperation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReservationStatus_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReview_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReviewEvaluation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReviewScale_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeRoom_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeSmoking_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeStatus_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeSubRegion_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeTourFrequency_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeTraveler_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeVehicle_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeView_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Unit_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_UserOperation_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_UserSession_BizTbl_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserBusinessPartner_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHistory_TB_City" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHistory_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHistory_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHistory_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHistory_TB_TypeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserHotel_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_BizTbl_UserOperation_TB_UserSession" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_UserOperation_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_UserOperation_TB_TypeOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_UserSession" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_UserSession" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_UserSession_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Attribute_TB_Attribute1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Attribute_TB_AttributeHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Attribute_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Attribute_TB_TypeAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Attribute_TB_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttribute_TB_Attribute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttributeHistory_TB_Attribute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomAttribute_TB_Attribute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomAttributeHistory_TB_Attribute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourAttribute_TB_Attribute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Bank_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Bank_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BankHistory_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BankHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_Region1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeBusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeBusinessPartnerStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeDeposit1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeDeposit2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeSalutation1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartner_TB_TypeSalutation2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicy_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicyHistory_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerPax_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerPaxHistory_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerRegion_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerRegionHistory_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealHistory_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferPeriod_TB_BusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicy_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicy_TB_TypeCancel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicy_TB_TypePenaltyRate" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealHistory_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_TypeCancel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_BusinessPartnerCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicyHistory_TB_BusinessPartnerCancelPolicyHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicyHistory_TB_TypeCancel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerCancelPolicyHistory_TB_TypePenaltyRate" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_City" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Currency5" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeBusinessPartner" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeBusinessPartnerHistoryStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeDeposit1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeDeposit2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeSalutation1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerHistory_TB_TypeSalutation2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerPax_TB_TransferPax" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_BusinessPartnerPax" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerRegion_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_BusinessPartnerRegionHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_ChannelManager" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_ChannelManager" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Country_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Firm_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmHidtory_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Country1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelSearchParameter_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelSearchParameter_TB_Country1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_IPToNation_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Message_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Region_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_Currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_Currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ExchangeRate_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ExchangeRateHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttribute_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttributeHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHotelRateHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPricePolicy_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRateHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRateHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Invoice_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_Currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_Currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_Currency2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_Currency3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_Currency4" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_Currency1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotelBudget_TB_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ExchangeRate_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ExchangeRateHistory_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAvailabilityHistory_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAvailabilityPolicy_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHotelRateHistory_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPricePolicy_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRateHistory_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_TB_Date" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_TB_Date1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRateHistory_TB_Date1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_DealReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Deal_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_CityOpportunityRoute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealHistory_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservation_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationPromotion_TB_DealReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationHistory_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationPromotion_TB_Promotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_DealReservationPromotion_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Firm_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Firm_TB_Region1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Firm_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Firm_TB_TypeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequest_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequestHistory_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Invoice_TB_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceHistory_TB_InvoiceHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_Firm" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmHistory_TB_City" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmHistory_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmHistory_TB_TypeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequest_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequest_TB_TypeFirmRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequest_TB_TypeFirmRequestStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequestHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequestHistory_TB_TypeFirmRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_FirmRequestHistory_TB_TypeFirmRequestStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HitCount_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Region1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Region2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_Region3" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_TypeHotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_TypeHotelAccommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_TypeHotelChain" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_TypeHotelClass" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Hotel_TB_TypeHotelStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttribute_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttributeHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicy_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicyHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelComission_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelComissionHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCreditCard_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCreditCardHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelMinumumAccommodation_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotion_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRegion_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRegionHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelSearch_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttribute_TB_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAttributeHistory_TB_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAvailabilityPolicy_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelAvailabilityHistory_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicy_TB_TypeCancel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicy_TB_TypePenaltyRate" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_HotelCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_HotelCancelPolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicyHistory_TB_HotelCancelPolicyHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicyHistory_TB_TypeCancel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCancelPolicyHistory_TB_TypePenaltyRate" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCreditCard_TB_TypeCreditCard" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelCreditCardHistory_TB_TypeCreditCard" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_Region1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_Region2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_TypeHotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_TypeHotelAccommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_TypeHotelChain" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_TypeHotelClass" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHistory_TB_TypeHotelHistoryStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotion_TB_Promotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionFreebie_TB_HotelPromotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionRoom_TB_HotelPromotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationPromotion_TB_HotelPromotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionFreebie_TB_TypeFreebie" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionHistory_TB_Promotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPromotionRoom_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelHotelRateHistory_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPrice_TB_TypePricePolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelPricePolicy_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRate_TB_TypeHotelAccommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRateHistory_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRateHistory_TB_TypeHotelAccommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRateHistory_TB_TypePricePolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRegion_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRegionHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_TypeHotelAccommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_TypePricePolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservation_TB_TypeTraveler" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationPromotion_TB_HotelReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRate_TB_HotelReservationRate" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationRateHistory_TB_HotelReservationRateHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_TypeHotelAccommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_TypePricePolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationHistory_TB_TypeTraveler" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationPromotion_TB_Promotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelReservationPromotion_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_TB_HotelRoom2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_TB_TypeRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_TB_TypeSmoking" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoom_TB_TypeView" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomAttribute_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomAttributeHistory_TB_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomBed_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomBedHistory_TB_HotelRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomBed_TB_TypeBed" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomBedHistory_TB_TypeBed" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomHistory_TB_TypeRoom" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomHistory_TB_TypeSmoking" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelRoomHistory_TB_TypeView" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelSearch_TB_HotelSearchParameter" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_HotelSearchParameter_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Invoice_TB_Period" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Invoice_TB_TypeInvoiceStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceDetail_TB_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceDetailHistory_TB_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceDetail_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceDetailHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceHistory_TB_Period" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_InvoiceHistory_TB_TypeInvoiceStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Message_TB_TypeMessageStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Message_TB_TypeMessageSubject" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Message_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Part_TB_Photo" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Promotion_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeCancel_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeFirmRequest_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypePenaltyRate_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReservationOperation_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReservationStatus_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeReview_TB_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Promotion_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationPromotion_TB_Promotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationPromotion_TB_Promotion" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRegion_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRegionHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_Region1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_TB_Region1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TypeHotelChain_TB_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Reservation1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_Reservation2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_TypeCreditCard" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Reservation_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReview_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationPromotion_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationPromotion_TB_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_ReservationHistory1" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_ReservationHistory2" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_TypeCreditCard" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationHistory_TB_TypeSalutation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReview_TB_TypeReviewStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReview_TB_TypeTraveller" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetail_TB_ReservationReview" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetailHistory_TB_ReservationReview" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetail_TB_TypeReview" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetail_TB_TypeReviewScale" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetailHistory_TB_TypeReview" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewDetailHistory_TB_TypeReviewScale" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewHistory_TB_TypeReviewStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationReviewHistory_TB_TypeTraveller" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_ReservationStatusHistory_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_TourReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_TypeTourFrequency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Tour_TB_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourAttribute_TB_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRegion_TB_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourRegionHistory_TB_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_TypeFirmRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_TypeTourFrequency" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourHistory_TB_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservation_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationPromotion_TB_TourReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TourReservationHistory_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_TransferPeriod" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_TransferReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_TransferRoute" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferHistory_TB_TransferPeriod" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_Transfer_TB_TypeVehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_TypeDeposit" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservation_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationPromotion_TB_TransferReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_TypeReservationOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_TypeReservationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="GBSHotelsModel.FK_TB_TransferReservationHistory_TB_TypeVehicle" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,67 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>RoomID</td><td>RoomTypeID</td><td>MaxPeopleCount</td><td>RoomCount</td><td>RoomTypeName</td><td>CssClass</td><td>DateID</td><td>Date</td><td>DayID</td><td>Day</td><td>WeekDay</td><td>DayName</td><td>MonthID</td><td>MonthName</td><td>Year</td><td>HotelAvailabityID</td><td>AvailableRoomCount</td><td>MinimumStay</td><td>RoomRateMissing</td><td>CloseToArrival</td><td>CloseToDeparture</td><td>Closed</td><td>HotelRateID</td><td>PricePolicyTypeID</td><td>SinglePrice</td><td>DoublePrice</td><td>RoomPrice</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161119</td><td>19-Nov-16 12:00:00 AM</td><td>6</td><td>19</td><td>7</td><td>Saturday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161120</td><td>20-Nov-16 12:00:00 AM</td><td>7</td><td>20</td><td>1</td><td>Sunday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161121</td><td>21-Nov-16 12:00:00 AM</td><td>1</td><td>21</td><td>2</td><td>Monday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161122</td><td>22-Nov-16 12:00:00 AM</td><td>2</td><td>22</td><td>3</td><td>Tuesday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161123</td><td>23-Nov-16 12:00:00 AM</td><td>3</td><td>23</td><td>4</td><td>Wednesday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161124</td><td>24-Nov-16 12:00:00 AM</td><td>4</td><td>24</td><td>5</td><td>Thursday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161125</td><td>25-Nov-16 12:00:00 AM</td><td>5</td><td>25</td><td>6</td><td>Friday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161126</td><td>26-Nov-16 12:00:00 AM</td><td>6</td><td>26</td><td>7</td><td>Saturday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161127</td><td>27-Nov-16 12:00:00 AM</td><td>7</td><td>27</td><td>1</td><td>Sunday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161128</td><td>28-Nov-16 12:00:00 AM</td><td>1</td><td>28</td><td>2</td><td>Monday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161129</td><td>29-Nov-16 12:00:00 AM</td><td>2</td><td>29</td><td>3</td><td>Tuesday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161130</td><td>30-Nov-16 12:00:00 AM</td><td>3</td><td>30</td><td>4</td><td>Wednesday</td><td>11</td><td>November</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>Closed</td><td>20161201</td><td>01-Dec-16 12:00:00 AM</td><td>4</td><td>1</td><td>5</td><td>Thursday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>True</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161202</td><td>02-Dec-16 12:00:00 AM</td><td>5</td><td>2</td><td>6</td><td>Friday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161203</td><td>03-Dec-16 12:00:00 AM</td><td>6</td><td>3</td><td>7</td><td>Saturday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161204</td><td>04-Dec-16 12:00:00 AM</td><td>7</td><td>4</td><td>1</td><td>Sunday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161205</td><td>05-Dec-16 12:00:00 AM</td><td>1</td><td>5</td><td>2</td><td>Monday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161206</td><td>06-Dec-16 12:00:00 AM</td><td>2</td><td>6</td><td>3</td><td>Tuesday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161207</td><td>07-Dec-16 12:00:00 AM</td><td>3</td><td>7</td><td>4</td><td>Wednesday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161208</td><td>08-Dec-16 12:00:00 AM</td><td>4</td><td>8</td><td>5</td><td>Thursday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161209</td><td>09-Dec-16 12:00:00 AM</td><td>5</td><td>9</td><td>6</td><td>Friday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161210</td><td>10-Dec-16 12:00:00 AM</td><td>6</td><td>10</td><td>7</td><td>Saturday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161211</td><td>11-Dec-16 12:00:00 AM</td><td>7</td><td>11</td><td>1</td><td>Sunday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161212</td><td>12-Dec-16 12:00:00 AM</td><td>1</td><td>12</td><td>2</td><td>Monday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161213</td><td>13-Dec-16 12:00:00 AM</td><td>2</td><td>13</td><td>3</td><td>Tuesday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161214</td><td>14-Dec-16 12:00:00 AM</td><td>3</td><td>14</td><td>4</td><td>Wednesday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161215</td><td>15-Dec-16 12:00:00 AM</td><td>4</td><td>15</td><td>5</td><td>Thursday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161216</td><td>16-Dec-16 12:00:00 AM</td><td>5</td><td>16</td><td>6</td><td>Friday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161217</td><td>17-Dec-16 12:00:00 AM</td><td>6</td><td>17</td><td>7</td><td>Saturday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161218</td><td>18-Dec-16 12:00:00 AM</td><td>7</td><td>18</td><td>1</td><td>Sunday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>0</td><td>0</td><td>4</td><td>0</td><td>&nbsp;</td><td>RateMissing</td><td>20161219</td><td>19-Dec-16 12:00:00 AM</td><td>1</td><td>19</td><td>2</td><td>Monday</td><td>12</td><td>December</td><td>2016</td><td>0</td><td>1</td><td>1</td><td>True</td><td>False</td><td>False</td><td>False</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+	</tr>
+</table>

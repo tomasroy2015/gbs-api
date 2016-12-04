@@ -1,0 +1,65 @@
+﻿@font-face {
+	font-family: AkkuratStd-Regular;
+	src: url('../../Content/fonts/AkkuratStd-Regular.otf') format("opentype");
+
+}
+body
+{
+font-family: AkkuratStd-Regular;
+}
+
+.headerDivider
+{  
+    width: 100%; 
+    border-top: 2px solid #DDDDDE;        
+}
+
+.headerContent
+{
+    background: #ffffff;
+    clear: both;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    line-height: 80px;
+}
+img
+{
+    height: 60px;  
+     margin: 9px auto; 
+}
+
+span 
+{    
+    font-size: 10pt;
+}
+#container 
+{    
+    margin: 120px 0 0 50px;
+    color: #555759;
+}
+
+.footerContent
+{
+    background: #DDDDDE;
+    clear: both;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    line-height: 50px;
+}
+
+.copyright
+{
+    font-size: 14px;
+    color: #555759;
+    left: 0;
+    position:absolute;
+    margin: auto 50px;
+}
