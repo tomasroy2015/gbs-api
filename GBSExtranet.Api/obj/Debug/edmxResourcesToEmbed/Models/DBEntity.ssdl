@@ -643,7 +643,6 @@ warning 6013: The table/view 'Gbshotels.dbo.Databkpmail' does not have a primary
     <Property Name="IsPublicDisplay" Type="bit" />
     <Property Name="IsPrivateDisplay" Type="bit" />
     <Property Name="IsPromotionDisplay" Type="bit" />
-    <Property Name="IsPeriodExists" Type="bit" />
     <Property Name="ArrivalTypeID" Type="int" />
     <Property Name="ArrivalRateID" Type="int" />
     <Property Name="PrepaymentTypeID" Type="int" />

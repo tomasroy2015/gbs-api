@@ -21,7 +21,7 @@ namespace GBSExtranet.Api.Models
         }
     
         public int ID { get; set; }
-        public byte[] Code { get; set; }
+        public string Code { get; set; }
         public string Name { get; set; }
         public string Name_en { get; set; }
         public string Name_tr { get; set; }
@@ -50,6 +50,7 @@ namespace GBSExtranet.Api.Models
         public bool Active { get; set; }
         public System.DateTime OpDateTime { get; set; }
         public long OpUserID { get; set; }
+        public string Icons { get; set; }
     
         public virtual BizTbl_User BizTbl_User { get; set; }
         public virtual ICollection<HotelPropertyPolicy> HotelPropertyPolicies { get; set; }

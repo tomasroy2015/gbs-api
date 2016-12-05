@@ -39,8 +39,11 @@ namespace GBSExtranet.Api.Models
             this.BizTbl_UserRight1 = new HashSet<BizTbl_UserRight>();
             this.ChildrenPolicies = new HashSet<ChildrenPolicy>();
             this.HotelPropertyPolicies = new HashSet<HotelPropertyPolicy>();
+            this.HotelPropertyPolicies1 = new HashSet<HotelPropertyPolicy>();
+            this.PriceUnits = new HashSet<PriceUnit>();
             this.PropertyPolicies = new HashSet<PropertyPolicy>();
             this.PropertyPolicyItems = new HashSet<PropertyPolicyItem>();
+            this.HotelPolicySummaries = new HashSet<HotelPolicySummary>();
             this.TB_Attribute = new HashSet<TB_Attribute>();
             this.TB_AttributeHeader = new HashSet<TB_AttributeHeader>();
             this.TB_Bank = new HashSet<TB_Bank>();
@@ -293,8 +296,11 @@ namespace GBSExtranet.Api.Models
         public virtual ICollection<BizTbl_UserRight> BizTbl_UserRight1 { get; set; }
         public virtual ICollection<ChildrenPolicy> ChildrenPolicies { get; set; }
         public virtual ICollection<HotelPropertyPolicy> HotelPropertyPolicies { get; set; }
+        public virtual ICollection<HotelPropertyPolicy> HotelPropertyPolicies1 { get; set; }
+        public virtual ICollection<PriceUnit> PriceUnits { get; set; }
         public virtual ICollection<PropertyPolicy> PropertyPolicies { get; set; }
         public virtual ICollection<PropertyPolicyItem> PropertyPolicyItems { get; set; }
+        public virtual ICollection<HotelPolicySummary> HotelPolicySummaries { get; set; }
         public virtual ICollection<TB_Attribute> TB_Attribute { get; set; }
         public virtual ICollection<TB_AttributeHeader> TB_AttributeHeader { get; set; }
         public virtual ICollection<TB_Bank> TB_Bank { get; set; }

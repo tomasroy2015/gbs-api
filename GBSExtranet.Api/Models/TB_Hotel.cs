@@ -19,7 +19,10 @@ namespace GBSExtranet.Api.Models
             this.BizTbl_UserHotel = new HashSet<BizTbl_UserHotel>();
             this.ChildrenPolicies = new HashSet<ChildrenPolicy>();
             this.ChildrenPolicySummaries = new HashSet<ChildrenPolicySummary>();
+            this.HotelCancellationPolicies = new HashSet<HotelCancellationPolicy>();
             this.HotelChildrenPolicies = new HashSet<HotelChildrenPolicy>();
+            this.HotelPolicySummaries = new HashSet<HotelPolicySummary>();
+            this.HotelPropertyPolicies = new HashSet<HotelPropertyPolicy>();
             this.TB_HotelAttribute = new HashSet<TB_HotelAttribute>();
             this.TB_HotelAttributeHistory = new HashSet<TB_HotelAttributeHistory>();
             this.TB_HotelCancelPolicy = new HashSet<TB_HotelCancelPolicy>();
@@ -112,7 +115,10 @@ namespace GBSExtranet.Api.Models
         public virtual ICollection<BizTbl_UserHotel> BizTbl_UserHotel { get; set; }
         public virtual ICollection<ChildrenPolicy> ChildrenPolicies { get; set; }
         public virtual ICollection<ChildrenPolicySummary> ChildrenPolicySummaries { get; set; }
+        public virtual ICollection<HotelCancellationPolicy> HotelCancellationPolicies { get; set; }
         public virtual ICollection<HotelChildrenPolicy> HotelChildrenPolicies { get; set; }
+        public virtual ICollection<HotelPolicySummary> HotelPolicySummaries { get; set; }
+        public virtual ICollection<HotelPropertyPolicy> HotelPropertyPolicies { get; set; }
         public virtual TB_ChannelManager TB_ChannelManager { get; set; }
         public virtual TB_Country TB_Country { get; set; }
         public virtual TB_Country TB_Country1 { get; set; }

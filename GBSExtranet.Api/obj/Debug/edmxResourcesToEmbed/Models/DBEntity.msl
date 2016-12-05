@@ -611,7 +611,6 @@
           <ScalarProperty Name="IsPublicDisplay" ColumnName="IsPublicDisplay" />
           <ScalarProperty Name="IsPrivateDisplay" ColumnName="IsPrivateDisplay" />
           <ScalarProperty Name="IsPromotionDisplay" ColumnName="IsPromotionDisplay" />
-          <ScalarProperty Name="IsPeriodExists" ColumnName="IsPeriodExists" />
           <ScalarProperty Name="ArrivalTypeID" ColumnName="ArrivalTypeID" />
           <ScalarProperty Name="ArrivalRateID" ColumnName="ArrivalRateID" />
           <ScalarProperty Name="PrepaymentTypeID" ColumnName="PrepaymentTypeID" />

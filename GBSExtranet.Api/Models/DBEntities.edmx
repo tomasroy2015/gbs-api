@@ -475,6 +475,132 @@ warning 6013: The table/view 'Gbshotels.data.hotel$' does not have a primary key
           <Property Name="IPAddress" Type="varchar" MaxLength="100" />
           <Property Name="OpDateTime" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="ChildrenPolicies">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="IsAccommodate" Type="bit" Nullable="false" />
+          <Property Name="IsExtraBedProvided" Type="bit" Nullable="false" />
+          <Property Name="NoOfExtraBed" Type="int" />
+          <Property Name="IsTwoYearsChild" Type="bit" />
+          <Property Name="TwoYearsChildCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="IsExtraBedChild" Type="bit" />
+          <Property Name="ExtraBedChildUnit" Type="int" />
+          <Property Name="IsAdult" Type="bit" />
+          <Property Name="AdultCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="IsExistingBedChild" Type="bit" />
+          <Property Name="ExistingBedChildUnit" Type="int" />
+          <Property Name="ExistingBedChildCount" Type="int" />
+          <Property Name="ExistingBedChildCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HotelID" Type="int" Nullable="false" />
+          <Property Name="CurrencyID" Type="int" Nullable="false" />
+          <Property Name="OpDateTime" Type="datetime" Nullable="false" />
+          <Property Name="OpUserID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChildrenPoliciesHeader">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Name_tr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_de" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_es" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_fr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ru" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_it" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ar" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ja" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_pt" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_zh" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_tr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_de" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_es" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_fr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_ru" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_it" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_ar" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_ja" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_pt" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description_zh" Type="nvarchar" MaxLength="100" />
+          <Property Name="Sort" Type="smallint" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="OpDateTime" Type="datetime" />
+          <Property Name="OpUserID" Type="bigint" />
+          <Property Name="PolicyType" Type="int" />
+        </EntityType>
+        <EntityType Name="ChildrenPolicyItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChildrenPolicyHeaderID" Type="int" Nullable="false" />
+          <Property Name="Name_en" Type="nvarchar(max)" />
+          <Property Name="Name_tr" Type="nvarchar(max)" />
+          <Property Name="Name_de" Type="nvarchar(max)" />
+          <Property Name="Name_es" Type="nvarchar(max)" />
+          <Property Name="Name_fr" Type="nvarchar(max)" />
+          <Property Name="Name_ru" Type="nvarchar(max)" />
+          <Property Name="Name_it" Type="nvarchar(max)" />
+          <Property Name="Name_ar" Type="nvarchar(max)" />
+          <Property Name="Name_ja" Type="nvarchar(max)" />
+          <Property Name="Name_pt" Type="nvarchar(max)" />
+          <Property Name="Name_zh" Type="nvarchar(max)" />
+          <Property Name="Description_tr" Type="nvarchar(max)" />
+          <Property Name="Description_en" Type="nvarchar(max)" />
+          <Property Name="Description_de" Type="nvarchar(max)" />
+          <Property Name="Description_es" Type="nvarchar(max)" />
+          <Property Name="Description_fr" Type="nvarchar(max)" />
+          <Property Name="Description_ru" Type="nvarchar(max)" />
+          <Property Name="Description_it" Type="nvarchar(max)" />
+          <Property Name="Description_ar" Type="nvarchar(max)" />
+          <Property Name="Description_ja" Type="nvarchar(max)" />
+          <Property Name="Description_pt" Type="nvarchar(max)" />
+          <Property Name="Description_zh" Type="nvarchar(max)" />
+          <Property Name="IsChargeable" Type="bit" />
+          <Property Name="PriceLabel" Type="varchar(max)" />
+          <Property Name="ChildUnitID" Type="int" Nullable="false" />
+          <Property Name="IsProviderNeeded" Type="bit" />
+          <Property Name="HasChildUnit" Type="bit" />
+          <Property Name="IsExtrabedItem" Type="bit" />
+          <Property Name="IsCheckedItem" Type="bit" />
+          <Property Name="IsExistingBedItem" Type="bit" />
+        </EntityType>
+        <EntityType Name="ChildrenPolicySummary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HasChildrenPolicy" Type="bit" Nullable="false" />
+          <Property Name="HasExtraBedPolicy" Type="bit" Nullable="false" />
+          <Property Name="MaxNoExtraBed" Type="int" />
+          <Property Name="MaxNoOfChild" Type="int" />
+          <Property Name="ChildrenPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AdultPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HotelID" Type="int" />
+        </EntityType>
+        <EntityType Name="ChildrenPolicyUnit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_tr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_de" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_es" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_fr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ru" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_it" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ar" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ja" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_pt" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_zh" Type="nvarchar" MaxLength="100" />
+          <Property Name="OpDateTime" Type="datetime" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6013: The table/view 'Gbshotels.dbo.Databkpmail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="Databkpmail">
@@ -512,6 +638,67 @@ warning 6013: The table/view 'Gbshotels.dbo.Databkpmail' does not have a primary
           <Property Name="TimeUtc" Type="datetime" Nullable="false" />
           <Property Name="Sequence" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AllXml" Type="ntext" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HotelCancellationPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HotellD" Type="int" Nullable="false" />
+          <Property Name="IsPublicDisplay" Type="bit" />
+          <Property Name="IsPrivateDisplay" Type="bit" />
+          <Property Name="IsPromotionDisplay" Type="bit" />
+          <Property Name="IsPeriodExists" Type="bit" />
+          <Property Name="ArrivalTypeID" Type="int" />
+          <Property Name="ArrivalRateID" Type="int" />
+          <Property Name="PrepaymentTypeID" Type="int" />
+          <Property Name="CancelRateID" Type="int" />
+          <Property Name="IsPrepayment" Type="bit" />
+        </EntityType>
+        <EntityType Name="HotelChildrenPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChildrenPolicyHeaderID" Type="int" Nullable="false" />
+          <Property Name="ChildrenPolicyItemID" Type="int" Nullable="false" />
+          <Property Name="HotelID" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NoOfExtraBed" Type="int" />
+          <Property Name="NoOfChildExistingBed" Type="int" />
+          <Property Name="CurrencyID" Type="int" />
+          <Property Name="ChildUnitID" Type="int" Nullable="false" />
+          <Property Name="IsAttributeSelected" Type="bit" />
+          <Property Name="IsChildrenAccommodated" Type="bit" />
+          <Property Name="IsExtrabedNeeded" Type="bit" />
+        </EntityType>
+        <EntityType Name="HotelPolicySummary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HotelID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="OpDateTime" Type="datetime" Nullable="false" />
+          <Property Name="OpUserID" Type="bigint" Nullable="false" />
+          <Property Name="Icons" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="HotelPropertyPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyPolicyID" Type="int" Nullable="false" />
+          <Property Name="PropertyPolicyItemID" Type="int" Nullable="false" />
+          <Property Name="HotelID" Type="int" Nullable="false" />
+          <Property Name="UnitID" Type="int" />
+          <Property Name="UnitValue" Type="nvarchar(max)" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PriceUnitID" Type="int" />
+          <Property Name="CurrencyID" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="OpDateTime" Type="datetime" Nullable="false" />
+          <Property Name="OpUserID" Type="bigint" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6013: The table/view 'Gbshotels.dbo.hoteltoadd$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
@@ -556,6 +743,114 @@ warning 6013: The table/view 'Gbshotels.dbo.hoteltoadd$' does not have a primary
           <Property Name="FAQ" Type="nvarchar" MaxLength="255" />
           <Property Name="images_count" Type="nvarchar" MaxLength="255" />
         </EntityType>-->
+        <EntityType Name="PriceUnit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_tr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_de" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_es" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_fr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ru" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_it" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ar" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ja" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_pt" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_zh" Type="nvarchar" MaxLength="100" />
+          <Property Name="Sort" Type="smallint" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="OpDateTime" Type="datetime" Nullable="false" />
+          <Property Name="OpUserID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PropertyPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Name_en" Type="nvarchar(max)" />
+          <Property Name="Name_tr" Type="nvarchar(max)" />
+          <Property Name="Name_de" Type="nvarchar(max)" />
+          <Property Name="Name_es" Type="nvarchar(max)" />
+          <Property Name="Name_fr" Type="nvarchar(max)" />
+          <Property Name="Name_ru" Type="nvarchar(max)" />
+          <Property Name="Name_it" Type="nvarchar(max)" />
+          <Property Name="Name_ar" Type="nvarchar(max)" />
+          <Property Name="Name_ja" Type="nvarchar(max)" />
+          <Property Name="Name_pt" Type="nvarchar(max)" />
+          <Property Name="Name_zh" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Description_en" Type="nvarchar(max)" />
+          <Property Name="Description_tr" Type="nvarchar(max)" />
+          <Property Name="Description_de" Type="nvarchar(max)" />
+          <Property Name="Description_es" Type="nvarchar(max)" />
+          <Property Name="Description_fr" Type="nvarchar(max)" />
+          <Property Name="Description_ru" Type="nvarchar(max)" />
+          <Property Name="Description_it" Type="nvarchar(max)" />
+          <Property Name="Description_ja" Type="nvarchar(max)" />
+          <Property Name="Description_zh" Type="nvarchar(max)" />
+          <Property Name="Description_pt" Type="nvarchar(max)" />
+          <Property Name="Description_ar" Type="nvarchar(max)" />
+          <Property Name="Sort" Type="smallint" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="OpDateTime" Type="datetime" Nullable="false" />
+          <Property Name="OpUserID" Type="bigint" Nullable="false" />
+          <Property Name="Icons" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PropertyPolicyItem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PropertyPolicyID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Name_en" Type="nvarchar(max)" />
+          <Property Name="Name_tr" Type="nvarchar(max)" />
+          <Property Name="Name_de" Type="nvarchar(max)" />
+          <Property Name="Name_es" Type="nvarchar(max)" />
+          <Property Name="Name_fr" Type="nvarchar(max)" />
+          <Property Name="Name_ru" Type="nvarchar(max)" />
+          <Property Name="Name_it" Type="nvarchar(max)" />
+          <Property Name="Name_ar" Type="nvarchar(max)" />
+          <Property Name="Name_ja" Type="nvarchar(max)" />
+          <Property Name="Name_pt" Type="nvarchar(max)" />
+          <Property Name="Name_zh" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="IsParentItem" Type="bit" />
+          <Property Name="IsChargedItem" Type="bit" />
+          <Property Name="PriceLabel" Type="nvarchar(max)" />
+          <Property Name="ParentPolicyItemID" Type="int" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="OpDateTime" Type="datetime" Nullable="false" />
+          <Property Name="OpUserID" Type="bigint" Nullable="false" />
+          <Property Name="RelatedIcon" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="PropertyPolicyUnit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_tr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_de" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_es" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_fr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ru" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_it" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ar" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_ja" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_pt" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_zh" Type="nvarchar" MaxLength="100" />
+          <Property Name="PolicyItemID" Type="int" Nullable="false" />
+          <Property Name="IsHideAttribute" Type="bit" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="OpDateTime" Type="datetime" />
+          <Property Name="OpUserID" Type="bigint" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -2335,7 +2630,7 @@ warning 6013: The table/view 'Gbshotels.dbo.hoteltoadd$' does not have a primary
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CountryID" Type="int" />
           <Property Name="ParentID" Type="bigint" />
           <Property Name="SecondParentID" Type="bigint" />
@@ -3487,6 +3782,27 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Property Name="Name_pt" Type="nvarchar" MaxLength="100" />
           <Property Name="Name_zh" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="TB_TypePrepayment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_tr" Type="nvarchar(max)" />
+          <Property Name="Name_en" Type="nvarchar(max)" />
+          <Property Name="Name_de" Type="nvarchar(max)" />
+          <Property Name="Name_es" Type="nvarchar(max)" />
+          <Property Name="Name_fr" Type="nvarchar(max)" />
+          <Property Name="Name_ru" Type="nvarchar(max)" />
+          <Property Name="Name_it" Type="nvarchar(max)" />
+          <Property Name="Name_ar" Type="nvarchar(max)" />
+          <Property Name="Name_ja" Type="nvarchar(max)" />
+          <Property Name="Name_pt" Type="nvarchar(max)" />
+          <Property Name="Name_zh" Type="nvarchar(max)" />
+          <Property Name="Sort" Type="smallint" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="OpDateTime" Type="datetime" Nullable="false" />
+          <Property Name="OpUserID" Type="bigint" Nullable="false" />
+        </EntityType>
         <EntityType Name="TB_TypePricePolicy">
           <Key>
             <PropertyRef Name="ID" />
@@ -4423,6 +4739,402 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             </Principal>
             <Dependent Role="BizTbl_UserRight">
               <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicies_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="ChildrenPolicies" Type="Self.ChildrenPolicies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicies">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicies_ChildrenPolicies">
+          <End Role="TB_Currency" Type="Self.TB_Currency" Multiplicity="1" />
+          <End Role="ChildrenPolicies" Type="Self.ChildrenPolicies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicies">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicies_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="ChildrenPolicies" Type="Self.ChildrenPolicies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicies">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicyItems_ChildrenPoliciesHeader">
+          <End Role="ChildrenPoliciesHeader" Type="Self.ChildrenPoliciesHeader" Multiplicity="1" />
+          <End Role="ChildrenPolicyItems" Type="Self.ChildrenPolicyItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPoliciesHeader">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicyItems">
+              <PropertyRef Name="ChildrenPolicyHeaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicyItems_ChildrenPolicyUnit">
+          <End Role="ChildrenPolicyUnit" Type="Self.ChildrenPolicyUnit" Multiplicity="1" />
+          <End Role="ChildrenPolicyItems" Type="Self.ChildrenPolicyItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPolicyUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicyItems">
+              <PropertyRef Name="ChildUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicySummary_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="0..1" />
+          <End Role="ChildrenPolicySummary" Type="Self.ChildrenPolicySummary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicySummary">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_HotelCancellationPolicy">
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="1" />
+          <End Role="HotelCancellationPolicy1" Type="Self.HotelCancellationPolicy" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="HotelCancellationPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="HotellD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate">
+          <End Role="TB_TypePenaltyRate" Type="Self.TB_TypePenaltyRate" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePenaltyRate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="ArrivalTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate1">
+          <End Role="TB_TypePenaltyRate" Type="Self.TB_TypePenaltyRate" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePenaltyRate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="CancelRateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate2">
+          <End Role="TB_TypePenaltyRate" Type="Self.TB_TypePenaltyRate" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePenaltyRate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="ArrivalRateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePrepayment">
+          <End Role="TB_TypePrepayment" Type="Self.TB_TypePrepayment" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePrepayment">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="PrepaymentTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_ChildrenPoliciesHeader">
+          <End Role="ChildrenPoliciesHeader" Type="Self.ChildrenPoliciesHeader" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPoliciesHeader">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="ChildrenPolicyHeaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_ChildrenPolicyItems">
+          <End Role="ChildrenPolicyItems" Type="Self.ChildrenPolicyItems" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPolicyItems">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="ChildrenPolicyItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_ChildrenPolicyUnit">
+          <End Role="ChildrenPolicyUnit" Type="Self.ChildrenPolicyUnit" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPolicyUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="ChildUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_TB_Currency">
+          <End Role="TB_Currency" Type="Self.TB_Currency" Multiplicity="0..1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicies_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_HotelPropertyPolicy">
+          <End Role="PropertyPolicy" Type="Self.PropertyPolicy" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="PropertyPolicyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_PriceUnit">
+          <End Role="PriceUnit" Type="Self.PriceUnit" Multiplicity="0..1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PriceUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="PriceUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_PropertyPolicyItem">
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyItem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="PropertyPolicyItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_PropertyPolicyUnit">
+          <End Role="PropertyPolicyUnit" Type="Self.PropertyPolicyUnit" Multiplicity="0..1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_TB_Currency">
+          <End Role="TB_Currency" Type="Self.TB_Currency" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PriceUnit_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="PriceUnit" Type="Self.PriceUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PriceUnit">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyHeader_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="PropertyPolicy" Type="Self.PropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicy">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItemOptions_PropertyPolicyItems">
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="1" />
+          <End Role="PropertyPolicyUnit" Type="Self.PropertyPolicyUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyItem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyUnit">
+              <PropertyRef Name="PolicyItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItems_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyItem">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItems_PropertyPolicyHeader">
+          <End Role="PropertyPolicy" Type="Self.PropertyPolicy" Multiplicity="1" />
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyItem">
+              <PropertyRef Name="PropertyPolicyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItems_PropertyPolicyItems">
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="0..1" />
+          <End Role="PropertyPolicyItem1" Type="Self.PropertyPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyItem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyItem1">
+              <PropertyRef Name="ParentPolicyItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicySummary_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="HotelPolicySummary" Type="Self.HotelPolicySummary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPolicySummary">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicySummary_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelPolicySummary" Type="Self.HotelPolicySummary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPolicySummary">
+              <PropertyRef Name="HotelID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -14498,8 +15210,21 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <EntitySet Name="BizTbl_UserOperation" EntityType="Self.BizTbl_UserOperation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BizTbl_UserRight" EntityType="Self.BizTbl_UserRight" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BizTbl_UserSession" EntityType="Self.BizTbl_UserSession" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenPolicies" EntityType="Self.ChildrenPolicies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenPoliciesHeader" EntityType="Self.ChildrenPoliciesHeader" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenPolicyItems" EntityType="Self.ChildrenPolicyItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenPolicySummary" EntityType="Self.ChildrenPolicySummary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChildrenPolicyUnit" EntityType="Self.ChildrenPolicyUnit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ELMAH_Error" EntityType="Self.ELMAH_Error" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotelCancellationPolicy" EntityType="Self.HotelCancellationPolicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotelChildrenPolicy" EntityType="Self.HotelChildrenPolicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotelPolicySummary" EntityType="Self.HotelPolicySummary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotelPropertyPolicy" EntityType="Self.HotelPropertyPolicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PriceUnit" EntityType="Self.PriceUnit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyPolicy" EntityType="Self.PropertyPolicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyPolicyItem" EntityType="Self.PropertyPolicyItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyPolicyUnit" EntityType="Self.PropertyPolicyUnit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Attribute" EntityType="Self.TB_Attribute" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_AttributeHeader" EntityType="Self.TB_AttributeHeader" Schema="dbo" store:Type="Tables" />
@@ -14627,6 +15352,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <EntitySet Name="TB_TypeMonth" EntityType="Self.TB_TypeMonth" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_TypeOperation" EntityType="Self.TB_TypeOperation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_TypePenaltyRate" EntityType="Self.TB_TypePenaltyRate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_TypePrepayment" EntityType="Self.TB_TypePrepayment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_TypePricePolicy" EntityType="Self.TB_TypePricePolicy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_TypeRegion" EntityType="Self.TB_TypeRegion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_TypeReservationOperation" EntityType="Self.TB_TypeReservationOperation" Schema="dbo" store:Type="Tables" />
@@ -14822,6 +15548,138 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <AssociationSet Name="FK_BizTbl_UserRight_BizTbl_User1" Association="Self.FK_BizTbl_UserRight_BizTbl_User1">
             <End Role="BizTbl_User" EntitySet="BizTbl_User" />
             <End Role="BizTbl_UserRight" EntitySet="BizTbl_UserRight" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicies_BizTbl_User" Association="Self.FK_ChildrenPolicies_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="ChildrenPolicies" EntitySet="ChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicies_ChildrenPolicies" Association="Self.FK_ChildrenPolicies_ChildrenPolicies">
+            <End Role="TB_Currency" EntitySet="TB_Currency" />
+            <End Role="ChildrenPolicies" EntitySet="ChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicies_TB_Hotel" Association="Self.FK_ChildrenPolicies_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="ChildrenPolicies" EntitySet="ChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicyItems_ChildrenPoliciesHeader" Association="Self.FK_ChildrenPolicyItems_ChildrenPoliciesHeader">
+            <End Role="ChildrenPoliciesHeader" EntitySet="ChildrenPoliciesHeader" />
+            <End Role="ChildrenPolicyItems" EntitySet="ChildrenPolicyItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicyItems_ChildrenPolicyUnit" Association="Self.FK_ChildrenPolicyItems_ChildrenPolicyUnit">
+            <End Role="ChildrenPolicyUnit" EntitySet="ChildrenPolicyUnit" />
+            <End Role="ChildrenPolicyItems" EntitySet="ChildrenPolicyItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicySummary_TB_Hotel" Association="Self.FK_ChildrenPolicySummary_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="ChildrenPolicySummary" EntitySet="ChildrenPolicySummary" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_HotelCancellationPolicy" Association="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy">
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
+            <End Role="HotelCancellationPolicy1" EntitySet="HotelCancellationPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_Hotel" Association="Self.FK_HotelCancellationPolicy_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate" Association="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate">
+            <End Role="TB_TypePenaltyRate" EntitySet="TB_TypePenaltyRate" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate1" Association="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate1">
+            <End Role="TB_TypePenaltyRate" EntitySet="TB_TypePenaltyRate" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate2" Association="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate2">
+            <End Role="TB_TypePenaltyRate" EntitySet="TB_TypePenaltyRate" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePrepayment" Association="Self.FK_HotelCancellationPolicy_TB_TypePrepayment">
+            <End Role="TB_TypePrepayment" EntitySet="TB_TypePrepayment" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_ChildrenPoliciesHeader" Association="Self.FK_HotelChildrenPolicy_ChildrenPoliciesHeader">
+            <End Role="ChildrenPoliciesHeader" EntitySet="ChildrenPoliciesHeader" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_ChildrenPolicyItems" Association="Self.FK_HotelChildrenPolicy_ChildrenPolicyItems">
+            <End Role="ChildrenPolicyItems" EntitySet="ChildrenPolicyItems" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_ChildrenPolicyUnit" Association="Self.FK_HotelChildrenPolicy_ChildrenPolicyUnit">
+            <End Role="ChildrenPolicyUnit" EntitySet="ChildrenPolicyUnit" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_TB_Currency" Association="Self.FK_HotelChildrenPolicy_TB_Currency">
+            <End Role="TB_Currency" EntitySet="TB_Currency" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_TB_Hotel" Association="Self.FK_HotelChildrenPolicy_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicies_BizTbl_User" Association="Self.FK_HotelPropertyPolicies_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_BizTbl_User" Association="Self.FK_HotelPropertyPolicy_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_HotelPropertyPolicy" Association="Self.FK_HotelPropertyPolicy_HotelPropertyPolicy">
+            <End Role="PropertyPolicy" EntitySet="PropertyPolicy" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_PriceUnit" Association="Self.FK_HotelPropertyPolicy_PriceUnit">
+            <End Role="PriceUnit" EntitySet="PriceUnit" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_PropertyPolicyItem" Association="Self.FK_HotelPropertyPolicy_PropertyPolicyItem">
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItem" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_PropertyPolicyUnit" Association="Self.FK_HotelPropertyPolicy_PropertyPolicyUnit">
+            <End Role="PropertyPolicyUnit" EntitySet="PropertyPolicyUnit" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_TB_Currency" Association="Self.FK_HotelPropertyPolicy_TB_Currency">
+            <End Role="TB_Currency" EntitySet="TB_Currency" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_TB_Hotel" Association="Self.FK_HotelPropertyPolicy_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PriceUnit_BizTbl_User" Association="Self.FK_PriceUnit_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="PriceUnit" EntitySet="PriceUnit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyHeader_BizTbl_User" Association="Self.FK_PropertyPolicyHeader_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="PropertyPolicy" EntitySet="PropertyPolicy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItemOptions_PropertyPolicyItems" Association="Self.FK_PropertyPolicyItemOptions_PropertyPolicyItems">
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItem" />
+            <End Role="PropertyPolicyUnit" EntitySet="PropertyPolicyUnit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItems_BizTbl_User" Association="Self.FK_PropertyPolicyItems_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItems_PropertyPolicyHeader" Association="Self.FK_PropertyPolicyItems_PropertyPolicyHeader">
+            <End Role="PropertyPolicy" EntitySet="PropertyPolicy" />
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItems_PropertyPolicyItems" Association="Self.FK_PropertyPolicyItems_PropertyPolicyItems">
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItem" />
+            <End Role="PropertyPolicyItem1" EntitySet="PropertyPolicyItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicySummary_BizTbl_User" Association="Self.FK_PropertyPolicySummary_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="HotelPolicySummary" EntitySet="HotelPolicySummary" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicySummary_TB_Hotel" Association="Self.FK_PropertyPolicySummary_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelPolicySummary" EntitySet="HotelPolicySummary" />
           </AssociationSet>
           <AssociationSet Name="FK_TB_Attribute_BizTbl_User" Association="Self.FK_TB_Attribute_BizTbl_User">
             <End Role="BizTbl_User" EntitySet="BizTbl_User" />
@@ -17660,6 +18518,13 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <NavigationProperty Name="BizTbl_UserHotel1" Relationship="Self.FK_BizTbl_UserHotel_BizTbl_User1" FromRole="BizTbl_User" ToRole="BizTbl_UserHotel" />
           <NavigationProperty Name="BizTbl_UserRight" Relationship="Self.FK_BizTbl_UserRight_BizTbl_User" FromRole="BizTbl_User" ToRole="BizTbl_UserRight" />
           <NavigationProperty Name="BizTbl_UserRight1" Relationship="Self.FK_BizTbl_UserRight_BizTbl_User1" FromRole="BizTbl_User" ToRole="BizTbl_UserRight" />
+          <NavigationProperty Name="ChildrenPolicies" Relationship="Self.FK_ChildrenPolicies_BizTbl_User" FromRole="BizTbl_User" ToRole="ChildrenPolicies" />
+          <NavigationProperty Name="HotelPropertyPolicies" Relationship="Self.FK_HotelPropertyPolicies_BizTbl_User" FromRole="BizTbl_User" ToRole="HotelPropertyPolicy" />
+          <NavigationProperty Name="HotelPropertyPolicies1" Relationship="Self.FK_HotelPropertyPolicy_BizTbl_User" FromRole="BizTbl_User" ToRole="HotelPropertyPolicy" />
+          <NavigationProperty Name="PriceUnits" Relationship="Self.FK_PriceUnit_BizTbl_User" FromRole="BizTbl_User" ToRole="PriceUnit" />
+          <NavigationProperty Name="PropertyPolicies" Relationship="Self.FK_PropertyPolicyHeader_BizTbl_User" FromRole="BizTbl_User" ToRole="PropertyPolicy" />
+          <NavigationProperty Name="PropertyPolicyItems" Relationship="Self.FK_PropertyPolicyItems_BizTbl_User" FromRole="BizTbl_User" ToRole="PropertyPolicyItem" />
+          <NavigationProperty Name="HotelPolicySummaries" Relationship="Self.FK_PropertyPolicySummary_BizTbl_User" FromRole="BizTbl_User" ToRole="HotelPolicySummary" />
           <NavigationProperty Name="TB_Attribute" Relationship="Self.FK_TB_Attribute_BizTbl_User" FromRole="BizTbl_User" ToRole="TB_Attribute" />
           <NavigationProperty Name="TB_AttributeHeader" Relationship="Self.FK_TB_AttributeHeader_BizTbl_User" FromRole="BizTbl_User" ToRole="TB_AttributeHeader" />
           <NavigationProperty Name="TB_Bank" Relationship="Self.FK_TB_Bank_BizTbl_User" FromRole="BizTbl_User" ToRole="TB_Bank" />
@@ -17961,6 +18826,143 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <NavigationProperty Name="TB_ReservationHistory" Relationship="Self.FK_TB_ReservationHistory_TB_UserSession" FromRole="BizTbl_UserSession" ToRole="TB_ReservationHistory" />
           <NavigationProperty Name="TB_Country" Relationship="Self.FK_TB_UserSession_TB_Country" FromRole="BizTbl_UserSession" ToRole="TB_Country" />
         </EntityType>
+        <EntityType Name="ChildrenPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="IsAccommodate" Type="Boolean" Nullable="false" />
+          <Property Name="IsExtraBedProvided" Type="Boolean" Nullable="false" />
+          <Property Name="NoOfExtraBed" Type="Int32" />
+          <Property Name="IsTwoYearsChild" Type="Boolean" />
+          <Property Name="TwoYearsChildCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="IsExtraBedChild" Type="Boolean" />
+          <Property Name="ExtraBedChildUnit" Type="Int32" />
+          <Property Name="IsAdult" Type="Boolean" />
+          <Property Name="AdultCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="IsExistingBedChild" Type="Boolean" />
+          <Property Name="ExistingBedChildUnit" Type="Int32" />
+          <Property Name="ExistingBedChildCount" Type="Int32" />
+          <Property Name="ExistingBedChildCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HotelID" Type="Int32" Nullable="false" />
+          <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+          <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_ChildrenPolicies_BizTbl_User" FromRole="ChildrenPolicies" ToRole="BizTbl_User" />
+          <NavigationProperty Name="TB_Currency" Relationship="Self.FK_ChildrenPolicies_ChildrenPolicies" FromRole="ChildrenPolicies" ToRole="TB_Currency" />
+          <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_ChildrenPolicies_TB_Hotel" FromRole="ChildrenPolicies" ToRole="TB_Hotel" />
+        </EntityType>
+        <EntityType Name="ChildrenPoliciesHeader">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name_tr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_tr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_de" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_es" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_fr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_it" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ja" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int16" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="OpDateTime" Type="DateTime" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" />
+          <Property Name="PolicyType" Type="Int32" />
+          <NavigationProperty Name="ChildrenPolicyItems" Relationship="Self.FK_ChildrenPolicyItems_ChildrenPoliciesHeader" FromRole="ChildrenPoliciesHeader" ToRole="ChildrenPolicyItems" />
+          <NavigationProperty Name="HotelChildrenPolicies" Relationship="Self.FK_HotelChildrenPolicy_ChildrenPoliciesHeader" FromRole="ChildrenPoliciesHeader" ToRole="HotelChildrenPolicy" />
+        </EntityType>
+        <EntityType Name="ChildrenPolicyItem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChildrenPolicyHeaderID" Type="Int32" Nullable="false" />
+          <Property Name="Name_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsChargeable" Type="Boolean" />
+          <Property Name="PriceLabel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ChildUnitID" Type="Int32" Nullable="false" />
+          <Property Name="IsProviderNeeded" Type="Boolean" />
+          <Property Name="HasChildUnit" Type="Boolean" />
+          <Property Name="IsExtrabedItem" Type="Boolean" />
+          <Property Name="IsCheckedItem" Type="Boolean" />
+          <Property Name="IsExistingBedItem" Type="Boolean" />
+          <NavigationProperty Name="ChildrenPoliciesHeader" Relationship="Self.FK_ChildrenPolicyItems_ChildrenPoliciesHeader" FromRole="ChildrenPolicyItems" ToRole="ChildrenPoliciesHeader" />
+          <NavigationProperty Name="ChildrenPolicyUnit" Relationship="Self.FK_ChildrenPolicyItems_ChildrenPolicyUnit" FromRole="ChildrenPolicyItems" ToRole="ChildrenPolicyUnit" />
+          <NavigationProperty Name="HotelChildrenPolicies" Relationship="Self.FK_HotelChildrenPolicy_ChildrenPolicyItems" FromRole="ChildrenPolicyItems" ToRole="HotelChildrenPolicy" />
+        </EntityType>
+        <EntityType Name="ChildrenPolicySummary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HasChildrenPolicy" Type="Boolean" Nullable="false" />
+          <Property Name="HasExtraBedPolicy" Type="Boolean" Nullable="false" />
+          <Property Name="MaxNoExtraBed" Type="Int32" />
+          <Property Name="MaxNoOfChild" Type="Int32" />
+          <Property Name="ChildrenPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AdultPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HotelID" Type="Int32" />
+          <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_ChildrenPolicySummary_TB_Hotel" FromRole="ChildrenPolicySummary" ToRole="TB_Hotel" />
+        </EntityType>
+        <EntityType Name="ChildrenPolicyUnit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_tr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OpDateTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ChildrenPolicyItems" Relationship="Self.FK_ChildrenPolicyItems_ChildrenPolicyUnit" FromRole="ChildrenPolicyUnit" ToRole="ChildrenPolicyItems" />
+          <NavigationProperty Name="HotelChildrenPolicies" Relationship="Self.FK_HotelChildrenPolicy_ChildrenPolicyUnit" FromRole="ChildrenPolicyUnit" ToRole="HotelChildrenPolicy" />
+        </EntityType>
         <EntityType Name="dtproperty">
           <Key>
             <PropertyRef Name="id" />
@@ -17989,6 +18991,210 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Property Name="TimeUtc" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Sequence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AllXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HotelCancellationPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HotellD" Type="Int32" Nullable="false" />
+          <Property Name="IsPublicDisplay" Type="Boolean" />
+          <Property Name="IsPrivateDisplay" Type="Boolean" />
+          <Property Name="IsPromotionDisplay" Type="Boolean" />
+          <Property Name="IsPeriodExists" Type="Boolean" />
+          <Property Name="ArrivalTypeID" Type="Int32" />
+          <Property Name="ArrivalRateID" Type="Int32" />
+          <Property Name="PrepaymentTypeID" Type="Int32" />
+          <Property Name="CancelRateID" Type="Int32" />
+          <Property Name="IsPrepayment" Type="Boolean" />
+          <NavigationProperty Name="HotelCancellationPolicy1" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy" ToRole="HotelCancellationPolicy1" />
+          <NavigationProperty Name="HotelCancellationPolicy2" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy1" ToRole="HotelCancellationPolicy" />
+          <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_HotelCancellationPolicy_TB_Hotel" FromRole="HotelCancellationPolicy" ToRole="TB_Hotel" />
+          <NavigationProperty Name="TB_TypePenaltyRate" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate" FromRole="HotelCancellationPolicy" ToRole="TB_TypePenaltyRate" />
+          <NavigationProperty Name="TB_TypePenaltyRate1" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate1" FromRole="HotelCancellationPolicy" ToRole="TB_TypePenaltyRate" />
+          <NavigationProperty Name="TB_TypePenaltyRate2" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate2" FromRole="HotelCancellationPolicy" ToRole="TB_TypePenaltyRate" />
+          <NavigationProperty Name="TB_TypePrepayment" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePrepayment" FromRole="HotelCancellationPolicy" ToRole="TB_TypePrepayment" />
+        </EntityType>
+        <EntityType Name="HotelChildrenPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChildrenPolicyHeaderID" Type="Int32" Nullable="false" />
+          <Property Name="ChildrenPolicyItemID" Type="Int32" Nullable="false" />
+          <Property Name="HotelID" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NoOfExtraBed" Type="Int32" />
+          <Property Name="NoOfChildExistingBed" Type="Int32" />
+          <Property Name="CurrencyID" Type="Int32" />
+          <Property Name="ChildUnitID" Type="Int32" Nullable="false" />
+          <Property Name="IsAttributeSelected" Type="Boolean" />
+          <Property Name="IsChildrenAccommodated" Type="Boolean" />
+          <Property Name="IsExtrabedNeeded" Type="Boolean" />
+          <NavigationProperty Name="ChildrenPoliciesHeader" Relationship="Self.FK_HotelChildrenPolicy_ChildrenPoliciesHeader" FromRole="HotelChildrenPolicy" ToRole="ChildrenPoliciesHeader" />
+          <NavigationProperty Name="ChildrenPolicyItem" Relationship="Self.FK_HotelChildrenPolicy_ChildrenPolicyItems" FromRole="HotelChildrenPolicy" ToRole="ChildrenPolicyItems" />
+          <NavigationProperty Name="ChildrenPolicyUnit" Relationship="Self.FK_HotelChildrenPolicy_ChildrenPolicyUnit" FromRole="HotelChildrenPolicy" ToRole="ChildrenPolicyUnit" />
+          <NavigationProperty Name="TB_Currency" Relationship="Self.FK_HotelChildrenPolicy_TB_Currency" FromRole="HotelChildrenPolicy" ToRole="TB_Currency" />
+          <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_HotelChildrenPolicy_TB_Hotel" FromRole="HotelChildrenPolicy" ToRole="TB_Hotel" />
+        </EntityType>
+        <EntityType Name="HotelPolicySummary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HotelID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" Nullable="false" />
+          <Property Name="Icons" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_PropertyPolicySummary_BizTbl_User" FromRole="HotelPolicySummary" ToRole="BizTbl_User" />
+          <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_PropertyPolicySummary_TB_Hotel" FromRole="HotelPolicySummary" ToRole="TB_Hotel" />
+        </EntityType>
+        <EntityType Name="HotelPropertyPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyPolicyID" Type="Int32" Nullable="false" />
+          <Property Name="PropertyPolicyItemID" Type="Int32" Nullable="false" />
+          <Property Name="HotelID" Type="Int32" Nullable="false" />
+          <Property Name="UnitID" Type="Int32" />
+          <Property Name="UnitValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PriceUnitID" Type="Int32" />
+          <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_HotelPropertyPolicies_BizTbl_User" FromRole="HotelPropertyPolicy" ToRole="BizTbl_User" />
+          <NavigationProperty Name="BizTbl_User1" Relationship="Self.FK_HotelPropertyPolicy_BizTbl_User" FromRole="HotelPropertyPolicy" ToRole="BizTbl_User" />
+          <NavigationProperty Name="PropertyPolicy" Relationship="Self.FK_HotelPropertyPolicy_HotelPropertyPolicy" FromRole="HotelPropertyPolicy" ToRole="PropertyPolicy" />
+          <NavigationProperty Name="PriceUnit" Relationship="Self.FK_HotelPropertyPolicy_PriceUnit" FromRole="HotelPropertyPolicy" ToRole="PriceUnit" />
+          <NavigationProperty Name="PropertyPolicyItem" Relationship="Self.FK_HotelPropertyPolicy_PropertyPolicyItem" FromRole="HotelPropertyPolicy" ToRole="PropertyPolicyItem" />
+          <NavigationProperty Name="PropertyPolicyUnit" Relationship="Self.FK_HotelPropertyPolicy_PropertyPolicyUnit" FromRole="HotelPropertyPolicy" ToRole="PropertyPolicyUnit" />
+          <NavigationProperty Name="TB_Currency" Relationship="Self.FK_HotelPropertyPolicy_TB_Currency" FromRole="HotelPropertyPolicy" ToRole="TB_Currency" />
+          <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_HotelPropertyPolicy_TB_Hotel" FromRole="HotelPropertyPolicy" ToRole="TB_Hotel" />
+        </EntityType>
+        <EntityType Name="PriceUnit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_tr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int16" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_PriceUnit_BizTbl_User" FromRole="PriceUnit" ToRole="BizTbl_User" />
+          <NavigationProperty Name="HotelPropertyPolicies" Relationship="Self.FK_HotelPropertyPolicy_PriceUnit" FromRole="PriceUnit" ToRole="HotelPropertyPolicy" />
+        </EntityType>
+        <EntityType Name="PropertyPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int16" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" Nullable="false" />
+          <Property Name="Icons" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_PropertyPolicyHeader_BizTbl_User" FromRole="PropertyPolicy" ToRole="BizTbl_User" />
+          <NavigationProperty Name="HotelPropertyPolicies" Relationship="Self.FK_HotelPropertyPolicy_HotelPropertyPolicy" FromRole="PropertyPolicy" ToRole="HotelPropertyPolicy" />
+          <NavigationProperty Name="PropertyPolicyItems" Relationship="Self.FK_PropertyPolicyItems_PropertyPolicyHeader" FromRole="PropertyPolicy" ToRole="PropertyPolicyItem" />
+        </EntityType>
+        <EntityType Name="PropertyPolicyItem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PropertyPolicyID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsParentItem" Type="Boolean" />
+          <Property Name="IsChargedItem" Type="Boolean" />
+          <Property Name="PriceLabel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ParentPolicyItemID" Type="Int32" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" Nullable="false" />
+          <Property Name="RelatedIcon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_PropertyPolicyItems_BizTbl_User" FromRole="PropertyPolicyItem" ToRole="BizTbl_User" />
+          <NavigationProperty Name="HotelPropertyPolicies" Relationship="Self.FK_HotelPropertyPolicy_PropertyPolicyItem" FromRole="PropertyPolicyItem" ToRole="HotelPropertyPolicy" />
+          <NavigationProperty Name="PropertyPolicy" Relationship="Self.FK_PropertyPolicyItems_PropertyPolicyHeader" FromRole="PropertyPolicyItem" ToRole="PropertyPolicy" />
+          <NavigationProperty Name="PropertyPolicyUnits" Relationship="Self.FK_PropertyPolicyItemOptions_PropertyPolicyItems" FromRole="PropertyPolicyItem" ToRole="PropertyPolicyUnit" />
+          <NavigationProperty Name="PropertyPolicyItem1" Relationship="Self.FK_PropertyPolicyItems_PropertyPolicyItems" FromRole="PropertyPolicyItem" ToRole="PropertyPolicyItem1" />
+          <NavigationProperty Name="PropertyPolicyItem2" Relationship="Self.FK_PropertyPolicyItems_PropertyPolicyItems" FromRole="PropertyPolicyItem1" ToRole="PropertyPolicyItem" />
+        </EntityType>
+        <EntityType Name="PropertyPolicyUnit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_tr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyItemID" Type="Int32" Nullable="false" />
+          <Property Name="IsHideAttribute" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="OpDateTime" Type="DateTime" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" />
+          <NavigationProperty Name="HotelPropertyPolicies" Relationship="Self.FK_HotelPropertyPolicy_PropertyPolicyUnit" FromRole="PropertyPolicyUnit" ToRole="HotelPropertyPolicy" />
+          <NavigationProperty Name="PropertyPolicyItem" Relationship="Self.FK_PropertyPolicyItemOptions_PropertyPolicyItems" FromRole="PropertyPolicyUnit" ToRole="PropertyPolicyItem" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -18530,6 +19736,9 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="OpUserID" Type="Int64" Nullable="false" />
           <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_TB_TypeCurrency_BizTbl_User" FromRole="TB_Currency" ToRole="BizTbl_User" />
+          <NavigationProperty Name="ChildrenPolicies" Relationship="Self.FK_ChildrenPolicies_ChildrenPolicies" FromRole="TB_Currency" ToRole="ChildrenPolicies" />
+          <NavigationProperty Name="HotelChildrenPolicies" Relationship="Self.FK_HotelChildrenPolicy_TB_Currency" FromRole="TB_Currency" ToRole="HotelChildrenPolicy" />
+          <NavigationProperty Name="HotelPropertyPolicies" Relationship="Self.FK_HotelPropertyPolicy_TB_Currency" FromRole="TB_Currency" ToRole="HotelPropertyPolicy" />
           <NavigationProperty Name="TB_Bank" Relationship="Self.FK_TB_Bank_TB_Currency" FromRole="TB_Currency" ToRole="TB_Bank" />
           <NavigationProperty Name="TB_BankHistory" Relationship="Self.FK_TB_BankHistory_TB_Currency" FromRole="TB_Currency" ToRole="TB_BankHistory" />
           <NavigationProperty Name="TB_BusinessPartner" Relationship="Self.FK_TB_BusinessPartner_TB_Currency" FromRole="TB_Currency" ToRole="TB_BusinessPartner" />
@@ -19217,6 +20426,12 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_TB_Hotel_BizTbl_User" FromRole="TB_Hotel" ToRole="BizTbl_User" />
           <NavigationProperty Name="BizTbl_User1" Relationship="Self.FK_TB_Hotel_BizTbl_User1" FromRole="TB_Hotel" ToRole="BizTbl_User" />
           <NavigationProperty Name="BizTbl_UserHotel" Relationship="Self.FK_BizTbl_UserHotel_TB_Hotel" FromRole="TB_Hotel" ToRole="BizTbl_UserHotel" />
+          <NavigationProperty Name="ChildrenPolicies" Relationship="Self.FK_ChildrenPolicies_TB_Hotel" FromRole="TB_Hotel" ToRole="ChildrenPolicies" />
+          <NavigationProperty Name="ChildrenPolicySummaries" Relationship="Self.FK_ChildrenPolicySummary_TB_Hotel" FromRole="TB_Hotel" ToRole="ChildrenPolicySummary" />
+          <NavigationProperty Name="HotelCancellationPolicies" Relationship="Self.FK_HotelCancellationPolicy_TB_Hotel" FromRole="TB_Hotel" ToRole="HotelCancellationPolicy" />
+          <NavigationProperty Name="HotelChildrenPolicies" Relationship="Self.FK_HotelChildrenPolicy_TB_Hotel" FromRole="TB_Hotel" ToRole="HotelChildrenPolicy" />
+          <NavigationProperty Name="HotelPolicySummaries" Relationship="Self.FK_PropertyPolicySummary_TB_Hotel" FromRole="TB_Hotel" ToRole="HotelPolicySummary" />
+          <NavigationProperty Name="HotelPropertyPolicies" Relationship="Self.FK_HotelPropertyPolicy_TB_Hotel" FromRole="TB_Hotel" ToRole="HotelPropertyPolicy" />
           <NavigationProperty Name="TB_ChannelManager" Relationship="Self.FK_TB_Hotel_TB_ChannelManager" FromRole="TB_Hotel" ToRole="TB_ChannelManager" />
           <NavigationProperty Name="TB_Country" Relationship="Self.FK_TB_Hotel_TB_Country" FromRole="TB_Hotel" ToRole="TB_Country" />
           <NavigationProperty Name="TB_Country1" Relationship="Self.FK_TB_Hotel_TB_Country1" FromRole="TB_Hotel" ToRole="TB_Country" />
@@ -20386,7 +21601,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CountryID" Type="Int32" />
           <Property Name="ParentID" Type="Int64" />
           <Property Name="SecondParentID" Type="Int64" />
@@ -21844,11 +23059,36 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Property Name="Name_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Name_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_TB_TypePenaltyRate_BizTbl_User" FromRole="TB_TypePenaltyRate" ToRole="BizTbl_User" />
+          <NavigationProperty Name="HotelCancellationPolicies" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate" FromRole="TB_TypePenaltyRate" ToRole="HotelCancellationPolicy" />
+          <NavigationProperty Name="HotelCancellationPolicies1" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate1" FromRole="TB_TypePenaltyRate" ToRole="HotelCancellationPolicy" />
+          <NavigationProperty Name="HotelCancellationPolicies2" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate2" FromRole="TB_TypePenaltyRate" ToRole="HotelCancellationPolicy" />
           <NavigationProperty Name="TB_BusinessPartnerCancelPolicy" Relationship="Self.FK_TB_BusinessPartnerCancelPolicy_TB_TypePenaltyRate" FromRole="TB_TypePenaltyRate" ToRole="TB_BusinessPartnerCancelPolicy" />
           <NavigationProperty Name="TB_BusinessPartnerCancelPolicyHistory" Relationship="Self.FK_TB_BusinessPartnerCancelPolicyHistory_TB_TypePenaltyRate" FromRole="TB_TypePenaltyRate" ToRole="TB_BusinessPartnerCancelPolicyHistory" />
           <NavigationProperty Name="TB_HotelCancelPolicy" Relationship="Self.FK_TB_HotelCancelPolicy_TB_TypePenaltyRate" FromRole="TB_TypePenaltyRate" ToRole="TB_HotelCancelPolicy" />
           <NavigationProperty Name="TB_HotelCancelPolicyHistory" Relationship="Self.FK_TB_HotelCancelPolicyHistory_TB_TypePenaltyRate" FromRole="TB_TypePenaltyRate" ToRole="TB_HotelCancelPolicyHistory" />
           <NavigationProperty Name="TB_Part" Relationship="Self.FK_TB_TypePenaltyRate_TB_Part" FromRole="TB_TypePenaltyRate" ToRole="TB_Part" />
+        </EntityType>
+        <EntityType Name="TB_TypePrepayment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int16" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="HotelCancellationPolicies" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePrepayment" FromRole="TB_TypePrepayment" ToRole="HotelCancellationPolicy" />
         </EntityType>
         <EntityType Name="TB_TypePricePolicy">
           <Key>
@@ -22817,6 +24057,90 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="BizTbl_UserRight">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicies_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="ChildrenPolicies" Type="Self.ChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicies">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicies_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PriceUnit_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="PriceUnit" Type="Self.PriceUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PriceUnit">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyHeader_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="PropertyPolicy" Type="Self.PropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicy">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItems_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyItem">
+              <PropertyRef Name="OpUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicySummary_BizTbl_User">
+          <End Role="BizTbl_User" Type="Self.BizTbl_User" Multiplicity="1" />
+          <End Role="HotelPolicySummary" Type="Self.HotelPolicySummary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BizTbl_User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPolicySummary">
               <PropertyRef Name="OpUserID" />
             </Dependent>
           </ReferentialConstraint>
@@ -25230,6 +26554,318 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             </Principal>
             <Dependent Role="BizTbl_UserSession">
               <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicies_ChildrenPolicies">
+          <End Role="TB_Currency" Type="Self.TB_Currency" Multiplicity="1" />
+          <End Role="ChildrenPolicies" Type="Self.ChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicies">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicies_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="ChildrenPolicies" Type="Self.ChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicies">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicyItems_ChildrenPoliciesHeader">
+          <End Role="ChildrenPoliciesHeader" Type="Self.ChildrenPoliciesHeader" Multiplicity="1" />
+          <End Role="ChildrenPolicyItems" Type="Self.ChildrenPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPoliciesHeader">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicyItems">
+              <PropertyRef Name="ChildrenPolicyHeaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_ChildrenPoliciesHeader">
+          <End Role="ChildrenPoliciesHeader" Type="Self.ChildrenPoliciesHeader" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPoliciesHeader">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="ChildrenPolicyHeaderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicyItems_ChildrenPolicyUnit">
+          <End Role="ChildrenPolicyUnit" Type="Self.ChildrenPolicyUnit" Multiplicity="1" />
+          <End Role="ChildrenPolicyItems" Type="Self.ChildrenPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPolicyUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicyItems">
+              <PropertyRef Name="ChildUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_ChildrenPolicyItems">
+          <End Role="ChildrenPolicyItems" Type="Self.ChildrenPolicyItem" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPolicyItems">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="ChildrenPolicyItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildrenPolicySummary_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="0..1" />
+          <End Role="ChildrenPolicySummary" Type="Self.ChildrenPolicySummary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChildrenPolicySummary">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_ChildrenPolicyUnit">
+          <End Role="ChildrenPolicyUnit" Type="Self.ChildrenPolicyUnit" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChildrenPolicyUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="ChildUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_HotelCancellationPolicy">
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="1" />
+          <End Role="HotelCancellationPolicy1" Type="Self.HotelCancellationPolicy" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="HotelCancellationPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="HotellD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate">
+          <End Role="TB_TypePenaltyRate" Type="Self.TB_TypePenaltyRate" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePenaltyRate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="ArrivalTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate1">
+          <End Role="TB_TypePenaltyRate" Type="Self.TB_TypePenaltyRate" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePenaltyRate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="CancelRateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate2">
+          <End Role="TB_TypePenaltyRate" Type="Self.TB_TypePenaltyRate" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePenaltyRate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="ArrivalRateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelCancellationPolicy_TB_TypePrepayment">
+          <End Role="TB_TypePrepayment" Type="Self.TB_TypePrepayment" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_TypePrepayment">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="PrepaymentTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_TB_Currency">
+          <End Role="TB_Currency" Type="Self.TB_Currency" Multiplicity="0..1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelChildrenPolicy_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelChildrenPolicy" Type="Self.HotelChildrenPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelChildrenPolicy">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicySummary_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelPolicySummary" Type="Self.HotelPolicySummary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPolicySummary">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_HotelPropertyPolicy">
+          <End Role="PropertyPolicy" Type="Self.PropertyPolicy" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="PropertyPolicyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_PriceUnit">
+          <End Role="PriceUnit" Type="Self.PriceUnit" Multiplicity="0..1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PriceUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="PriceUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_PropertyPolicyItem">
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyItem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="PropertyPolicyItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_PropertyPolicyUnit">
+          <End Role="PropertyPolicyUnit" Type="Self.PropertyPolicyUnit" Multiplicity="0..1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyUnit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_TB_Currency">
+          <End Role="TB_Currency" Type="Self.TB_Currency" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelPropertyPolicy_TB_Hotel">
+          <End Role="TB_Hotel" Type="Self.TB_Hotel" Multiplicity="1" />
+          <End Role="HotelPropertyPolicy" Type="Self.HotelPropertyPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Hotel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HotelPropertyPolicy">
+              <PropertyRef Name="HotelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItems_PropertyPolicyHeader">
+          <End Role="PropertyPolicy" Type="Self.PropertyPolicy" Multiplicity="1" />
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyItem">
+              <PropertyRef Name="PropertyPolicyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItemOptions_PropertyPolicyItems">
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="1" />
+          <End Role="PropertyPolicyUnit" Type="Self.PropertyPolicyUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyItem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyUnit">
+              <PropertyRef Name="PolicyItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyPolicyItems_PropertyPolicyItems">
+          <End Role="PropertyPolicyItem" Type="Self.PropertyPolicyItem" Multiplicity="0..1" />
+          <End Role="PropertyPolicyItem1" Type="Self.PropertyPolicyItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PropertyPolicyItem">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PropertyPolicyItem1">
+              <PropertyRef Name="ParentPolicyItemID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -30183,7 +31819,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BizTbl_Culture" EntityType="Self.BizTbl_Culture" />
           <EntitySet Name="BizTbl_Error" EntityType="Self.BizTbl_Error" />
           <EntitySet Name="BizTbl_MailQueue" EntityType="Self.BizTbl_MailQueue" />
@@ -30205,8 +31841,21 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <EntitySet Name="BizTbl_UserOperation" EntityType="Self.BizTbl_UserOperation" />
           <EntitySet Name="BizTbl_UserRight" EntityType="Self.BizTbl_UserRight" />
           <EntitySet Name="BizTbl_UserSession" EntityType="Self.BizTbl_UserSession" />
+          <EntitySet Name="ChildrenPolicies" EntityType="Self.ChildrenPolicy" />
+          <EntitySet Name="ChildrenPoliciesHeaders" EntityType="Self.ChildrenPoliciesHeader" />
+          <EntitySet Name="ChildrenPolicyItems" EntityType="Self.ChildrenPolicyItem" />
+          <EntitySet Name="ChildrenPolicySummaries" EntityType="Self.ChildrenPolicySummary" />
+          <EntitySet Name="ChildrenPolicyUnits" EntityType="Self.ChildrenPolicyUnit" />
           <EntitySet Name="dtproperties" EntityType="Self.dtproperty" />
           <EntitySet Name="ELMAH_Error" EntityType="Self.ELMAH_Error" />
+          <EntitySet Name="HotelCancellationPolicies" EntityType="Self.HotelCancellationPolicy" />
+          <EntitySet Name="HotelChildrenPolicies" EntityType="Self.HotelChildrenPolicy" />
+          <EntitySet Name="HotelPolicySummaries" EntityType="Self.HotelPolicySummary" />
+          <EntitySet Name="HotelPropertyPolicies" EntityType="Self.HotelPropertyPolicy" />
+          <EntitySet Name="PriceUnits" EntityType="Self.PriceUnit" />
+          <EntitySet Name="PropertyPolicies" EntityType="Self.PropertyPolicy" />
+          <EntitySet Name="PropertyPolicyItems" EntityType="Self.PropertyPolicyItem" />
+          <EntitySet Name="PropertyPolicyUnits" EntityType="Self.PropertyPolicyUnit" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TB_Attribute" EntityType="Self.TB_Attribute" />
           <EntitySet Name="TB_AttributeHeader" EntityType="Self.TB_AttributeHeader" />
@@ -30334,6 +31983,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <EntitySet Name="TB_TypeMonth" EntityType="Self.TB_TypeMonth" />
           <EntitySet Name="TB_TypeOperation" EntityType="Self.TB_TypeOperation" />
           <EntitySet Name="TB_TypePenaltyRate" EntityType="Self.TB_TypePenaltyRate" />
+          <EntitySet Name="TB_TypePrepayment" EntityType="Self.TB_TypePrepayment" />
           <EntitySet Name="TB_TypePricePolicy" EntityType="Self.TB_TypePricePolicy" />
           <EntitySet Name="TB_TypeRegion" EntityType="Self.TB_TypeRegion" />
           <EntitySet Name="TB_TypeReservationOperation" EntityType="Self.TB_TypeReservationOperation" />
@@ -30509,6 +32159,34 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <AssociationSet Name="FK_BizTbl_UserRight_BizTbl_User1" Association="Self.FK_BizTbl_UserRight_BizTbl_User1">
             <End Role="BizTbl_User" EntitySet="BizTbl_User" />
             <End Role="BizTbl_UserRight" EntitySet="BizTbl_UserRight" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicies_BizTbl_User" Association="Self.FK_ChildrenPolicies_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="ChildrenPolicies" EntitySet="ChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicies_BizTbl_User" Association="Self.FK_HotelPropertyPolicies_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_BizTbl_User" Association="Self.FK_HotelPropertyPolicy_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PriceUnit_BizTbl_User" Association="Self.FK_PriceUnit_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="PriceUnit" EntitySet="PriceUnits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyHeader_BizTbl_User" Association="Self.FK_PropertyPolicyHeader_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="PropertyPolicy" EntitySet="PropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItems_BizTbl_User" Association="Self.FK_PropertyPolicyItems_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicySummary_BizTbl_User" Association="Self.FK_PropertyPolicySummary_BizTbl_User">
+            <End Role="BizTbl_User" EntitySet="BizTbl_User" />
+            <End Role="HotelPolicySummary" EntitySet="HotelPolicySummaries" />
           </AssociationSet>
           <AssociationSet Name="FK_TB_Attribute_BizTbl_User" Association="Self.FK_TB_Attribute_BizTbl_User">
             <End Role="BizTbl_User" EntitySet="BizTbl_User" />
@@ -31313,6 +32991,110 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <AssociationSet Name="FK_TB_UserSession_TB_Country" Association="Self.FK_TB_UserSession_TB_Country">
             <End Role="TB_Country" EntitySet="TB_Country" />
             <End Role="BizTbl_UserSession" EntitySet="BizTbl_UserSession" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicies_ChildrenPolicies" Association="Self.FK_ChildrenPolicies_ChildrenPolicies">
+            <End Role="TB_Currency" EntitySet="TB_Currency" />
+            <End Role="ChildrenPolicies" EntitySet="ChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicies_TB_Hotel" Association="Self.FK_ChildrenPolicies_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="ChildrenPolicies" EntitySet="ChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicyItems_ChildrenPoliciesHeader" Association="Self.FK_ChildrenPolicyItems_ChildrenPoliciesHeader">
+            <End Role="ChildrenPoliciesHeader" EntitySet="ChildrenPoliciesHeaders" />
+            <End Role="ChildrenPolicyItems" EntitySet="ChildrenPolicyItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_ChildrenPoliciesHeader" Association="Self.FK_HotelChildrenPolicy_ChildrenPoliciesHeader">
+            <End Role="ChildrenPoliciesHeader" EntitySet="ChildrenPoliciesHeaders" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicyItems_ChildrenPolicyUnit" Association="Self.FK_ChildrenPolicyItems_ChildrenPolicyUnit">
+            <End Role="ChildrenPolicyUnit" EntitySet="ChildrenPolicyUnits" />
+            <End Role="ChildrenPolicyItems" EntitySet="ChildrenPolicyItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_ChildrenPolicyItems" Association="Self.FK_HotelChildrenPolicy_ChildrenPolicyItems">
+            <End Role="ChildrenPolicyItems" EntitySet="ChildrenPolicyItems" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildrenPolicySummary_TB_Hotel" Association="Self.FK_ChildrenPolicySummary_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="ChildrenPolicySummary" EntitySet="ChildrenPolicySummaries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_ChildrenPolicyUnit" Association="Self.FK_HotelChildrenPolicy_ChildrenPolicyUnit">
+            <End Role="ChildrenPolicyUnit" EntitySet="ChildrenPolicyUnits" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_HotelCancellationPolicy" Association="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy">
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
+            <End Role="HotelCancellationPolicy1" EntitySet="HotelCancellationPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_Hotel" Association="Self.FK_HotelCancellationPolicy_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate" Association="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate">
+            <End Role="TB_TypePenaltyRate" EntitySet="TB_TypePenaltyRate" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate1" Association="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate1">
+            <End Role="TB_TypePenaltyRate" EntitySet="TB_TypePenaltyRate" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePenaltyRate2" Association="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate2">
+            <End Role="TB_TypePenaltyRate" EntitySet="TB_TypePenaltyRate" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelCancellationPolicy_TB_TypePrepayment" Association="Self.FK_HotelCancellationPolicy_TB_TypePrepayment">
+            <End Role="TB_TypePrepayment" EntitySet="TB_TypePrepayment" />
+            <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_TB_Currency" Association="Self.FK_HotelChildrenPolicy_TB_Currency">
+            <End Role="TB_Currency" EntitySet="TB_Currency" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelChildrenPolicy_TB_Hotel" Association="Self.FK_HotelChildrenPolicy_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicySummary_TB_Hotel" Association="Self.FK_PropertyPolicySummary_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelPolicySummary" EntitySet="HotelPolicySummaries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_HotelPropertyPolicy" Association="Self.FK_HotelPropertyPolicy_HotelPropertyPolicy">
+            <End Role="PropertyPolicy" EntitySet="PropertyPolicies" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_PriceUnit" Association="Self.FK_HotelPropertyPolicy_PriceUnit">
+            <End Role="PriceUnit" EntitySet="PriceUnits" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_PropertyPolicyItem" Association="Self.FK_HotelPropertyPolicy_PropertyPolicyItem">
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItems" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_PropertyPolicyUnit" Association="Self.FK_HotelPropertyPolicy_PropertyPolicyUnit">
+            <End Role="PropertyPolicyUnit" EntitySet="PropertyPolicyUnits" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_TB_Currency" Association="Self.FK_HotelPropertyPolicy_TB_Currency">
+            <End Role="TB_Currency" EntitySet="TB_Currency" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelPropertyPolicy_TB_Hotel" Association="Self.FK_HotelPropertyPolicy_TB_Hotel">
+            <End Role="TB_Hotel" EntitySet="TB_Hotel" />
+            <End Role="HotelPropertyPolicy" EntitySet="HotelPropertyPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItems_PropertyPolicyHeader" Association="Self.FK_PropertyPolicyItems_PropertyPolicyHeader">
+            <End Role="PropertyPolicy" EntitySet="PropertyPolicies" />
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItemOptions_PropertyPolicyItems" Association="Self.FK_PropertyPolicyItemOptions_PropertyPolicyItems">
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItems" />
+            <End Role="PropertyPolicyUnit" EntitySet="PropertyPolicyUnits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyPolicyItems_PropertyPolicyItems" Association="Self.FK_PropertyPolicyItems_PropertyPolicyItems">
+            <End Role="PropertyPolicyItem" EntitySet="PropertyPolicyItems" />
+            <End Role="PropertyPolicyItem1" EntitySet="PropertyPolicyItems" />
           </AssociationSet>
           <AssociationSet Name="FK_TB_Attribute_TB_Attribute1" Association="Self.FK_TB_Attribute_TB_Attribute1">
             <End Role="TB_Attribute" EntitySet="TB_Attribute" />
@@ -36718,7 +38500,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GBSHotelsModelStoreContainer" CdmEntityContainer="DBEntities">
+        <EntityContainerMapping StorageEntityContainer="GBSHotelsModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="BizTbl_Culture">
             <EntityTypeMapping TypeName="GBSHotelsModel.BizTbl_Culture">
               <MappingFragment StoreEntitySet="BizTbl_Culture">
@@ -37160,6 +38942,137 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenPolicies">
+            <EntityTypeMapping TypeName="GBSHotelsModel.ChildrenPolicy">
+              <MappingFragment StoreEntitySet="ChildrenPolicies">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IsAccommodate" ColumnName="IsAccommodate" />
+                <ScalarProperty Name="IsExtraBedProvided" ColumnName="IsExtraBedProvided" />
+                <ScalarProperty Name="NoOfExtraBed" ColumnName="NoOfExtraBed" />
+                <ScalarProperty Name="IsTwoYearsChild" ColumnName="IsTwoYearsChild" />
+                <ScalarProperty Name="TwoYearsChildCharge" ColumnName="TwoYearsChildCharge" />
+                <ScalarProperty Name="IsExtraBedChild" ColumnName="IsExtraBedChild" />
+                <ScalarProperty Name="ExtraBedChildUnit" ColumnName="ExtraBedChildUnit" />
+                <ScalarProperty Name="IsAdult" ColumnName="IsAdult" />
+                <ScalarProperty Name="AdultCharge" ColumnName="AdultCharge" />
+                <ScalarProperty Name="IsExistingBedChild" ColumnName="IsExistingBedChild" />
+                <ScalarProperty Name="ExistingBedChildUnit" ColumnName="ExistingBedChildUnit" />
+                <ScalarProperty Name="ExistingBedChildCount" ColumnName="ExistingBedChildCount" />
+                <ScalarProperty Name="ExistingBedChildCharge" ColumnName="ExistingBedChildCharge" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenPoliciesHeaders">
+            <EntityTypeMapping TypeName="GBSHotelsModel.ChildrenPoliciesHeader">
+              <MappingFragment StoreEntitySet="ChildrenPoliciesHeader">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="Description_en" ColumnName="Description_en" />
+                <ScalarProperty Name="Description_tr" ColumnName="Description_tr" />
+                <ScalarProperty Name="Description_de" ColumnName="Description_de" />
+                <ScalarProperty Name="Description_es" ColumnName="Description_es" />
+                <ScalarProperty Name="Description_fr" ColumnName="Description_fr" />
+                <ScalarProperty Name="Description_ru" ColumnName="Description_ru" />
+                <ScalarProperty Name="Description_it" ColumnName="Description_it" />
+                <ScalarProperty Name="Description_ar" ColumnName="Description_ar" />
+                <ScalarProperty Name="Description_ja" ColumnName="Description_ja" />
+                <ScalarProperty Name="Description_pt" ColumnName="Description_pt" />
+                <ScalarProperty Name="Description_zh" ColumnName="Description_zh" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
+                <ScalarProperty Name="PolicyType" ColumnName="PolicyType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenPolicyItems">
+            <EntityTypeMapping TypeName="GBSHotelsModel.ChildrenPolicyItem">
+              <MappingFragment StoreEntitySet="ChildrenPolicyItems">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ChildrenPolicyHeaderID" ColumnName="ChildrenPolicyHeaderID" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="Description_tr" ColumnName="Description_tr" />
+                <ScalarProperty Name="Description_en" ColumnName="Description_en" />
+                <ScalarProperty Name="Description_de" ColumnName="Description_de" />
+                <ScalarProperty Name="Description_es" ColumnName="Description_es" />
+                <ScalarProperty Name="Description_fr" ColumnName="Description_fr" />
+                <ScalarProperty Name="Description_ru" ColumnName="Description_ru" />
+                <ScalarProperty Name="Description_it" ColumnName="Description_it" />
+                <ScalarProperty Name="Description_ar" ColumnName="Description_ar" />
+                <ScalarProperty Name="Description_ja" ColumnName="Description_ja" />
+                <ScalarProperty Name="Description_pt" ColumnName="Description_pt" />
+                <ScalarProperty Name="Description_zh" ColumnName="Description_zh" />
+                <ScalarProperty Name="IsChargeable" ColumnName="IsChargeable" />
+                <ScalarProperty Name="PriceLabel" ColumnName="PriceLabel" />
+                <ScalarProperty Name="ChildUnitID" ColumnName="ChildUnitID" />
+                <ScalarProperty Name="IsProviderNeeded" ColumnName="IsProviderNeeded" />
+                <ScalarProperty Name="HasChildUnit" ColumnName="HasChildUnit" />
+                <ScalarProperty Name="IsExtrabedItem" ColumnName="IsExtrabedItem" />
+                <ScalarProperty Name="IsCheckedItem" ColumnName="IsCheckedItem" />
+                <ScalarProperty Name="IsExistingBedItem" ColumnName="IsExistingBedItem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenPolicySummaries">
+            <EntityTypeMapping TypeName="GBSHotelsModel.ChildrenPolicySummary">
+              <MappingFragment StoreEntitySet="ChildrenPolicySummary">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HasChildrenPolicy" ColumnName="HasChildrenPolicy" />
+                <ScalarProperty Name="HasExtraBedPolicy" ColumnName="HasExtraBedPolicy" />
+                <ScalarProperty Name="MaxNoExtraBed" ColumnName="MaxNoExtraBed" />
+                <ScalarProperty Name="MaxNoOfChild" ColumnName="MaxNoOfChild" />
+                <ScalarProperty Name="ChildrenPrice" ColumnName="ChildrenPrice" />
+                <ScalarProperty Name="AdultPrice" ColumnName="AdultPrice" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChildrenPolicyUnits">
+            <EntityTypeMapping TypeName="GBSHotelsModel.ChildrenPolicyUnit">
+              <MappingFragment StoreEntitySet="ChildrenPolicyUnit">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="dtproperties">
             <EntityTypeMapping TypeName="GBSHotelsModel.dtproperty">
               <MappingFragment StoreEntitySet="dtproperties">
@@ -37187,6 +39100,183 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
                 <ScalarProperty Name="TimeUtc" ColumnName="TimeUtc" />
                 <ScalarProperty Name="Sequence" ColumnName="Sequence" />
                 <ScalarProperty Name="AllXml" ColumnName="AllXml" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotelCancellationPolicies">
+            <EntityTypeMapping TypeName="GBSHotelsModel.HotelCancellationPolicy">
+              <MappingFragment StoreEntitySet="HotelCancellationPolicy">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HotellD" ColumnName="HotellD" />
+                <ScalarProperty Name="IsPublicDisplay" ColumnName="IsPublicDisplay" />
+                <ScalarProperty Name="IsPrivateDisplay" ColumnName="IsPrivateDisplay" />
+                <ScalarProperty Name="IsPromotionDisplay" ColumnName="IsPromotionDisplay" />
+                <ScalarProperty Name="IsPeriodExists" ColumnName="IsPeriodExists" />
+                <ScalarProperty Name="ArrivalTypeID" ColumnName="ArrivalTypeID" />
+                <ScalarProperty Name="ArrivalRateID" ColumnName="ArrivalRateID" />
+                <ScalarProperty Name="PrepaymentTypeID" ColumnName="PrepaymentTypeID" />
+                <ScalarProperty Name="CancelRateID" ColumnName="CancelRateID" />
+                <ScalarProperty Name="IsPrepayment" ColumnName="IsPrepayment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotelChildrenPolicies">
+            <EntityTypeMapping TypeName="GBSHotelsModel.HotelChildrenPolicy">
+              <MappingFragment StoreEntitySet="HotelChildrenPolicy">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ChildrenPolicyHeaderID" ColumnName="ChildrenPolicyHeaderID" />
+                <ScalarProperty Name="ChildrenPolicyItemID" ColumnName="ChildrenPolicyItemID" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="NoOfExtraBed" ColumnName="NoOfExtraBed" />
+                <ScalarProperty Name="NoOfChildExistingBed" ColumnName="NoOfChildExistingBed" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="ChildUnitID" ColumnName="ChildUnitID" />
+                <ScalarProperty Name="IsAttributeSelected" ColumnName="IsAttributeSelected" />
+                <ScalarProperty Name="IsChildrenAccommodated" ColumnName="IsChildrenAccommodated" />
+                <ScalarProperty Name="IsExtrabedNeeded" ColumnName="IsExtrabedNeeded" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotelPolicySummaries">
+            <EntityTypeMapping TypeName="GBSHotelsModel.HotelPolicySummary">
+              <MappingFragment StoreEntitySet="HotelPolicySummary">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
+                <ScalarProperty Name="Icons" ColumnName="Icons" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotelPropertyPolicies">
+            <EntityTypeMapping TypeName="GBSHotelsModel.HotelPropertyPolicy">
+              <MappingFragment StoreEntitySet="HotelPropertyPolicy">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PropertyPolicyID" ColumnName="PropertyPolicyID" />
+                <ScalarProperty Name="PropertyPolicyItemID" ColumnName="PropertyPolicyItemID" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="UnitValue" ColumnName="UnitValue" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="PriceUnitID" ColumnName="PriceUnitID" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PriceUnits">
+            <EntityTypeMapping TypeName="GBSHotelsModel.PriceUnit">
+              <MappingFragment StoreEntitySet="PriceUnit">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyPolicies">
+            <EntityTypeMapping TypeName="GBSHotelsModel.PropertyPolicy">
+              <MappingFragment StoreEntitySet="PropertyPolicy">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Description_en" ColumnName="Description_en" />
+                <ScalarProperty Name="Description_tr" ColumnName="Description_tr" />
+                <ScalarProperty Name="Description_de" ColumnName="Description_de" />
+                <ScalarProperty Name="Description_es" ColumnName="Description_es" />
+                <ScalarProperty Name="Description_fr" ColumnName="Description_fr" />
+                <ScalarProperty Name="Description_ru" ColumnName="Description_ru" />
+                <ScalarProperty Name="Description_it" ColumnName="Description_it" />
+                <ScalarProperty Name="Description_ja" ColumnName="Description_ja" />
+                <ScalarProperty Name="Description_zh" ColumnName="Description_zh" />
+                <ScalarProperty Name="Description_pt" ColumnName="Description_pt" />
+                <ScalarProperty Name="Description_ar" ColumnName="Description_ar" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
+                <ScalarProperty Name="Icons" ColumnName="Icons" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyPolicyItems">
+            <EntityTypeMapping TypeName="GBSHotelsModel.PropertyPolicyItem">
+              <MappingFragment StoreEntitySet="PropertyPolicyItem">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PropertyPolicyID" ColumnName="PropertyPolicyID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsParentItem" ColumnName="IsParentItem" />
+                <ScalarProperty Name="IsChargedItem" ColumnName="IsChargedItem" />
+                <ScalarProperty Name="PriceLabel" ColumnName="PriceLabel" />
+                <ScalarProperty Name="ParentPolicyItemID" ColumnName="ParentPolicyItemID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
+                <ScalarProperty Name="RelatedIcon" ColumnName="RelatedIcon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyPolicyUnits">
+            <EntityTypeMapping TypeName="GBSHotelsModel.PropertyPolicyUnit">
+              <MappingFragment StoreEntitySet="PropertyPolicyUnit">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="PolicyItemID" ColumnName="PolicyItemID" />
+                <ScalarProperty Name="IsHideAttribute" ColumnName="IsHideAttribute" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -40234,6 +42324,28 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
                 <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
                 <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
                 <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TypePrepayment">
+            <EntityTypeMapping TypeName="GBSHotelsModel.TB_TypePrepayment">
+              <MappingFragment StoreEntitySet="TB_TypePrepayment">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Name_de" ColumnName="Name_de" />
+                <ScalarProperty Name="Name_es" ColumnName="Name_es" />
+                <ScalarProperty Name="Name_fr" ColumnName="Name_fr" />
+                <ScalarProperty Name="Name_ru" ColumnName="Name_ru" />
+                <ScalarProperty Name="Name_it" ColumnName="Name_it" />
+                <ScalarProperty Name="Name_ar" ColumnName="Name_ar" />
+                <ScalarProperty Name="Name_ja" ColumnName="Name_ja" />
+                <ScalarProperty Name="Name_pt" ColumnName="Name_pt" />
+                <ScalarProperty Name="Name_zh" ColumnName="Name_zh" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -15,10 +15,10 @@ namespace GBSExtranet.Api.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class DBEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public DBEntities()
-            : base("name=DBEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -48,8 +48,21 @@ namespace GBSExtranet.Api.Models
         public virtual DbSet<BizTbl_UserOperation> BizTbl_UserOperation { get; set; }
         public virtual DbSet<BizTbl_UserRight> BizTbl_UserRight { get; set; }
         public virtual DbSet<BizTbl_UserSession> BizTbl_UserSession { get; set; }
+        public virtual DbSet<ChildrenPolicy> ChildrenPolicies { get; set; }
+        public virtual DbSet<ChildrenPoliciesHeader> ChildrenPoliciesHeaders { get; set; }
+        public virtual DbSet<ChildrenPolicyItem> ChildrenPolicyItems { get; set; }
+        public virtual DbSet<ChildrenPolicySummary> ChildrenPolicySummaries { get; set; }
+        public virtual DbSet<ChildrenPolicyUnit> ChildrenPolicyUnits { get; set; }
         public virtual DbSet<dtproperty> dtproperties { get; set; }
         public virtual DbSet<ELMAH_Error> ELMAH_Error { get; set; }
+        public virtual DbSet<HotelCancellationPolicy> HotelCancellationPolicies { get; set; }
+        public virtual DbSet<HotelChildrenPolicy> HotelChildrenPolicies { get; set; }
+        public virtual DbSet<HotelPolicySummary> HotelPolicySummaries { get; set; }
+        public virtual DbSet<HotelPropertyPolicy> HotelPropertyPolicies { get; set; }
+        public virtual DbSet<PriceUnit> PriceUnits { get; set; }
+        public virtual DbSet<PropertyPolicy> PropertyPolicies { get; set; }
+        public virtual DbSet<PropertyPolicyItem> PropertyPolicyItems { get; set; }
+        public virtual DbSet<PropertyPolicyUnit> PropertyPolicyUnits { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TB_Attribute> TB_Attribute { get; set; }
         public virtual DbSet<TB_AttributeHeader> TB_AttributeHeader { get; set; }
@@ -177,6 +190,7 @@ namespace GBSExtranet.Api.Models
         public virtual DbSet<TB_TypeMonth> TB_TypeMonth { get; set; }
         public virtual DbSet<TB_TypeOperation> TB_TypeOperation { get; set; }
         public virtual DbSet<TB_TypePenaltyRate> TB_TypePenaltyRate { get; set; }
+        public virtual DbSet<TB_TypePrepayment> TB_TypePrepayment { get; set; }
         public virtual DbSet<TB_TypePricePolicy> TB_TypePricePolicy { get; set; }
         public virtual DbSet<TB_TypeRegion> TB_TypeRegion { get; set; }
         public virtual DbSet<TB_TypeReservationOperation> TB_TypeReservationOperation { get; set; }
@@ -198,17 +212,17 @@ namespace GBSExtranet.Api.Models
         public virtual DbSet<TB_WishLists> TB_WishLists { get; set; }
         public virtual DbSet<tblAuditLog> tblAuditLogs { get; set; }
     
-        [DbFunction("DBEntities", "BizFnc_GetPageControls")]
+        [DbFunction("Entities", "BizFnc_GetPageControls")]
         public virtual IQueryable<BizFnc_GetPageControls_Result> BizFnc_GetPageControls(Nullable<int> pageId)
         {
             var pageIdParameter = pageId.HasValue ?
                 new ObjectParameter("PageId", pageId) :
                 new ObjectParameter("PageId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<BizFnc_GetPageControls_Result>("[DBEntities].[BizFnc_GetPageControls](@PageId)", pageIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<BizFnc_GetPageControls_Result>("[Entities].[BizFnc_GetPageControls](@PageId)", pageIdParameter);
         }
     
-        [DbFunction("DBEntities", "Split")]
+        [DbFunction("Entities", "Split")]
         public virtual IQueryable<Split_Result> Split(string sTRING, string delimiter)
         {
             var sTRINGParameter = sTRING != null ?
@@ -219,7 +233,7 @@ namespace GBSExtranet.Api.Models
                 new ObjectParameter("Delimiter", delimiter) :
                 new ObjectParameter("Delimiter", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Split_Result>("[DBEntities].[Split](@STRING, @Delimiter)", sTRINGParameter, delimiterParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Split_Result>("[Entities].[Split](@STRING, @Delimiter)", sTRINGParameter, delimiterParameter);
         }
     
         public virtual int B_BizSp_GetUsers_SP(string culture, string orderBy, Nullable<int> pagingSize, Nullable<int> pageIndex, Nullable<long> userID, string name, string surname, string userName, Nullable<int> firmID, Nullable<int> countryID, Nullable<long> regionID, Nullable<long> cityID, Nullable<int> securityGroupID, Nullable<int> securityGroupLevel, Nullable<int> statusID, Nullable<bool> active, Nullable<bool> locked)

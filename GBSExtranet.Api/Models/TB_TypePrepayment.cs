@@ -12,17 +12,16 @@ namespace GBSExtranet.Api.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class PropertyPolicyUnit
+    public partial class TB_TypePrepayment
     {
-        public PropertyPolicyUnit()
+        public TB_TypePrepayment()
         {
-            this.HotelPropertyPolicies = new HashSet<HotelPropertyPolicy>();
+            this.HotelCancellationPolicies = new HashSet<HotelCancellationPolicy>();
         }
     
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Name_en { get; set; }
         public string Name_tr { get; set; }
+        public string Name_en { get; set; }
         public string Name_de { get; set; }
         public string Name_es { get; set; }
         public string Name_fr { get; set; }
@@ -32,13 +31,11 @@ namespace GBSExtranet.Api.Models
         public string Name_ja { get; set; }
         public string Name_pt { get; set; }
         public string Name_zh { get; set; }
-        public int PolicyItemID { get; set; }
-        public Nullable<bool> IsHideAttribute { get; set; }
-        public Nullable<bool> Active { get; set; }
-        public Nullable<System.DateTime> OpDateTime { get; set; }
-        public Nullable<long> OpUserID { get; set; }
+        public Nullable<short> Sort { get; set; }
+        public bool Active { get; set; }
+        public System.DateTime OpDateTime { get; set; }
+        public long OpUserID { get; set; }
     
-        public virtual ICollection<HotelPropertyPolicy> HotelPropertyPolicies { get; set; }
-        public virtual PropertyPolicyItem PropertyPolicyItem { get; set; }
+        public virtual ICollection<HotelCancellationPolicy> HotelCancellationPolicies { get; set; }
     }
 }

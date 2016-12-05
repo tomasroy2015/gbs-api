@@ -72,6 +72,7 @@
     <Compile Include="DBModel\TB_Hotel.cs" />
     <Compile Include="DBModel\TB_HotelAttribute.cs" />
     <Compile Include="DBModel\TB_Region.cs" />
+    <Compile Include="DBModel\TB_TypePrepayment.cs" />
     <Compile Include="GBSDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />

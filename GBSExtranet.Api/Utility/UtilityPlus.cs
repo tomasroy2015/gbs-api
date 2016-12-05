@@ -9,6 +9,14 @@ namespace GBSExtranet.Api
 {
     public static class UtilityPlus
     {
+        public static string GetNameByCulture(string cultureCode)
+        {
+            return "Name_" + cultureCode;
+        }
+        public static string GetDescriptionByCulture(string cultureCode)
+        {
+            return "Description_" + cultureCode;
+        }
         /// <summary>
         /// Converts a List&lt;T&gt; to a DataTable.
         /// </summary>

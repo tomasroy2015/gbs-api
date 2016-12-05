@@ -18,18 +18,22 @@ namespace GBSExtranet.Api.Models
         public int PropertyPolicyID { get; set; }
         public int PropertyPolicyItemID { get; set; }
         public int HotelID { get; set; }
-        public int UnitID { get; set; }
+        public Nullable<int> UnitID { get; set; }
         public string UnitValue { get; set; }
         public Nullable<decimal> Price { get; set; }
+        public Nullable<int> PriceUnitID { get; set; }
         public int CurrencyID { get; set; }
         public bool Active { get; set; }
         public System.DateTime OpDateTime { get; set; }
         public long OpUserID { get; set; }
     
         public virtual BizTbl_User BizTbl_User { get; set; }
+        public virtual BizTbl_User BizTbl_User1 { get; set; }
         public virtual PropertyPolicy PropertyPolicy { get; set; }
-        public virtual PropertyPolicyUnit PropertyPolicyUnit { get; set; }
+        public virtual PriceUnit PriceUnit { get; set; }
         public virtual PropertyPolicyItem PropertyPolicyItem { get; set; }
+        public virtual PropertyPolicyUnit PropertyPolicyUnit { get; set; }
         public virtual TB_Currency TB_Currency { get; set; }
+        public virtual TB_Hotel TB_Hotel { get; set; }
     }
 }

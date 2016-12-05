@@ -264,915 +264,927 @@
     </Compile>
     <Compile Include="Models\ApiResponseMessage.cs" />
     <Compile Include="Models\BizFnc_GetPageControls_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizSP_GetPage_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizSP_GetParameter_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_Culture.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_Error.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_MailQueue.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_MailTemplate.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_Message.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_Page.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_PageControl.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_Parameter.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_Security.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_SecurityGroup.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_SecurityGroupRight.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_Table.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_TableColumn.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_TableSecurityGroupRight.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_User.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_UserBusinessPartner.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_UserHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_UserHotel.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_UserOperation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_UserRight.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BizTbl_UserSession.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_CheckEmail_BizTbl_User_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_DisplayTable_BizTbl_Table_Sp_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_EX_GetAllMessage_BizTbl_Message_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetAllRegions_TB_Region_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetAttributeCategory_TB_AttributeHeader_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetAttributeType_TB_TypeAttribute_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetAuthority_BizTbl_SecurityGroup_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetBedType_TB_TypeBed_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetBusinessPartnerPax_TB_BusinessPartnerPax_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetBusinessPartnerType_TB_TypeBusinessPartner_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetBusinessPartner_BizTbl_UserBusinessPartner_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetCaptionValues_BizTbl_TableColumn_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetCreateUser_BizTbl_User_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetCreditCard_TB_TypeCreditCard_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_Getculture_BizTbl_Culture_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetCurrencyDropdown_TB_Currency_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDates_TB_Date_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDay_TB_TypeDays_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDealDropdown_TB_Deal_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownCancelType_TB_TypeCancel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownCity_TB_TB_Region_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownCreditCardType_TB_TypeCreditCard_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownDescription_BizTbl_Security_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownFirm_TB_Firm_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownPenaltyRate_TB_TypePenaltyRate_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownRequestStatus_TB_TypeFirmRequestStatus_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownRequestType_TB_TypeFirmRequest_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetDropdownRole_BizTbl_SecurityGroup_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetFirmDropdown_TB_Firm_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHitTableValue_TB_HitCount_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotelAccommodation_TB_TypeHotelAccommodation_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotelAttribute_TB_Attribute_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotelByHotelID_Tb_Hotel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotelChain_TB_TypeHotelChain_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotelClass_TB_TypeHotelClass_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotelSearchParameter_TB_HotelSearchParameter_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotels_TB_Hotel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetHotelType_TB_TypeHotel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetMessageStatus_TB_TypeMessageStatus_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetMessageSubject_TB_TypeMessageSubject_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetOperationType_TB_TypeOperation_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetPagesDropdown_TB_Currency_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetPart_TB_Part_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetPeriod_TB_Period_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetPhotos_TB_Photo_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetPricePlicy_TB_TypePricePolicy_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetPromotion_TB_Promotion_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetRegionsDropdown_TB_Region_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetRegions_TB_Region_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetRelatedAttribute_TB_Attribute_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetReservationOperation_TB_TypeReservationOperation_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetReservationStatus_TB_TypeReservationStatus_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetReviewScale_TB_TypeReviewScale_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetReviewType_TB_TypeReview_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetRoomType_TB_TypeRoom_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetSecurityGroupsUseroperations_BizTbl_SecurityGroup_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetSecurityGroups_BizTbl_SecurityGroups_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetSecurityGroup_BizTbl_SecurityGroup_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTables_BizTbl_Table_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTemplate_BizTbl_MailQueue_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTourFrequencyDropdown_TB_TypeTourFrequency_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTour_TB_Tour_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTransferPeriod_TB_TransferPeriod_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTraveller_TB_TypeTraveller_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTypeDeposit_TB_TypeDeposit_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTypeFirmRequest_TB_TypeFirmRequest_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTypeInvoiceStatus_TB_TypeInvoiceStatus_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTypeSmoking_TB_TypeSmoking_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetTypeView_TB_TypeView_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetUnit_TB_Unit_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetUserHotelByUserID_TB_Hotel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetUserHotel_BizTbl_UserHotel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetUserInfoByEmail_Sp_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetUserOperationDetails_BizTbl_UserOperation_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetUserOperations_BizTbl_User_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Ex_GetUser_BizTbl_User_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_ForgetPassword_BizTbl_User_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetBank_TB_Bank_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetBiztable_BizTbl_Table_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetBusinessPartner_TB_BusinessPartner_Sp_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetChannelManager_TB_ChannelManager_Sp_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetCreditCard_TB_TypeCreditCard_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetCultureAvailableCount_BizTbl_Culture_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Getculture_BizTbl_Culture_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetCurrentHitcount_TB_HitCount_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetHotelImage_TB_Photo_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetHotelRoomDetails_TB_HotelRoom_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetHotelsList_TB_Hotel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetLatestNewsByID_TB_LatestNews_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetMessagecodeValues_BizTbl_Message_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetRecentActiveReservation_TB_Reservation_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetReservationReviews_TB_ReservationReview_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_getreviewcount_ReservationReview_sp_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetRoomAvailability_TB_HotelAvailability_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetRoomRate_TB_HotelRate_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetRoutingDetails_TB_Hotel_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetSaveCreditCardsByUser_TB_CreditCardsDetails_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_GetuserCreditCards_TB_CreditCardsDetails_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_InsertRoomFacilities_TB_HotelRoomAttribute_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Insert_ContactInfo_TB_Firm_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_Resendverification_BizTbl_User_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\B_UserLogin_BizTbl_User_SP_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChildrenPoliciesHeader.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChildrenPolicy.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChildrenPolicyItem.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChildrenPolicySummary.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChildrenPolicyUnit.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\dtproperty.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dt_getpropertiesbyid_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dt_getpropertiesbyid_u_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ELMAH_Error.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Filter.cs" />
-    <Compile Include="Models\GBSHotelsEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GBSHotelsEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\GBSHotelsEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\GBSHotelsEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GBSHotelsEntities.edmx</DependentUpon>
+    <Compile Include="Models\HotelCancellationPolicy.cs">
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HotelChildrenPolicy.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HotelPolicySummary.cs">
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HotelPropertyPolicy.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\limit.cs" />
     <Compile Include="Models\order.cs" />
     <Compile Include="Models\between.cs" />
+    <Compile Include="Models\PriceUnit.cs">
+      <DependentUpon>DBEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PropertyPolicy.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PropertyPolicyItem.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PropertyPolicyUnit.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SelectStats_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SessionWrapper.cs" />
     <Compile Include="Models\Split_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblAuditLog.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Attribute.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_AttributeHeader.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Bank.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BankHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartner.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartnerCancelPolicy.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartnerCancelPolicyHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartnerHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartnerPax.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartnerPaxHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartnerRegion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_BusinessPartnerRegionHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ChannelManager.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Continents.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Country.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_CreditCardsDetails.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Currency.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Date.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Deal.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_DealHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_DealReservation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_DealReservationHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_DealReservationPromotion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_EmailList.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ExchangeRate.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ExchangeRateHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_FAQ.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Firm.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_FirmHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_FirmRequest.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_FirmRequestHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_GuestUser.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HitCount.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Hotel.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelAttribute.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelAttributeHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelAvailability.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelAvailabilityHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelCancelPolicy.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelCancelPolicyHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelComission.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelComissionHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelCreditCard.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelCreditCardHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelMinumumAccommodation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelPromotion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelPromotionFreebie.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelPromotionHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelPromotionRoom.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRate.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRateHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRegion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRegionHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelReservation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelReservationHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelReservationPromotion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelReservationRate.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelReservationRateHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRoom.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRoomAttribute.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRoomAttributeHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRoomBed.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRoomBedHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelRoomHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelSearch.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelSearchHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_HotelSearchParameter.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Invoice.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_InvoiceDetail.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_InvoiceDetailHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_InvoiceHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_IPToNation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_LatestNews.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Message.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Messenger.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Part.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Period.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Photo.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Promotion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Region.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Reservation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ReservationHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ReservationReview.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ReservationReviewDetail.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ReservationReviewDetailHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ReservationReviewHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_ReservationStatusHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_SP_GetCountryFromIPNumber_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_SP_GetHotelAvailability_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_SP_GetHotelPromotionsDailyDiscountPercentage_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_SP_GetHotelRate_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_SP_GetHotelSearchResult_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_SP_GetReservationCC_Result.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Subscription.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Tour.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TourAttribute.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TourHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TourRegion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TourRegionHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TourReservation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TourReservationHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TourReservationPromotion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Transfer.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TransferHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TransferPeriod.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TransferReservation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TransferReservationHistory.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TransferReservationPromotion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeAttribute.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeBed.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeBusinessPartner.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeCancel.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeCreditCard.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeData.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeDay.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeDeposit.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeFirmRequest.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeFirmRequestStatus.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeFreebie.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeHotel.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeHotelAccommodation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeHotelBudget.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeHotelChain.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeHotelClass.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeHotelSearchSort.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeInvoiceStatus.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeMessageStatus.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeMessageSubject.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeMonth.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeOperation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypePenaltyRate.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TB_TypePrepayment.cs">
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypePricePolicy.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeRegion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeReservationOperation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeReservationStatus.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeReview.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeReviewEvaluation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeReviewScale.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeReviewStatus.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeRoom.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeSalutation.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeSmoking.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeStatus.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeSubRegion.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeTourFrequency.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeTraveller.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeVehicle.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_TypeView.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_Unit.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TB_WishLists.cs">
-      <DependentUpon>GBSHotelsEntities.tt</DependentUpon>
+      <DependentUpon>DBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceLayer\AccountService.cs" />
@@ -1233,6 +1245,7 @@
     <Compile Include="ViewModel\ResetPassword.cs" />
     <Compile Include="Models\ResponseObject.cs" />
     <Compile Include="ViewModel\RoomRateAvailability.cs" />
+    <Compile Include="ViewModel\TypePrepayment.cs" />
     <Compile Include="ViewModel\User.cs" />
     <Compile Include="ViewModel\UserOperation.cs" />
   </ItemGroup>
@@ -1264,15 +1277,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\GBSHotelsEntities.Context.tt">
+    <Content Include="Models\DBEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GBSHotelsEntities.edmx</DependentUpon>
-      <LastGenOutput>GBSHotelsEntities.Context.cs</LastGenOutput>
+      <DependentUpon>DBEntities.edmx</DependentUpon>
+      <LastGenOutput>DBEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\GBSHotelsEntities.tt">
+    <Content Include="Models\DBEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GBSHotelsEntities.edmx</DependentUpon>
-      <LastGenOutput>GBSHotelsEntities.cs</LastGenOutput>
+      <DependentUpon>DBEntities.edmx</DependentUpon>
+      <LastGenOutput>DBEntities.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\Internet.png" />
     <Content Include="Resources\parking.png" />
@@ -1298,12 +1311,12 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\GBSHotelsEntities.edmx">
+    <EntityDeploy Include="Models\DBEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GBSHotelsEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\GBSHotelsEntities.edmx.diagram">
-      <DependentUpon>GBSHotelsEntities.edmx</DependentUpon>
+    <Content Include="Models\DBEntities.edmx.diagram">
+      <DependentUpon>DBEntities.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\api.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

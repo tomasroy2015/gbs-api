@@ -32,6 +32,7 @@ namespace GBSExtranet.Repository
         public DbSet<HotelPropertyPolicy> HotelPropertyPolicies { get; set; }
         public DbSet<PriceUnit> PriceUnits { get; set; }
         public DbSet<HotelPolicySummary> HotelPoicySummary { get; set; }
+        public DbSet<TB_TypePrepayment> TypePrepayments { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

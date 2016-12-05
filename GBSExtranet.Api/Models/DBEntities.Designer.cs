@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\gbs-extranet-api\GBSExtranet.Api\GBSExtranet.Api\Models\DBEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Api\Models\DBEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

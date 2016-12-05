@@ -18,12 +18,23 @@ namespace GBSExtranet.Api.Models
         {
             this.HotelPropertyPolicies = new HashSet<HotelPropertyPolicy>();
             this.PropertyPolicyUnits = new HashSet<PropertyPolicyUnit>();
-            this.PropertyPolicyItems1 = new HashSet<PropertyPolicyItem>();
+            this.PropertyPolicyItem1 = new HashSet<PropertyPolicyItem>();
         }
     
         public int ID { get; set; }
         public int PropertyPolicyID { get; set; }
         public string Name { get; set; }
+        public string Name_en { get; set; }
+        public string Name_tr { get; set; }
+        public string Name_de { get; set; }
+        public string Name_es { get; set; }
+        public string Name_fr { get; set; }
+        public string Name_ru { get; set; }
+        public string Name_it { get; set; }
+        public string Name_ar { get; set; }
+        public string Name_ja { get; set; }
+        public string Name_pt { get; set; }
+        public string Name_zh { get; set; }
         public string Description { get; set; }
         public Nullable<bool> IsParentItem { get; set; }
         public Nullable<bool> IsChargedItem { get; set; }
@@ -38,7 +49,7 @@ namespace GBSExtranet.Api.Models
         public virtual ICollection<HotelPropertyPolicy> HotelPropertyPolicies { get; set; }
         public virtual PropertyPolicy PropertyPolicy { get; set; }
         public virtual ICollection<PropertyPolicyUnit> PropertyPolicyUnits { get; set; }
-        public virtual ICollection<PropertyPolicyItem> PropertyPolicyItems1 { get; set; }
-        public virtual PropertyPolicyItem PropertyPolicyItem1 { get; set; }
+        public virtual ICollection<PropertyPolicyItem> PropertyPolicyItem1 { get; set; }
+        public virtual PropertyPolicyItem PropertyPolicyItem2 { get; set; }
     }
 }

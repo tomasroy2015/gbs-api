@@ -882,7 +882,6 @@
     <Property Name="IsPublicDisplay" Type="Boolean" />
     <Property Name="IsPrivateDisplay" Type="Boolean" />
     <Property Name="IsPromotionDisplay" Type="Boolean" />
-    <Property Name="IsPeriodExists" Type="Boolean" />
     <Property Name="ArrivalTypeID" Type="Int32" />
     <Property Name="ArrivalRateID" Type="Int32" />
     <Property Name="PrepaymentTypeID" Type="Int32" />

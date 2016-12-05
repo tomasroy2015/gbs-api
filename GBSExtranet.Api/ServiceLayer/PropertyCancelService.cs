@@ -8,6 +8,7 @@ using System.ServiceModel;
 using GBSExtranet.Api.ViewModel;
 using Business;
 using System.Data;
+using GBSExtranet.Repository;
 
 namespace GBSExtranet.Api.ServiceLayer
 {
@@ -114,7 +115,23 @@ namespace GBSExtranet.Api.ServiceLayer
             }
             return ListOfModel;
         }
-          
-          
+
+        public List<TypePrepayment> GetPrepaymentNames(string culture)
+        {
+            GBSDbContext _db = new GBSDbContext();
+            List<TypePrepayment> list = new List<TypePrepayment>();
+            var names = _db.TypePrepayments.ToList().OrderBy(o => o.Sort);
+            if (names != null)
+            {
+                foreach (var p in names)
+                {
+                    var obj = new TypePrepayment();
+                    obj.ID = p.ID;
+                    obj.Name = new Tools().GetDynamicSortProperty(p, "Name_" + culture) as string;
+                    list.Add(obj);
+                }
+            }
+            return list;
+        }
     }
 }

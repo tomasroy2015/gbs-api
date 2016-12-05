@@ -55,3 +55,11 @@ F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\EntityFramew
 F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.xml
 F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
 F:\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.dll
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.pdb
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\EntityFramework.dll
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\EntityFramework.xml
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
+E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb

@@ -10,12 +10,12 @@ namespace GBSExtranet.Api.ServiceLayer
 {
     public class BaseService : IDisposable 
     {
-        public GBSHotelsEntities _db;
+        public Entities _db;
         public DataContext _context;
         public SqlConnection _sqlConnection;
         public BaseService()
         {
-            _db = new GBSHotelsEntities();
+            _db = new Entities();
             _context = new DataContext(ConfigurationManager.ConnectionStrings["GBSConnection"].ConnectionString);
             _sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["GBSConnection"].ConnectionString);
         }
