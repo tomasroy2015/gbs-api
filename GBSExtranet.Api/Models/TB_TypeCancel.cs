@@ -16,6 +16,7 @@ namespace GBSExtranet.Api.Models
     {
         public TB_TypeCancel()
         {
+            this.HotelCancellationPolicies = new HashSet<HotelCancellationPolicy>();
             this.TB_BusinessPartnerCancelPolicy = new HashSet<TB_BusinessPartnerCancelPolicy>();
             this.TB_BusinessPartnerCancelPolicyHistory = new HashSet<TB_BusinessPartnerCancelPolicyHistory>();
             this.TB_HotelCancelPolicy = new HashSet<TB_HotelCancelPolicy>();
@@ -42,6 +43,7 @@ namespace GBSExtranet.Api.Models
         public string Name_zh { get; set; }
     
         public virtual BizTbl_User BizTbl_User { get; set; }
+        public virtual ICollection<HotelCancellationPolicy> HotelCancellationPolicies { get; set; }
         public virtual ICollection<TB_BusinessPartnerCancelPolicy> TB_BusinessPartnerCancelPolicy { get; set; }
         public virtual ICollection<TB_BusinessPartnerCancelPolicyHistory> TB_BusinessPartnerCancelPolicyHistory { get; set; }
         public virtual ICollection<TB_HotelCancelPolicy> TB_HotelCancelPolicy { get; set; }

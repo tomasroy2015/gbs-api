@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GBSHotelsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="GBSHotelsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6013: The table/view 'Gbshotels.data.chain$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="chain$">
@@ -645,15 +645,40 @@ warning 6013: The table/view 'Gbshotels.dbo.Databkpmail' does not have a primary
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="HotellD" Type="int" Nullable="false" />
+          <Property Name="PolicyDescription_tr" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_en" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_de" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_es" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_fr" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_ru" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_it" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_ar" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_ja" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_pt" Type="nvarchar(max)" />
+          <Property Name="PolicyDescription_zh" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_en" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_tr" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_ar" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_ja" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_zh" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_pt" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_it" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_ru" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_fr" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_de" Type="nvarchar(max)" />
+          <Property Name="PaymentDescription_es" Type="nvarchar(max)" />
           <Property Name="IsPublicDisplay" Type="bit" />
           <Property Name="IsPrivateDisplay" Type="bit" />
           <Property Name="IsPromotionDisplay" Type="bit" />
           <Property Name="IsPeriodExists" Type="bit" />
           <Property Name="ArrivalTypeID" Type="int" />
           <Property Name="ArrivalRateID" Type="int" />
+          <Property Name="CancelTypeID" Type="int" />
           <Property Name="PrepaymentTypeID" Type="int" />
           <Property Name="CancelRateID" Type="int" />
           <Property Name="IsPrepayment" Type="bit" />
+          <Property Name="OpDateTime" Type="datetime" />
+          <Property Name="OpUserID" Type="bigint" />
         </EntityType>
         <EntityType Name="HotelChildrenPolicy">
           <Key>
@@ -3798,6 +3823,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Property Name="Name_ja" Type="nvarchar(max)" />
           <Property Name="Name_pt" Type="nvarchar(max)" />
           <Property Name="Name_zh" Type="nvarchar(max)" />
+          <Property Name="IsAfterReservation" Type="bit" />
           <Property Name="Sort" Type="smallint" />
           <Property Name="Active" Type="bit" Nullable="false" />
           <Property Name="OpDateTime" Type="datetime" Nullable="false" />
@@ -4815,14 +4841,14 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelCancellationPolicy_HotelCancellationPolicy">
-          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="1" />
-          <End Role="HotelCancellationPolicy1" Type="Self.HotelCancellationPolicy" Multiplicity="0..1" />
+          <End Role="TB_TypeCancel" Type="Self.TB_TypeCancel" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="HotelCancellationPolicy">
+            <Principal Role="TB_TypeCancel">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="HotelCancellationPolicy1">
-              <PropertyRef Name="ID" />
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="CancelTypeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -15574,8 +15600,8 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <End Role="ChildrenPolicySummary" EntitySet="ChildrenPolicySummary" />
           </AssociationSet>
           <AssociationSet Name="FK_HotelCancellationPolicy_HotelCancellationPolicy" Association="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy">
+            <End Role="TB_TypeCancel" EntitySet="TB_TypeCancel" />
             <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
-            <End Role="HotelCancellationPolicy1" EntitySet="HotelCancellationPolicy" />
           </AssociationSet>
           <AssociationSet Name="FK_HotelCancellationPolicy_TB_Hotel" Association="Self.FK_HotelCancellationPolicy_TB_Hotel">
             <End Role="TB_Hotel" EntitySet="TB_Hotel" />
@@ -18114,8 +18140,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <End Role="BizTbl_UserSession" EntitySet="BizTbl_UserSession" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GBSHotelsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -18998,17 +19023,41 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="HotellD" Type="Int32" Nullable="false" />
+          <Property Name="PolicyDescription_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyDescription_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDescription_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IsPublicDisplay" Type="Boolean" />
           <Property Name="IsPrivateDisplay" Type="Boolean" />
           <Property Name="IsPromotionDisplay" Type="Boolean" />
           <Property Name="IsPeriodExists" Type="Boolean" />
           <Property Name="ArrivalTypeID" Type="Int32" />
           <Property Name="ArrivalRateID" Type="Int32" />
+          <Property Name="CancelTypeID" Type="Int32" />
           <Property Name="PrepaymentTypeID" Type="Int32" />
           <Property Name="CancelRateID" Type="Int32" />
           <Property Name="IsPrepayment" Type="Boolean" />
-          <NavigationProperty Name="HotelCancellationPolicy1" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy" ToRole="HotelCancellationPolicy1" />
-          <NavigationProperty Name="HotelCancellationPolicy2" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy1" ToRole="HotelCancellationPolicy" />
+          <Property Name="OpDateTime" Type="DateTime" Precision="3" />
+          <Property Name="OpUserID" Type="Int64" />
+          <NavigationProperty Name="TB_TypeCancel" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy" ToRole="TB_TypeCancel" />
           <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_HotelCancellationPolicy_TB_Hotel" FromRole="HotelCancellationPolicy" ToRole="TB_Hotel" />
           <NavigationProperty Name="TB_TypePenaltyRate" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate" FromRole="HotelCancellationPolicy" ToRole="TB_TypePenaltyRate" />
           <NavigationProperty Name="TB_TypePenaltyRate1" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate1" FromRole="HotelCancellationPolicy" ToRole="TB_TypePenaltyRate" />
@@ -22614,6 +22663,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Property Name="Name_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Name_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_TB_TypeCancel_BizTbl_User" FromRole="TB_TypeCancel" ToRole="BizTbl_User" />
+          <NavigationProperty Name="HotelCancellationPolicies" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="TB_TypeCancel" ToRole="HotelCancellationPolicy" />
           <NavigationProperty Name="TB_BusinessPartnerCancelPolicy" Relationship="Self.FK_TB_BusinessPartnerCancelPolicy_TB_TypeCancel" FromRole="TB_TypeCancel" ToRole="TB_BusinessPartnerCancelPolicy" />
           <NavigationProperty Name="TB_BusinessPartnerCancelPolicyHistory" Relationship="Self.FK_TB_BusinessPartnerCancelPolicyHistory_TB_TypeCancel" FromRole="TB_TypeCancel" ToRole="TB_BusinessPartnerCancelPolicyHistory" />
           <NavigationProperty Name="TB_HotelCancelPolicy" Relationship="Self.FK_TB_HotelCancelPolicy_TB_TypeCancel" FromRole="TB_TypeCancel" ToRole="TB_HotelCancelPolicy" />
@@ -23089,6 +23139,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="OpUserID" Type="Int64" Nullable="false" />
           <NavigationProperty Name="HotelCancellationPolicies" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePrepayment" FromRole="TB_TypePrepayment" ToRole="HotelCancellationPolicy" />
+          <Property Name="IsAfterReservation" Type="Boolean" />
         </EntityType>
         <EntityType Name="TB_TypePricePolicy">
           <Key>
@@ -26654,14 +26705,14 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelCancellationPolicy_HotelCancellationPolicy">
-          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="1" />
-          <End Role="HotelCancellationPolicy1" Type="Self.HotelCancellationPolicy" Multiplicity="0..1" />
+          <End Role="TB_TypeCancel" Type="Self.TB_TypeCancel" Multiplicity="0..1" />
+          <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="HotelCancellationPolicy">
+            <Principal Role="TB_TypeCancel">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="HotelCancellationPolicy1">
-              <PropertyRef Name="ID" />
+            <Dependent Role="HotelCancellationPolicy">
+              <PropertyRef Name="CancelTypeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -31819,7 +31870,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="GBSHotelsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BizTbl_Culture" EntityType="Self.BizTbl_Culture" />
           <EntitySet Name="BizTbl_Error" EntityType="Self.BizTbl_Error" />
           <EntitySet Name="BizTbl_MailQueue" EntityType="Self.BizTbl_MailQueue" />
@@ -33025,8 +33076,8 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicies" />
           </AssociationSet>
           <AssociationSet Name="FK_HotelCancellationPolicy_HotelCancellationPolicy" Association="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy">
+            <End Role="TB_TypeCancel" EntitySet="TB_TypeCancel" />
             <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
-            <End Role="HotelCancellationPolicy1" EntitySet="HotelCancellationPolicies" />
           </AssociationSet>
           <AssociationSet Name="FK_HotelCancellationPolicy_TB_Hotel" Association="Self.FK_HotelCancellationPolicy_TB_Hotel">
             <End Role="TB_Hotel" EntitySet="TB_Hotel" />
@@ -34745,7 +34796,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <End Role="TB_TransferReservationHistory" EntitySet="TB_TransferReservationHistory" />
           </AssociationSet>
           <FunctionImport Name="BizFnc_GetPageControls" ReturnType="Collection(GBSHotelsModel.BizFnc_GetPageControls_Result)" IsComposable="true">
-            <Parameter Name="PageId" Mode="In" Type="Int32" />
+          <Parameter Name="PageId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="Split" ReturnType="Collection(GBSHotelsModel.Split_Result)" IsComposable="true">
             <Parameter Name="STRING" Mode="In" Type="String" />
@@ -34775,10 +34826,10 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Creditcardnumber" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_CheckEmail_BizTbl_User_SP" ReturnType="Collection(GBSHotelsModel.B_CheckEmail_BizTbl_User_SP_Result)">
-            <Parameter Name="Email" Mode="In" Type="String" />
+          <Parameter Name="Email" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_ChecKPincode_TB_Reservation_SB" ReturnType="Collection(Int32)">
-            <Parameter Name="Pincode" Mode="In" Type="String" />
+          <Parameter Name="Pincode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_CheckReviewStatusByUser_TB_ReservationReview_SP" ReturnType="Collection(Int32)">
             <Parameter Name="UserID" Mode="In" Type="String" />
@@ -34790,10 +34841,10 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Emailid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_CheckUsername_BizTbl_User_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="UserName" Mode="In" Type="String" />
+          <Parameter Name="UserName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_checkvarificationcode_BizTbl_User_SP" ReturnType="Collection(String)">
-            <Parameter Name="checkvarificationcode" Mode="In" Type="String" />
+          <Parameter Name="checkvarificationcode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_CheckWishlistByUser_TB_WishLists_SP" ReturnType="Collection(Int32)">
             <Parameter Name="HotelID" Mode="In" Type="String" />
@@ -34811,14 +34862,14 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Continetid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_DeleteGroup_BizTbl_SecurityGroupRight_SP">
-            <Parameter Name="SecurityGroupID" Mode="In" Type="Int32" />
+          <Parameter Name="SecurityGroupID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_DeleteMyViewedhotels_TB_HotelSearchHistory">
             <Parameter Name="searchID" Mode="In" Type="String" />
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_DeleteRecentlyViewDetails_BizTbl_UserOperation_SP">
-            <Parameter Name="UserID" Mode="In" Type="String" />
+          <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_DisplayTable_BizTbl_Table_Sp" ReturnType="Collection(GBSHotelsModel.B_DisplayTable_BizTbl_Table_Sp_Result)">
             <Parameter Name="TableID" Mode="In" Type="Int32" />
@@ -34835,16 +34886,16 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <FunctionImport Name="B_EX_GetAllMessage_BizTbl_Message_SP" ReturnType="Collection(GBSHotelsModel.B_EX_GetAllMessage_BizTbl_Message_SP_Result)" />
           <FunctionImport Name="B_Ex_GetAllRegions_TB_Region_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetAllRegions_TB_Region_SP_Result)" />
           <FunctionImport Name="B_Ex_GetAttributeCategory_TB_AttributeHeader_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetAttributeCategory_TB_AttributeHeader_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetAttributeType_TB_TypeAttribute_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetAttributeType_TB_TypeAttribute_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetAuthority_BizTbl_SecurityGroup_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetAuthority_BizTbl_SecurityGroup_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetBedType_TB_TypeBed_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetBedType_TB_TypeBed_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetBusinessPartner_BizTbl_UserBusinessPartner_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetBusinessPartner_BizTbl_UserBusinessPartner_SP_Result)" />
           <FunctionImport Name="B_Ex_GetBusinessPartnerCancelPolicy_TB_BusinessPartnerCancelPolicy_SP" ReturnType="Collection(Int32)" />
@@ -34865,7 +34916,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Active" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetBusinessPartnerType_TB_TypeBusinessPartner_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetBusinessPartnerType_TB_TypeBusinessPartner_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetCaptionValues_BizTbl_TableColumn_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetCaptionValues_BizTbl_TableColumn_SP_Result)">
             <Parameter Name="TableName" Mode="In" Type="String" />
@@ -34873,49 +34924,49 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="MessageCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetCityID_TB_Region_SP" ReturnType="Collection(Int64)">
-            <Parameter Name="Regionid" Mode="In" Type="Int64" />
+          <Parameter Name="Regionid" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetContactUs_BizTbl_Parameter_SP" ReturnType="Collection(String)">
-            <Parameter Name="code" Mode="In" Type="String" />
+          <Parameter Name="code" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetCreateUser_BizTbl_User_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetCreateUser_BizTbl_User_SP_Result)" />
           <FunctionImport Name="B_Ex_GetCreditCard_TB_TypeCreditCard_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetCreditCard_TB_TypeCreditCard_SP_Result)">
-            <Parameter Name="HotelID" Mode="In" Type="Int64" />
+          <Parameter Name="HotelID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_Getculture_BizTbl_Culture" ReturnType="Collection(GBSHotelsModel.B_Ex_Getculture_BizTbl_Culture_Result)" />
           <FunctionImport Name="B_Ex_GetCurrencyDropdown_TB_Currency_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetCurrencyDropdown_TB_Currency_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetCurrencyIDByHotel_TB_Hotel_Sp" ReturnType="Collection(Int32)">
-            <Parameter Name="HotelId" Mode="In" Type="String" />
+          <Parameter Name="HotelId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDates_TB_Date_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDates_TB_Date_SP_Result)" />
           <FunctionImport Name="B_Ex_GetDay_TB_TypeDays_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDay_TB_TypeDays_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDealDropdown_TB_Deal_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDealDropdown_TB_Deal_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDropdownCancelType_TB_TypeCancel_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownCancelType_TB_TypeCancel_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDropdownCity_TB_TB_Region_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownCity_TB_TB_Region_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDropdownComission_TB_HotelComission_SP" ReturnType="Collection(Int16)" />
           <FunctionImport Name="B_Ex_GetDropdownCreditCardType_TB_TypeCreditCard_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownCreditCardType_TB_TypeCreditCard_SP_Result)" />
           <FunctionImport Name="B_Ex_GetDropdownDescription_BizTbl_Security_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownDescription_BizTbl_Security_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDropdownFirm_TB_Firm_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownFirm_TB_Firm_SP_Result)" />
           <FunctionImport Name="B_Ex_GetDropdownPenaltyRate_TB_TypePenaltyRate_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownPenaltyRate_TB_TypePenaltyRate_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDropdownRequestStatus_TB_TypeFirmRequestStatus_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownRequestStatus_TB_TypeFirmRequestStatus_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDropdownRequestType_TB_TypeFirmRequest_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownRequestType_TB_TypeFirmRequest_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetDropdownReservationID_TB_Reservation_SP" ReturnType="Collection(Int64)" />
           <FunctionImport Name="B_Ex_GetDropdownRole_BizTbl_SecurityGroup_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetDropdownRole_BizTbl_SecurityGroup_SP_Result)" />
@@ -34934,17 +34985,17 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <FunctionImport Name="B_Ex_GetFreebieID_TB_TypeFreebie_SP" ReturnType="Collection(Int32)" />
           <FunctionImport Name="B_Ex_GetHitTableValue_TB_HitCount_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHitTableValue_TB_HitCount_SP_Result)" />
           <FunctionImport Name="B_Ex_GetHotelAccommodation_TB_TypeHotelAccommodation_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotelAccommodation_TB_TypeHotelAccommodation_SP_Result)">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetHotelAttribute_TB_Attribute_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotelAttribute_TB_Attribute_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetHotelByHotelID_Tb_Hotel_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotelByHotelID_Tb_Hotel_SP_Result)">
-            <Parameter Name="HotelID" Mode="In" Type="Int32" />
+          <Parameter Name="HotelID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetHotelChain_TB_TypeHotelChain_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotelChain_TB_TypeHotelChain_SP_Result)" />
           <FunctionImport Name="B_Ex_GetHotelClass_TB_TypeHotelClass_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotelClass_TB_TypeHotelClass_SP_Result)">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetHotelPromotionID_TB_HotelPromotion_SP" ReturnType="Collection(Int32)" />
           <FunctionImport Name="B_Ex_GetHotels_TB_Hotel_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotels_TB_Hotel_SP_Result)">
@@ -34969,17 +35020,17 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetHotelSearchParameter_TB_HotelSearchParameter_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotelSearchParameter_TB_HotelSearchParameter_SP_Result)" />
           <FunctionImport Name="B_Ex_GetHotelType_TB_TypeHotel_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetHotelType_TB_TypeHotel_SP_Result)">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetInvoiceID_TB_Invoice_SP" ReturnType="Collection(Int32)" />
           <FunctionImport Name="B_Ex_GetMessageStatus_TB_TypeMessageStatus_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetMessageStatus_TB_TypeMessageStatus_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetMessageSubject_TB_TypeMessageSubject_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetMessageSubject_TB_TypeMessageSubject_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetOperationType_TB_TypeOperation_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetOperationType_TB_TypeOperation_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetPageCaptions_BizTbl_PageControl_SP" ReturnType="Collection(String)">
             <Parameter Name="PageID" Mode="In" Type="String" />
@@ -34991,14 +35042,14 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetPagesDropdown_TB_Currency_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetPagesDropdown_TB_Currency_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetpageTitle_BizTbl_Table_SP" ReturnType="Collection(String)">
             <Parameter Name="Culture" Mode="In" Type="String" />
             <Parameter Name="Name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetParameter_BizTbl_Parameter_SP" ReturnType="Collection(String)">
-            <Parameter Name="Code" Mode="In" Type="String" />
+          <Parameter Name="Code" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetPart_TB_Part_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetPart_TB_Part_SP_Result)" />
           <FunctionImport Name="B_Ex_GetPeriod_TB_Period_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetPeriod_TB_Period_SP_Result)" />
@@ -35007,10 +35058,10 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="RecordID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetPricePlicy_TB_TypePricePolicy_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetPricePlicy_TB_TypePricePolicy_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetPromotion_TB_Promotion_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetPromotion_TB_Promotion_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetPromotionDetails_TB_Promotion_SP">
             <Parameter Name="CultureCode" Mode="In" Type="String" />
@@ -35058,16 +35109,16 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="IsCity" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetRegionsDropdown_TB_Region_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetRegionsDropdown_TB_Region_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetRelatedAttribute_TB_Attribute_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetRelatedAttribute_TB_Attribute_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetReservationOperation_TB_TypeReservationOperation_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetReservationOperation_TB_TypeReservationOperation_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetReservationStatus_TB_TypeReservationStatus_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetReservationStatus_TB_TypeReservationStatus_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetResevations_TB_Reservations_SP">
             <Parameter Name="Culture" Mode="In" Type="String" />
@@ -35087,57 +35138,57 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Active" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetReviewScale_TB_TypeReviewScale_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetReviewScale_TB_TypeReviewScale_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetReviewType_TB_TypeReview_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetReviewType_TB_TypeReview_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetRoomID_TB_HotelRoom_Sp" ReturnType="Collection(Int32)" />
           <FunctionImport Name="B_Ex_GetRoomType_TB_TypeRoom_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetRoomType_TB_TypeRoom_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetSecurityGroup_BizTbl_SecurityGroup_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetSecurityGroup_BizTbl_SecurityGroup_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetSecurityGroups_BizTbl_SecurityGroups_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetSecurityGroups_BizTbl_SecurityGroups_SP_Result)">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetSecurityGroupsUseroperations_BizTbl_SecurityGroup_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetSecurityGroupsUseroperations_BizTbl_SecurityGroup_SP_Result)">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTables_BizTbl_Table_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTables_BizTbl_Table_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTemplate_BizTbl_MailQueue_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTemplate_BizTbl_MailQueue_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTour_TB_Tour_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTour_TB_Tour_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTourFrequencyDropdown_TB_TypeTourFrequency_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTourFrequencyDropdown_TB_TypeTourFrequency_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTransferPeriod_TB_TransferPeriod_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTransferPeriod_TB_TransferPeriod_SP_Result)" />
           <FunctionImport Name="B_Ex_GetTraveller_TB_TypeTraveller_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTraveller_TB_TypeTraveller_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTypeDeposit_TB_TypeDeposit_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTypeDeposit_TB_TypeDeposit_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTypeFirmRequest_TB_TypeFirmRequest_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTypeFirmRequest_TB_TypeFirmRequest_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTypeInvoiceStatus_TB_TypeInvoiceStatus_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTypeInvoiceStatus_TB_TypeInvoiceStatus_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTypeSmoking_TB_TypeSmoking_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTypeSmoking_TB_TypeSmoking_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetTypeView_TB_TypeView_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetTypeView_TB_TypeView_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetUnit_TB_Unit_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetUnit_TB_Unit_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetUser_BizTbl_User_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetUser_BizTbl_User_SP_Result)" />
           <FunctionImport Name="B_Ex_GetUserHotel_BizTbl_UserHotel_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetUserHotel_BizTbl_UserHotel_SP_Result)" />
@@ -35146,11 +35197,11 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="FirmID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetUserInfoByEmail_Sp" ReturnType="Collection(GBSHotelsModel.B_Ex_GetUserInfoByEmail_Sp_Result)">
-            <Parameter Name="Email" Mode="In" Type="String" />
+          <Parameter Name="Email" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_GetUserOperationDetails_BizTbl_UserOperation_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetUserOperationDetails_BizTbl_UserOperation_SP_Result)" />
           <FunctionImport Name="B_Ex_GetUserOperations_BizTbl_User_SP" ReturnType="Collection(GBSHotelsModel.B_Ex_GetUserOperations_BizTbl_User_SP_Result)">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Ex_Insert_TB_Hotel_SP" ReturnType="Collection(String)">
             <Parameter Name="HotelName" Mode="In" Type="String" />
@@ -35314,7 +35365,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_ForgetPassword_BizTbl_User_SP" ReturnType="Collection(GBSHotelsModel.B_ForgetPassword_BizTbl_User_SP_Result)">
-            <Parameter Name="EmailID" Mode="In" Type="String" />
+          <Parameter Name="EmailID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GenSearch_TB_Attribute_SP">
             <Parameter Name="GenarlField" Mode="In" Type="String" />
@@ -35322,16 +35373,16 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="AttributeHeaderID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetAttributes_TB_Attribute_SP">
-            <Parameter Name="CultureID" Mode="In" Type="String" />
+          <Parameter Name="CultureID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetBank_TB_Bank_SP" ReturnType="Collection(GBSHotelsModel.B_GetBank_TB_Bank_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetBedType_TB_TypeBed_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetBiztable_BizTbl_Table_SP" ReturnType="Collection(GBSHotelsModel.B_GetBiztable_BizTbl_Table_SP_Result)">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetBookings_TB_Reservation_SP">
             <Parameter Name="CultureID" Mode="In" Type="String" />
@@ -35369,28 +35420,28 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Code" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCountry_TB_Country_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCountryCode_TB_Country_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="CountryCode" Mode="In" Type="String" />
+          <Parameter Name="CountryCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCountryId_TB_Country_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="CountryName" Mode="In" Type="String" />
+          <Parameter Name="CountryName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCountryName_TB_Country_SP">
             <Parameter Name="CultureCode" Mode="In" Type="String" />
             <Parameter Name="IPNumber" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCountrytble_TB_Country_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCreditCard_TB_TypeCreditCard_SP" ReturnType="Collection(GBSHotelsModel.B_GetCreditCard_TB_TypeCreditCard_SP_Result)" />
           <FunctionImport Name="B_Getculture_BizTbl_Culture" ReturnType="Collection(GBSHotelsModel.B_Getculture_BizTbl_Culture_Result)" />
           <FunctionImport Name="B_GetCultureAvailableCount_BizTbl_Culture_SP" ReturnType="Collection(GBSHotelsModel.B_GetCultureAvailableCount_BizTbl_Culture_SP_Result)">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCurrency_TB_Currency_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetCurrentHitcount_TB_HitCount_SP" ReturnType="Collection(GBSHotelsModel.B_GetCurrentHitcount_TB_HitCount_SP_Result)">
             <Parameter Name="PartID" Mode="In" Type="Int32" />
@@ -35416,24 +35467,24 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="MailQueueID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="B_GetEmails_BizTbl_MailQueue_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetEndIndex_BizTbl_Parameter_SP" ReturnType="Collection(String)">
-            <Parameter Name="Code" Mode="In" Type="String" />
+          <Parameter Name="Code" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetFAQ_FAQ_SP">
             <Parameter Name="CultureCode" Mode="In" Type="String" />
             <Parameter Name="FAQ" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetFeaturedHotel_TB_Hotel_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetFeaturedHotelSearchResults_TB_Hotel_SP">
             <Parameter Name="Culture" Mode="In" Type="String" />
             <Parameter Name="RegionID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetFirm_TB_Firm_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetFirmByFirmID_TB_Firm_SP">
             <Parameter Name="CultureCode" Mode="In" Type="String" />
@@ -35451,7 +35502,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="StatusID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelAccommodation_TB_TypeHotelAccommodation_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelAttributeIcon_HotelAttribute_SP">
             <Parameter Name="HotelId" Mode="In" Type="String" />
@@ -35468,7 +35519,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelClass_TB_TypeHotelClass_SP">
-            <Parameter Name="CultureId" Mode="In" Type="String" />
+          <Parameter Name="CultureId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelCreditCards_HotelCreditCard_SP">
             <Parameter Name="HotelID" Mode="In" Type="Int64" />
@@ -35480,14 +35531,14 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelIDByRoutingName_TB_Hotel_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="RoutingName" Mode="In" Type="String" />
+          <Parameter Name="RoutingName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelImage_TB_Photo" ReturnType="Collection(GBSHotelsModel.B_GetHotelImage_TB_Photo_Result)">
             <Parameter Name="CultureCode" Mode="In" Type="String" />
             <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelReviewCount_HotelReservation_SP" ReturnType="Collection(Decimal)">
-            <Parameter Name="HotelID" Mode="In" Type="String" />
+          <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelRoom_TB_HotelRoom_SP">
             <Parameter Name="RoomID" Mode="In" Type="String" />
@@ -35564,7 +35615,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Active" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelsforMap_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelsforMapSearch_SP">
             <Parameter Name="Culture" Mode="In" Type="String" />
@@ -35572,7 +35623,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="RegionID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelsList_TB_Hotel_SP" ReturnType="Collection(GBSHotelsModel.B_GetHotelsList_TB_Hotel_SP_Result)">
-            <Parameter Name="FirmID" Mode="In" Type="String" />
+          <Parameter Name="FirmID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelsMapByHotelId_TB_Hotel_SP">
             <Parameter Name="Culture" Mode="In" Type="String" />
@@ -35587,17 +35638,17 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="TypeID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetHotelType_TB_TypeHotel_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Gethotles_TB_Hotel_SP" ReturnType="Collection(Int32)" />
           <FunctionImport Name="B_GetInvoices_TB_Invoice_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetLatestNews_TB_LatestNews_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetLatestNewsByID_TB_LatestNews_SP" ReturnType="Collection(GBSHotelsModel.B_GetLatestNewsByID_TB_LatestNews_SP_Result)">
-            <Parameter Name="LatestNewsID" Mode="In" Type="String" />
+          <Parameter Name="LatestNewsID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetMailTemplate_BizTbl_MailTemplate_SP">
             <Parameter Name="MailTemplateCode" Mode="In" Type="String" />
@@ -35608,10 +35659,10 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="MessageCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetMessagecodeValues_BizTbl_Message_SP" ReturnType="Collection(GBSHotelsModel.B_GetMessagecodeValues_BizTbl_Message_SP_Result)">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetMonth_TB_TypeMonth_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetMyViewedHotels_TB_HotelSearchHistory_SP">
             <Parameter Name="UserID" Mode="In" Type="String" />
@@ -35627,30 +35678,30 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetParameters_BizTbl_Parameters_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetPenaltyRate_TB_TypePenaltyRate_SP">
-            <Parameter Name="CultureId" Mode="In" Type="String" />
+          <Parameter Name="CultureId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetPopularHotel_TBHotel_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetPropertyFacilities_TB_Attribute_SP">
             <Parameter Name="CultureId" Mode="In" Type="String" />
             <Parameter Name="AttributeHeaderID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRecentActiveReservation_TB_Reservation_SP" ReturnType="Collection(GBSHotelsModel.B_GetRecentActiveReservation_TB_Reservation_SP_Result)">
-            <Parameter Name="UserID" Mode="In" Type="String" />
+          <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRecentlyViewedHotels_TB_HotelSearchHistory_SP">
             <Parameter Name="CultureID" Mode="In" Type="String" />
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRegionId_TB_Region_SP" ReturnType="Collection(Int64)">
-            <Parameter Name="RegionName" Mode="In" Type="String" />
+          <Parameter Name="RegionName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRegionName_TB_Region_SP" ReturnType="Collection(String)">
-            <Parameter Name="Regionid" Mode="In" Type="String" />
+          <Parameter Name="Regionid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRegions_TB_Region_SP">
             <Parameter Name="CultureCode" Mode="In" Type="String" />
@@ -35673,17 +35724,17 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Active" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="B_GetReservations_TB_Reservation_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_getreviewcount_ReservationReview_sp" ReturnType="Collection(GBSHotelsModel.B_getreviewcount_ReservationReview_sp_Result)">
-            <Parameter Name="id" Mode="In" Type="String" />
+          <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetReviews_TB_ReservationReviewDetail_SP">
             <Parameter Name="CultureCode" Mode="In" Type="String" />
             <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetReviewTypeCount_TB_TypeReview_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="HotelID" Mode="In" Type="Int32" />
+          <Parameter Name="HotelID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_GetRoomAvailability_TB_HotelAvailability_SP" ReturnType="Collection(GBSHotelsModel.B_GetRoomAvailability_TB_HotelAvailability_SP_Result)">
             <Parameter Name="HotelRoomID" Mode="In" Type="String" />
@@ -35696,10 +35747,10 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="CultureID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRoomFacilities_TB_Attribute_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRoomFacilitiesCount_TB_HotelRoom_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="HotelId" Mode="In" Type="String" />
+          <Parameter Name="HotelId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRoomRate_TB_HotelRate_SP" ReturnType="Collection(GBSHotelsModel.B_GetRoomRate_TB_HotelRate_SP_Result)">
             <Parameter Name="HotelRoomID" Mode="In" Type="Int32" />
@@ -35709,16 +35760,16 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="EndDate" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="B_GetRoomType_TB_TypeRoom_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRoomView_TB_TypeView_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetRoutingDetails_TB_Hotel_SP" ReturnType="Collection(GBSHotelsModel.B_GetRoutingDetails_TB_Hotel_SP_Result)">
-            <Parameter Name="HotelID" Mode="In" Type="String" />
+          <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetSalutation_TB_TypeSalutation_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetSaveCreditCardsByUser_TB_CreditCardsDetails_SP" ReturnType="Collection(GBSHotelsModel.B_GetSaveCreditCardsByUser_TB_CreditCardsDetails_SP_Result)">
             <Parameter Name="UserID" Mode="In" Type="String" />
@@ -35761,13 +35812,13 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="SecurityGroupID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_GetSecurityGroup_BizTbl_SecurityGroup_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetSmokingType_TB_TypeSmoking_SP">
-            <Parameter Name="Cultureid" Mode="In" Type="String" />
+          <Parameter Name="Cultureid" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetSortBy_TB_TypeHotelSearchSort_SP">
-            <Parameter Name="CultureID" Mode="In" Type="String" />
+          <Parameter Name="CultureID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetSpecification_TB_HotelRoom_SP">
             <Parameter Name="Culture" Mode="In" Type="String" />
@@ -35778,19 +35829,19 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetTemplate_BizTbl_MailQueue">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_Gettermsandcondtions_BizTbl_Message_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetTraveller_TB_TypeTraveller_SP">
-            <Parameter Name="Culture" Mode="In" Type="String" />
+          <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetTypeHotel_TB_TypeHotel_SP">
-            <Parameter Name="CultureId" Mode="In" Type="String" />
+          <Parameter Name="CultureId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetTypeReview_TB_TypeReview">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetTypescalename_TB_TypeReviewScale_Sp">
             <Parameter Name="averegepoint" Mode="In" Type="String" />
@@ -35801,13 +35852,13 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Culture" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetUserDetails_BizTbl_User_SP">
-            <Parameter Name="UserID" Mode="In" Type="String" />
+          <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetUserInfo_BizTbl_User_SP" ReturnType="Collection(Int64)">
-            <Parameter Name="EMail" Mode="In" Type="String" />
+          <Parameter Name="EMail" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetUserMessages_TB_Message_SP">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_GetWishlists_TB_WishLists_SP">
             <Parameter Name="CultureID" Mode="In" Type="String" />
@@ -36194,13 +36245,13 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="HotelID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_PastBookings_TB_ReservationHistory_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="UserID" Mode="In" Type="String" />
+          <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_RecentlyViewedHotels_TB_HotelSearchHistory_SP" ReturnType="Collection(Int32)">
-            <Parameter Name="UserID" Mode="In" Type="String" />
+          <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_RemovecarditCards_TB_CreditCardsDetails_SP">
-            <Parameter Name="Id" Mode="In" Type="String" />
+          <Parameter Name="Id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_RemoveReservation_TB_Reservation_SP">
             <Parameter Name="UserID" Mode="In" Type="String" />
@@ -36324,7 +36375,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="IPAddress" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_UpdateInvoices_TB_Invoice_SP">
-            <Parameter Name="InvoiceID" Mode="In" Type="Int32" />
+          <Parameter Name="InvoiceID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="B_UpdateLatestNews_TB_LatestNews_SP">
             <Parameter Name="ID" Mode="In" Type="String" />
@@ -36397,16 +36448,16 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="B_WriteReview_sp">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BizSP_AddCulture">
-            <Parameter Name="Code" Mode="In" Type="String" />
+          <Parameter Name="Code" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BizSP_GetPage" ReturnType="Collection(GBSHotelsModel.BizSP_GetPage_Result)">
-            <Parameter Name="PageId" Mode="In" Type="Int32" />
+          <Parameter Name="PageId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="BizSP_GetParameter" ReturnType="Collection(GBSHotelsModel.BizSP_GetParameter_Result)">
-            <Parameter Name="Id" Mode="In" Type="Int32" />
+          <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="BizSp_GetUsers">
             <Parameter Name="Culture" Mode="In" Type="String" />
@@ -36438,7 +36489,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="IsHTML" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="BT_GetContinents_TB_Continents">
-            <Parameter Name="CultureCode" Mode="In" Type="String" />
+          <Parameter Name="CultureCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BT_GETExtratax_TB_HotelAttribute_SP">
             <Parameter Name="HotelID" Mode="In" Type="String" />
@@ -36490,7 +36541,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           </FunctionImport>
           <FunctionImport Name="dt_adduserobject" />
           <FunctionImport Name="dt_adduserobject_vcs">
-            <Parameter Name="vchProperty" Mode="In" Type="String" />
+          <Parameter Name="vchProperty" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="dt_checkinobject">
             <Parameter Name="chObjectType" Mode="In" Type="String" />
@@ -36547,10 +36598,10 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="property" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="dt_dropuserobjectbyid">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="dt_generateansiname">
-            <Parameter Name="name" Mode="InOut" Type="String" />
+          <Parameter Name="name" Mode="InOut" Type="String" />
           </FunctionImport>
           <FunctionImport Name="dt_getobjwithprop" ReturnType="Collection(Int32)">
             <Parameter Name="property" Mode="In" Type="String" />
@@ -36748,7 +36799,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
             <Parameter Name="Active" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="TB_SP_GetCountryFromIPNumber" ReturnType="Collection(GBSHotelsModel.TB_SP_GetCountryFromIPNumber_Result)">
-            <Parameter Name="IPNumber" Mode="In" Type="Int64" />
+          <Parameter Name="IPNumber" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="TB_SP_GetDates">
             <Parameter Name="Culture" Mode="In" Type="String" />
@@ -38500,7 +38551,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GBSHotelsModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="GBSHotelsModelStoreContainer" CdmEntityContainer="GBSHotelsEntities">
           <EntitySetMapping Name="BizTbl_Culture">
             <EntityTypeMapping TypeName="GBSHotelsModel.BizTbl_Culture">
               <MappingFragment StoreEntitySet="BizTbl_Culture">
@@ -39108,15 +39159,40 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
               <MappingFragment StoreEntitySet="HotelCancellationPolicy">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="HotellD" ColumnName="HotellD" />
+                <ScalarProperty Name="PolicyDescription_tr" ColumnName="PolicyDescription_tr" />
+                <ScalarProperty Name="PolicyDescription_en" ColumnName="PolicyDescription_en" />
+                <ScalarProperty Name="PolicyDescription_de" ColumnName="PolicyDescription_de" />
+                <ScalarProperty Name="PolicyDescription_es" ColumnName="PolicyDescription_es" />
+                <ScalarProperty Name="PolicyDescription_fr" ColumnName="PolicyDescription_fr" />
+                <ScalarProperty Name="PolicyDescription_ru" ColumnName="PolicyDescription_ru" />
+                <ScalarProperty Name="PolicyDescription_it" ColumnName="PolicyDescription_it" />
+                <ScalarProperty Name="PolicyDescription_ar" ColumnName="PolicyDescription_ar" />
+                <ScalarProperty Name="PolicyDescription_ja" ColumnName="PolicyDescription_ja" />
+                <ScalarProperty Name="PolicyDescription_pt" ColumnName="PolicyDescription_pt" />
+                <ScalarProperty Name="PolicyDescription_zh" ColumnName="PolicyDescription_zh" />
+                <ScalarProperty Name="PaymentDescription_en" ColumnName="PaymentDescription_en" />
+                <ScalarProperty Name="PaymentDescription_tr" ColumnName="PaymentDescription_tr" />
+                <ScalarProperty Name="PaymentDescription_ar" ColumnName="PaymentDescription_ar" />
+                <ScalarProperty Name="PaymentDescription_ja" ColumnName="PaymentDescription_ja" />
+                <ScalarProperty Name="PaymentDescription_zh" ColumnName="PaymentDescription_zh" />
+                <ScalarProperty Name="PaymentDescription_pt" ColumnName="PaymentDescription_pt" />
+                <ScalarProperty Name="PaymentDescription_it" ColumnName="PaymentDescription_it" />
+                <ScalarProperty Name="PaymentDescription_ru" ColumnName="PaymentDescription_ru" />
+                <ScalarProperty Name="PaymentDescription_fr" ColumnName="PaymentDescription_fr" />
+                <ScalarProperty Name="PaymentDescription_de" ColumnName="PaymentDescription_de" />
+                <ScalarProperty Name="PaymentDescription_es" ColumnName="PaymentDescription_es" />
                 <ScalarProperty Name="IsPublicDisplay" ColumnName="IsPublicDisplay" />
                 <ScalarProperty Name="IsPrivateDisplay" ColumnName="IsPrivateDisplay" />
                 <ScalarProperty Name="IsPromotionDisplay" ColumnName="IsPromotionDisplay" />
                 <ScalarProperty Name="IsPeriodExists" ColumnName="IsPeriodExists" />
                 <ScalarProperty Name="ArrivalTypeID" ColumnName="ArrivalTypeID" />
                 <ScalarProperty Name="ArrivalRateID" ColumnName="ArrivalRateID" />
+                <ScalarProperty Name="CancelTypeID" ColumnName="CancelTypeID" />
                 <ScalarProperty Name="PrepaymentTypeID" ColumnName="PrepaymentTypeID" />
                 <ScalarProperty Name="CancelRateID" ColumnName="CancelRateID" />
                 <ScalarProperty Name="IsPrepayment" ColumnName="IsPrepayment" />
+                <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+                <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -42330,6 +42406,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
           <EntitySetMapping Name="TB_TypePrepayment">
             <EntityTypeMapping TypeName="GBSHotelsModel.TB_TypePrepayment">
               <MappingFragment StoreEntitySet="TB_TypePrepayment">
+                <ScalarProperty Name="IsAfterReservation" ColumnName="IsAfterReservation" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
                 <ScalarProperty Name="Name_en" ColumnName="Name_en" />

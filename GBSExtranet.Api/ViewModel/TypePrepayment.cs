@@ -8,7 +8,8 @@ namespace GBSExtranet.Api.ViewModel
     public class TypePrepayment
     {
         public int ID { get; set; }
-        public string Name { get; set; }     
+        public string Name { get; set; }
+        public bool IsAfterReservation { get; set; }
     }
     
 }

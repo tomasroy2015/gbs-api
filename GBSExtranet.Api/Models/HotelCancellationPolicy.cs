@@ -16,18 +16,42 @@ namespace GBSExtranet.Api.Models
     {
         public int ID { get; set; }
         public int HotellD { get; set; }
+        public string PolicyDescription_tr { get; set; }
+        public string PolicyDescription_en { get; set; }
+        public string PolicyDescription_de { get; set; }
+        public string PolicyDescription_es { get; set; }
+        public string PolicyDescription_fr { get; set; }
+        public string PolicyDescription_ru { get; set; }
+        public string PolicyDescription_it { get; set; }
+        public string PolicyDescription_ar { get; set; }
+        public string PolicyDescription_ja { get; set; }
+        public string PolicyDescription_pt { get; set; }
+        public string PolicyDescription_zh { get; set; }
+        public string PaymentDescription_en { get; set; }
+        public string PaymentDescription_tr { get; set; }
+        public string PaymentDescription_ar { get; set; }
+        public string PaymentDescription_ja { get; set; }
+        public string PaymentDescription_zh { get; set; }
+        public string PaymentDescription_pt { get; set; }
+        public string PaymentDescription_it { get; set; }
+        public string PaymentDescription_ru { get; set; }
+        public string PaymentDescription_fr { get; set; }
+        public string PaymentDescription_de { get; set; }
+        public string PaymentDescription_es { get; set; }
         public Nullable<bool> IsPublicDisplay { get; set; }
         public Nullable<bool> IsPrivateDisplay { get; set; }
         public Nullable<bool> IsPromotionDisplay { get; set; }
         public Nullable<bool> IsPeriodExists { get; set; }
         public Nullable<int> ArrivalTypeID { get; set; }
         public Nullable<int> ArrivalRateID { get; set; }
+        public Nullable<int> CancelTypeID { get; set; }
         public Nullable<int> PrepaymentTypeID { get; set; }
         public Nullable<int> CancelRateID { get; set; }
         public Nullable<bool> IsPrepayment { get; set; }
+        public Nullable<System.DateTime> OpDateTime { get; set; }
+        public Nullable<long> OpUserID { get; set; }
     
-        public virtual HotelCancellationPolicy HotelCancellationPolicy1 { get; set; }
-        public virtual HotelCancellationPolicy HotelCancellationPolicy2 { get; set; }
+        public virtual TB_TypeCancel TB_TypeCancel { get; set; }
         public virtual TB_Hotel TB_Hotel { get; set; }
         public virtual TB_TypePenaltyRate TB_TypePenaltyRate { get; set; }
         public virtual TB_TypePenaltyRate TB_TypePenaltyRate1 { get; set; }

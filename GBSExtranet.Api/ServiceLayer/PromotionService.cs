@@ -270,7 +270,7 @@ namespace GBSExtranet.Api.ServiceLayer
                 dtEnd = DateTime.ParseExact(promotion.AccommodationEndDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             }
             string status = "Success";
-            Entities insertentity = new Entities();
+            GBSHotelsEntities insertentity = new GBSHotelsEntities();
             GBSExtranet.Api.Models.TB_HotelPromotion PageObj = new GBSExtranet.Api.Models.TB_HotelPromotion();
             //  PageObj.ID = model.ID;
             PageObj.HotelID = HotelID;

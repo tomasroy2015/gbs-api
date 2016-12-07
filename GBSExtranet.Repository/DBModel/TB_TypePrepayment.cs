@@ -23,6 +23,7 @@ namespace GBSExtranet.Repository
         public string Name_pt { get; set; }
         public string Name_zh { get; set; }
         public Nullable<short> Sort { get; set; }
+        public bool IsAfterReservation { get; set; }
         public bool Active { get; set; }
         public System.DateTime OpDateTime { get; set; }
         public long OpUserID { get; set; }

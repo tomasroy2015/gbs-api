@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="GBSHotelsModelStoreContainer" CdmEntityContainer="Entities">
+  <EntityContainerMapping StorageEntityContainer="GBSHotelsModelStoreContainer" CdmEntityContainer="GBSHotelsEntities">
     <EntitySetMapping Name="BizTbl_Culture">
       <EntityTypeMapping TypeName="GBSHotelsModel.BizTbl_Culture">
         <MappingFragment StoreEntitySet="BizTbl_Culture">
@@ -608,15 +608,40 @@
         <MappingFragment StoreEntitySet="HotelCancellationPolicy">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="HotellD" ColumnName="HotellD" />
+          <ScalarProperty Name="PolicyDescription_tr" ColumnName="PolicyDescription_tr" />
+          <ScalarProperty Name="PolicyDescription_en" ColumnName="PolicyDescription_en" />
+          <ScalarProperty Name="PolicyDescription_de" ColumnName="PolicyDescription_de" />
+          <ScalarProperty Name="PolicyDescription_es" ColumnName="PolicyDescription_es" />
+          <ScalarProperty Name="PolicyDescription_fr" ColumnName="PolicyDescription_fr" />
+          <ScalarProperty Name="PolicyDescription_ru" ColumnName="PolicyDescription_ru" />
+          <ScalarProperty Name="PolicyDescription_it" ColumnName="PolicyDescription_it" />
+          <ScalarProperty Name="PolicyDescription_ar" ColumnName="PolicyDescription_ar" />
+          <ScalarProperty Name="PolicyDescription_ja" ColumnName="PolicyDescription_ja" />
+          <ScalarProperty Name="PolicyDescription_pt" ColumnName="PolicyDescription_pt" />
+          <ScalarProperty Name="PolicyDescription_zh" ColumnName="PolicyDescription_zh" />
+          <ScalarProperty Name="PaymentDescription_en" ColumnName="PaymentDescription_en" />
+          <ScalarProperty Name="PaymentDescription_tr" ColumnName="PaymentDescription_tr" />
+          <ScalarProperty Name="PaymentDescription_ar" ColumnName="PaymentDescription_ar" />
+          <ScalarProperty Name="PaymentDescription_ja" ColumnName="PaymentDescription_ja" />
+          <ScalarProperty Name="PaymentDescription_zh" ColumnName="PaymentDescription_zh" />
+          <ScalarProperty Name="PaymentDescription_pt" ColumnName="PaymentDescription_pt" />
+          <ScalarProperty Name="PaymentDescription_it" ColumnName="PaymentDescription_it" />
+          <ScalarProperty Name="PaymentDescription_ru" ColumnName="PaymentDescription_ru" />
+          <ScalarProperty Name="PaymentDescription_fr" ColumnName="PaymentDescription_fr" />
+          <ScalarProperty Name="PaymentDescription_de" ColumnName="PaymentDescription_de" />
+          <ScalarProperty Name="PaymentDescription_es" ColumnName="PaymentDescription_es" />
           <ScalarProperty Name="IsPublicDisplay" ColumnName="IsPublicDisplay" />
           <ScalarProperty Name="IsPrivateDisplay" ColumnName="IsPrivateDisplay" />
           <ScalarProperty Name="IsPromotionDisplay" ColumnName="IsPromotionDisplay" />
           <ScalarProperty Name="IsPeriodExists" ColumnName="IsPeriodExists" />
           <ScalarProperty Name="ArrivalTypeID" ColumnName="ArrivalTypeID" />
           <ScalarProperty Name="ArrivalRateID" ColumnName="ArrivalRateID" />
+          <ScalarProperty Name="CancelTypeID" ColumnName="CancelTypeID" />
           <ScalarProperty Name="PrepaymentTypeID" ColumnName="PrepaymentTypeID" />
           <ScalarProperty Name="CancelRateID" ColumnName="CancelRateID" />
           <ScalarProperty Name="IsPrepayment" ColumnName="IsPrepayment" />
+          <ScalarProperty Name="OpDateTime" ColumnName="OpDateTime" />
+          <ScalarProperty Name="OpUserID" ColumnName="OpUserID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -3830,6 +3855,7 @@
     <EntitySetMapping Name="TB_TypePrepayment">
       <EntityTypeMapping TypeName="GBSHotelsModel.TB_TypePrepayment">
         <MappingFragment StoreEntitySet="TB_TypePrepayment">
+          <ScalarProperty Name="IsAfterReservation" ColumnName="IsAfterReservation" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name_tr" ColumnName="Name_tr" />
           <ScalarProperty Name="Name_en" ColumnName="Name_en" />

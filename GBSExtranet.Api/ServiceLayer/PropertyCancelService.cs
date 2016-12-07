@@ -31,6 +31,89 @@ namespace GBSExtranet.Api.ServiceLayer
             return status;
 
         }
+        public int SavePolicy(PropertyCancellationPolicy model,string culture, long? UserID) 
+        {
+            var dbExist = _db.HotelCancellationPolicies.Where(f => f.HotellD == model.HotellD && f.CancelTypeID == model.CancelTypeID).FirstOrDefault();
+            
+            if (dbExist != null)
+            {
+                _db.HotelCancellationPolicies.Remove(dbExist);
+                _db.SaveChanges();
+            }
+
+            GBSExtranet.Api.Models.HotelCancellationPolicy dbModel = new Models.HotelCancellationPolicy();
+            dbModel.ArrivalRateID = model.ArrivalRateID;
+            dbModel.ArrivalTypeID = model.ArrivalTypeID;
+            dbModel.CancelRateID = model.CancelRateID;
+            dbModel.CancelTypeID = model.CancelTypeID;
+            dbModel.HotellD = model.HotellD;
+            dbModel.IsPeriodExists = model.IsPeriodExists;
+            dbModel.IsPrivateDisplay = model.IsPromotionDisplay;
+            dbModel.IsPublicDisplay = model.IsPublicDisplay;
+            dbModel.PrepaymentTypeID = model.PrepaymentTypeID;
+            if (culture == "en")
+            {
+                dbModel.PaymentDescription_en = model.PaymentDescription;
+                dbModel.PolicyDescription_en = model.PolicyDescription;
+            }
+            if (culture == "ar")
+            {
+                dbModel.PaymentDescription_ar = model.PaymentDescription;
+                dbModel.PolicyDescription_ar = model.PolicyDescription;
+            }
+            if (culture == "de")
+            {
+                dbModel.PaymentDescription_de = model.PaymentDescription;
+                dbModel.PolicyDescription_de = model.PolicyDescription;
+            }
+            if (culture == "es")
+            {
+                dbModel.PaymentDescription_es = model.PaymentDescription;
+                dbModel.PolicyDescription_es = model.PolicyDescription;
+            }
+            if (culture == "fr")
+            {
+                dbModel.PaymentDescription_fr = model.PaymentDescription;
+                dbModel.PolicyDescription_fr = model.PolicyDescription;
+            }
+            if (culture == "it")
+            {
+                dbModel.PaymentDescription_it = model.PaymentDescription;
+                dbModel.PolicyDescription_it = model.PolicyDescription;
+            }
+            if (culture == "ja")
+            {
+                dbModel.PaymentDescription_ja = model.PaymentDescription;
+                dbModel.PolicyDescription_ja = model.PolicyDescription;
+            }
+            if (culture == "pt")
+            {
+                dbModel.PaymentDescription_pt = model.PaymentDescription;
+                dbModel.PolicyDescription_pt = model.PolicyDescription;
+            }
+            if (culture == "ru")
+            {
+                dbModel.PaymentDescription_ru = model.PaymentDescription;
+                dbModel.PolicyDescription_ru = model.PolicyDescription;
+            }
+            if (culture == "tr")
+            {
+                dbModel.PaymentDescription_tr = model.PaymentDescription;
+                dbModel.PolicyDescription_tr = model.PolicyDescription;
+            }
+            if (culture == "zh")
+            {
+                dbModel.PaymentDescription_zh = model.PaymentDescription;
+                dbModel.PolicyDescription_zh = model.PolicyDescription;
+            }
+             dbModel.OpDateTime = DateTime.Now;
+             dbModel.OpUserID = UserID;
+             
+             _db.HotelCancellationPolicies.Add(dbModel);
+             
+            _db.SaveChanges();
+             return 0;
+        }
 
         public List<PropertyCancelPolicy> GetHotelCancelPolicyinfo(int HotelID, string CultureValue)
         {
@@ -73,7 +156,30 @@ namespace GBSExtranet.Api.ServiceLayer
             return ListOfModel;
         }
 
-
+        public List<CancelTypeSummary> GetCancelTypeSummary(int hotelID, string culture) 
+        {
+            var summaryList = new List<CancelTypeSummary>();
+            var types = _db.TB_TypeCancel.ToList().Where(f => f.PartID == Convert.ToInt32(EnumPart.Hotel) && f.Active == true).ToList().OrderBy(o=>o.Sort);
+            if (types != null)
+            {
+                foreach (var type in types)
+                {
+                    var summary = new CancelTypeSummary();
+                    summary.CancelTypeID = type.ID;
+                    summary.CancelTypeName = new Tools().GetDynamicSortProperty(type, "Name_" + culture).ToString();
+                    summary.IsRefundable = type.Refundable == null ? false : (type.Refundable == false? false:true);
+                    var data = _db.HotelCancellationPolicies.ToList().Where(h => h.HotellD == hotelID && h.CancelTypeID == type.ID).FirstOrDefault();
+                    if (data != null)
+                    {
+                        summary.CancelSummaryText = new Tools().GetDynamicSortProperty(data, "PolicyDescription_" + culture).ToString();
+                        summary.PrepaymentSummaryText = new Tools().GetDynamicSortProperty(data, "PaymentDescription_" + culture).ToString();
+                    }
+                    summaryList.Add(summary);
+                }
+                
+            }
+            return summaryList;
+        }
         public List<PropertyCancelPolicy> GetHotelCancelPolicy(string CultureValue)
         {
 
@@ -128,6 +234,7 @@ namespace GBSExtranet.Api.ServiceLayer
                     var obj = new TypePrepayment();
                     obj.ID = p.ID;
                     obj.Name = new Tools().GetDynamicSortProperty(p, "Name_" + culture) as string;
+                    obj.IsAfterReservation = p.IsAfterReservation;
                     list.Add(obj);
                 }
             }

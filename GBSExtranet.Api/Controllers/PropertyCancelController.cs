@@ -83,5 +83,48 @@ namespace GBSExtranet.Api.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
+
+        [Route("propertyCancelPolicy/getPropertyCancelSummary")]
+        [HttpGet]
+        public HttpResponseMessage GetPropertyCancelSummary(int hotelID, string culture)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var response = new PropertyCancelService().GetCancelTypeSummary(hotelID,culture);
+                    return Request.CreateResponse(HttpStatusCode.OK, response);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+        [Route("propertyCancelPolicy/savePolicy")]
+        [HttpPost]
+        public HttpResponseMessage SaveCancellationPolicy(PropertyCancellationPolicy policy, string culture,long? userID)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var response = new PropertyCancelService().SavePolicy(policy, culture, userID);
+                    return Request.CreateResponse(HttpStatusCode.OK, response);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
     }
 }

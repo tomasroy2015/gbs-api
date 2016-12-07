@@ -879,17 +879,41 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="HotellD" Type="Int32" Nullable="false" />
+    <Property Name="PolicyDescription_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyDescription_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_tr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_ja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_zh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_pt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_it" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_fr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_de" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDescription_es" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IsPublicDisplay" Type="Boolean" />
     <Property Name="IsPrivateDisplay" Type="Boolean" />
     <Property Name="IsPromotionDisplay" Type="Boolean" />
     <Property Name="IsPeriodExists" Type="Boolean" />
     <Property Name="ArrivalTypeID" Type="Int32" />
     <Property Name="ArrivalRateID" Type="Int32" />
+    <Property Name="CancelTypeID" Type="Int32" />
     <Property Name="PrepaymentTypeID" Type="Int32" />
     <Property Name="CancelRateID" Type="Int32" />
     <Property Name="IsPrepayment" Type="Boolean" />
-    <NavigationProperty Name="HotelCancellationPolicy1" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy" ToRole="HotelCancellationPolicy1" />
-    <NavigationProperty Name="HotelCancellationPolicy2" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy1" ToRole="HotelCancellationPolicy" />
+    <Property Name="OpDateTime" Type="DateTime" Precision="3" />
+    <Property Name="OpUserID" Type="Int64" />
+    <NavigationProperty Name="TB_TypeCancel" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="HotelCancellationPolicy" ToRole="TB_TypeCancel" />
     <NavigationProperty Name="TB_Hotel" Relationship="Self.FK_HotelCancellationPolicy_TB_Hotel" FromRole="HotelCancellationPolicy" ToRole="TB_Hotel" />
     <NavigationProperty Name="TB_TypePenaltyRate" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate" FromRole="HotelCancellationPolicy" ToRole="TB_TypePenaltyRate" />
     <NavigationProperty Name="TB_TypePenaltyRate1" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePenaltyRate1" FromRole="HotelCancellationPolicy" ToRole="TB_TypePenaltyRate" />
@@ -4495,6 +4519,7 @@
     <Property Name="Name_pt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Name_zh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="BizTbl_User" Relationship="Self.FK_TB_TypeCancel_BizTbl_User" FromRole="TB_TypeCancel" ToRole="BizTbl_User" />
+    <NavigationProperty Name="HotelCancellationPolicies" Relationship="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy" FromRole="TB_TypeCancel" ToRole="HotelCancellationPolicy" />
     <NavigationProperty Name="TB_BusinessPartnerCancelPolicy" Relationship="Self.FK_TB_BusinessPartnerCancelPolicy_TB_TypeCancel" FromRole="TB_TypeCancel" ToRole="TB_BusinessPartnerCancelPolicy" />
     <NavigationProperty Name="TB_BusinessPartnerCancelPolicyHistory" Relationship="Self.FK_TB_BusinessPartnerCancelPolicyHistory_TB_TypeCancel" FromRole="TB_TypeCancel" ToRole="TB_BusinessPartnerCancelPolicyHistory" />
     <NavigationProperty Name="TB_HotelCancelPolicy" Relationship="Self.FK_TB_HotelCancelPolicy_TB_TypeCancel" FromRole="TB_TypeCancel" ToRole="TB_HotelCancelPolicy" />
@@ -4970,6 +4995,7 @@
     <Property Name="OpDateTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="OpUserID" Type="Int64" Nullable="false" />
     <NavigationProperty Name="HotelCancellationPolicies" Relationship="Self.FK_HotelCancellationPolicy_TB_TypePrepayment" FromRole="TB_TypePrepayment" ToRole="HotelCancellationPolicy" />
+    <Property Name="IsAfterReservation" Type="Boolean" />
   </EntityType>
   <EntityType Name="TB_TypePricePolicy">
     <Key>
@@ -8535,14 +8561,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_HotelCancellationPolicy_HotelCancellationPolicy">
-    <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="1" />
-    <End Role="HotelCancellationPolicy1" Type="Self.HotelCancellationPolicy" Multiplicity="0..1" />
+    <End Role="TB_TypeCancel" Type="Self.TB_TypeCancel" Multiplicity="0..1" />
+    <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="HotelCancellationPolicy">
+      <Principal Role="TB_TypeCancel">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="HotelCancellationPolicy1">
-        <PropertyRef Name="ID" />
+      <Dependent Role="HotelCancellationPolicy">
+        <PropertyRef Name="CancelTypeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -13700,7 +13726,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="GBSHotelsEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="BizTbl_Culture" EntityType="Self.BizTbl_Culture" />
     <EntitySet Name="BizTbl_Error" EntityType="Self.BizTbl_Error" />
     <EntitySet Name="BizTbl_MailQueue" EntityType="Self.BizTbl_MailQueue" />
@@ -14906,8 +14932,8 @@
       <End Role="HotelChildrenPolicy" EntitySet="HotelChildrenPolicies" />
     </AssociationSet>
     <AssociationSet Name="FK_HotelCancellationPolicy_HotelCancellationPolicy" Association="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy">
+      <End Role="TB_TypeCancel" EntitySet="TB_TypeCancel" />
       <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicies" />
-      <End Role="HotelCancellationPolicy1" EntitySet="HotelCancellationPolicies" />
     </AssociationSet>
     <AssociationSet Name="FK_HotelCancellationPolicy_TB_Hotel" Association="Self.FK_HotelCancellationPolicy_TB_Hotel">
       <End Role="TB_Hotel" EntitySet="TB_Hotel" />

@@ -15,10 +15,10 @@ namespace GBSExtranet.Api.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Entities : DbContext
+    public partial class GBSHotelsEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public GBSHotelsEntities()
+            : base("name=GBSHotelsEntities")
         {
         }
     
@@ -212,17 +212,17 @@ namespace GBSExtranet.Api.Models
         public virtual DbSet<TB_WishLists> TB_WishLists { get; set; }
         public virtual DbSet<tblAuditLog> tblAuditLogs { get; set; }
     
-        [DbFunction("Entities", "BizFnc_GetPageControls")]
+        [DbFunction("GBSHotelsEntities", "BizFnc_GetPageControls")]
         public virtual IQueryable<BizFnc_GetPageControls_Result> BizFnc_GetPageControls(Nullable<int> pageId)
         {
             var pageIdParameter = pageId.HasValue ?
                 new ObjectParameter("PageId", pageId) :
                 new ObjectParameter("PageId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<BizFnc_GetPageControls_Result>("[Entities].[BizFnc_GetPageControls](@PageId)", pageIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<BizFnc_GetPageControls_Result>("[GBSHotelsEntities].[BizFnc_GetPageControls](@PageId)", pageIdParameter);
         }
     
-        [DbFunction("Entities", "Split")]
+        [DbFunction("GBSHotelsEntities", "Split")]
         public virtual IQueryable<Split_Result> Split(string sTRING, string delimiter)
         {
             var sTRINGParameter = sTRING != null ?
@@ -233,7 +233,7 @@ namespace GBSExtranet.Api.Models
                 new ObjectParameter("Delimiter", delimiter) :
                 new ObjectParameter("Delimiter", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Split_Result>("[Entities].[Split](@STRING, @Delimiter)", sTRINGParameter, delimiterParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Split_Result>("[GBSHotelsEntities].[Split](@STRING, @Delimiter)", sTRINGParameter, delimiterParameter);
         }
     
         public virtual int B_BizSp_GetUsers_SP(string culture, string orderBy, Nullable<int> pagingSize, Nullable<int> pageIndex, Nullable<long> userID, string name, string surname, string userName, Nullable<int> firmID, Nullable<int> countryID, Nullable<long> regionID, Nullable<long> cityID, Nullable<int> securityGroupID, Nullable<int> securityGroupLevel, Nullable<int> statusID, Nullable<bool> active, Nullable<bool> locked)

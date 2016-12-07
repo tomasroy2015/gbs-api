@@ -35,6 +35,7 @@ namespace GBSExtranet.Api.Models
         public bool Active { get; set; }
         public System.DateTime OpDateTime { get; set; }
         public long OpUserID { get; set; }
+        public Nullable<bool> IsAfterReservation { get; set; }
     
         public virtual ICollection<HotelCancellationPolicy> HotelCancellationPolicies { get; set; }
     }

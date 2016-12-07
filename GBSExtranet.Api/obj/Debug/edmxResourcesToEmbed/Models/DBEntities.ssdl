@@ -640,15 +640,40 @@ warning 6013: The table/view 'Gbshotels.dbo.Databkpmail' does not have a primary
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HotellD" Type="int" Nullable="false" />
+    <Property Name="PolicyDescription_tr" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_en" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_de" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_es" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_fr" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_ru" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_it" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_ar" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_ja" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_pt" Type="nvarchar(max)" />
+    <Property Name="PolicyDescription_zh" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_en" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_tr" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_ar" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_ja" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_zh" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_pt" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_it" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_ru" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_fr" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_de" Type="nvarchar(max)" />
+    <Property Name="PaymentDescription_es" Type="nvarchar(max)" />
     <Property Name="IsPublicDisplay" Type="bit" />
     <Property Name="IsPrivateDisplay" Type="bit" />
     <Property Name="IsPromotionDisplay" Type="bit" />
     <Property Name="IsPeriodExists" Type="bit" />
     <Property Name="ArrivalTypeID" Type="int" />
     <Property Name="ArrivalRateID" Type="int" />
+    <Property Name="CancelTypeID" Type="int" />
     <Property Name="PrepaymentTypeID" Type="int" />
     <Property Name="CancelRateID" Type="int" />
     <Property Name="IsPrepayment" Type="bit" />
+    <Property Name="OpDateTime" Type="datetime" />
+    <Property Name="OpUserID" Type="bigint" />
   </EntityType>
   <EntityType Name="HotelChildrenPolicy">
     <Key>
@@ -3793,6 +3818,7 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
     <Property Name="Name_ja" Type="nvarchar(max)" />
     <Property Name="Name_pt" Type="nvarchar(max)" />
     <Property Name="Name_zh" Type="nvarchar(max)" />
+    <Property Name="IsAfterReservation" Type="bit" />
     <Property Name="Sort" Type="smallint" />
     <Property Name="Active" Type="bit" Nullable="false" />
     <Property Name="OpDateTime" Type="datetime" Nullable="false" />
@@ -4810,14 +4836,14 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_HotelCancellationPolicy_HotelCancellationPolicy">
-    <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="1" />
-    <End Role="HotelCancellationPolicy1" Type="Self.HotelCancellationPolicy" Multiplicity="0..1" />
+    <End Role="TB_TypeCancel" Type="Self.TB_TypeCancel" Multiplicity="0..1" />
+    <End Role="HotelCancellationPolicy" Type="Self.HotelCancellationPolicy" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="HotelCancellationPolicy">
+      <Principal Role="TB_TypeCancel">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="HotelCancellationPolicy1">
-        <PropertyRef Name="ID" />
+      <Dependent Role="HotelCancellationPolicy">
+        <PropertyRef Name="CancelTypeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -15569,8 +15595,8 @@ warning 6013: The table/view 'Gbshotels.dbo.TB_Translation' does not have a prim
       <End Role="ChildrenPolicySummary" EntitySet="ChildrenPolicySummary" />
     </AssociationSet>
     <AssociationSet Name="FK_HotelCancellationPolicy_HotelCancellationPolicy" Association="Self.FK_HotelCancellationPolicy_HotelCancellationPolicy">
+      <End Role="TB_TypeCancel" EntitySet="TB_TypeCancel" />
       <End Role="HotelCancellationPolicy" EntitySet="HotelCancellationPolicy" />
-      <End Role="HotelCancellationPolicy1" EntitySet="HotelCancellationPolicy" />
     </AssociationSet>
     <AssociationSet Name="FK_HotelCancellationPolicy_TB_Hotel" Association="Self.FK_HotelCancellationPolicy_TB_Hotel">
       <End Role="TB_Hotel" EntitySet="TB_Hotel" />

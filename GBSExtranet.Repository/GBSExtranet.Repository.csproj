@@ -60,6 +60,7 @@
     <Compile Include="DBModel\ChildrenPolicyItems.cs" />
     <Compile Include="DBModel\ChildrenPolicySummary.cs" />
     <Compile Include="DBModel\ChildrenPolicyUnit.cs" />
+    <Compile Include="DBModel\HotelCancellationPolicy.cs" />
     <Compile Include="DBModel\HotelChildrenPolicy.cs" />
     <Compile Include="DBModel\HotelPolicySummary.cs" />
     <Compile Include="DBModel\HotelPropertyPolicy.cs" />

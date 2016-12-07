@@ -1215,6 +1215,7 @@
     <Compile Include="Utility\UtilityPlus.cs" />
     <Compile Include="Utility\Tools.cs" />
     <Compile Include="ViewModel\Authorization.cs" />
+    <Compile Include="ViewModel\CancelTypeSummary.cs" />
     <Compile Include="ViewModel\ChidrenPoliciesModel.cs" />
     <Compile Include="ViewModel\ChildrenPolicy.cs" />
     <Compile Include="ViewModel\ChildrenPolicyItem.cs" />
@@ -1230,6 +1231,7 @@
     <Compile Include="ViewModel\Parameter.cs" />
     <Compile Include="ViewModel\Promotion.cs" />
     <Compile Include="ViewModel\PromotionViewModel.cs" />
+    <Compile Include="ViewModel\PropertyCancellationPolicy.cs" />
     <Compile Include="ViewModel\PropertyCancelPolicy.cs" />
     <Compile Include="ViewModel\PropertyFacilities.cs" />
     <Compile Include="ViewModel\PropertyFacilitiesHeader.cs" />
@@ -1288,6 +1290,7 @@
       <LastGenOutput>DBEntities.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\Internet.png" />
+    <Content Include="Resources\Nothing.png" />
     <Content Include="Resources\parking.png" />
     <Content Include="Resources\Pet.png" />
     <Content Include="Scripts\bootstrap.js" />
