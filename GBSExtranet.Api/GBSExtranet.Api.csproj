@@ -232,6 +232,7 @@
     <Compile Include="Controllers\PropertyReviewController.cs" />
     <Compile Include="Controllers\PropertyStatisticsController.cs" />
     <Compile Include="Controllers\RegionController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\RoomRateAvailabilityController.cs" />
     <Compile Include="Controllers\SessionControllerHandler.cs" />
     <Compile Include="Controllers\SessionRouteHandler.cs" />
@@ -1204,6 +1205,7 @@
     <Compile Include="ServiceLayer\PropertyFacilitiesService.cs" />
     <Compile Include="ServiceLayer\PropertyOperationService.cs" />
     <Compile Include="ServiceLayer\PropertyPolicyService.cs" />
+    <Compile Include="ServiceLayer\PropertyReservationService.cs" />
     <Compile Include="ServiceLayer\PropertyReviewService.cs" />
     <Compile Include="ServiceLayer\PropertyStatisticService.cs" />
     <Compile Include="ServiceLayer\RegionService.cs" />
@@ -1239,6 +1241,7 @@
     <Compile Include="ViewModel\PropertyPolicies.cs" />
     <Compile Include="ViewModel\PropertyPolicyItems.cs" />
     <Compile Include="ViewModel\PropertyPolicyUnits.cs" />
+    <Compile Include="ViewModel\PropertyReservation.cs" />
     <Compile Include="ViewModel\PropertyReview.cs" />
     <Compile Include="ViewModel\PropertyReviewHeader.cs" />
     <Compile Include="ViewModel\PropertyRoom.cs" />
