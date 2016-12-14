@@ -1247,6 +1247,7 @@
     <Compile Include="ViewModel\PropertyRoom.cs" />
     <Compile Include="ViewModel\PropertyStatistics.cs" />
     <Compile Include="ViewModel\Region.cs" />
+    <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\ResetPassword.cs" />
     <Compile Include="Models\ResponseObject.cs" />
     <Compile Include="ViewModel\RoomRateAvailability.cs" />

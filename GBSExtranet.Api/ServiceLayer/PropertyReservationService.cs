@@ -413,7 +413,7 @@ namespace GBSExtranet.Api.ServiceLayer
         }
 
 
-        public PropertyReservation GetReservationsForView(long ReservationID,string culture)
+        public List<PropertyReservation> GetReservationsForView(long ReservationID,string culture)
         {
             DataTable dt = new DataTable();
             DataTable dt1 = new DataTable();
@@ -522,7 +522,7 @@ namespace GBSExtranet.Api.ServiceLayer
                         ProObj.ReservationCultureSystemCode = dr["ReservationCultureSystemCode"].ToString();
                         if (Convert.ToBoolean(dr["Refundable"]) == true)
                         {
-                            String CancelPolicyText = "";
+                            String CancelPolicyText = new PropertyCancelService().GetCancelTypeSummary(ProObj.HotelID, culture).Where(f => f.IsRefundable == true).FirstOrDefault().CancelSummaryText;
                             ProObj.CancelPolicyDesc = CancelPolicyText.Replace("#Days#", dr["RefundableDayCount"].ToString()).Replace("#Penalty#", dr["PenaltyRateTypeName"].ToString());
                         }
                         else
@@ -619,8 +619,8 @@ namespace GBSExtranet.Api.ServiceLayer
                    
                 }
             }
-            var resObj = ListOfModel.FirstOrDefault();
-            return resObj;
+            
+            return ListOfModel;
         }
 
         public string GetRoomBedInfoDetails(string ReservationID, string HotelRoomID, string BedOptionNo, string CultureValue)

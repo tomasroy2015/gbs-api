@@ -62,5 +62,28 @@ namespace GBSExtranet.Api.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
             }
         }
+
+        [Route("reservation/getReservationPromotions")]
+        [HttpGet]
+        public HttpResponseMessage GetReservationPromotions(int reservationID,string culture) 
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var data = new PropertyReservationService().ReservationPromotions(reservationID, culture);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
     }
 }
