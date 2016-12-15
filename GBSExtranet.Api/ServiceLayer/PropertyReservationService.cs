@@ -12,15 +12,17 @@ using System.Security.Cryptography;
 using System.Text;
 using System.IO;
 using System.Collections;
+using GBSExtranet.Api.Models;
 
 namespace GBSExtranet.Api.ServiceLayer
 {
     public class PropertyReservationService:BaseService
     {
-        public List<PropertyReservation> GetReservationByProperty(int hotelID, string CultureValue,int offset) 
+        public ResponseObject GetReservationByProperty(int hotelID, string CultureValue, int offset) 
         {
              DataTable dt = new DataTable();
             DataTable dt1 = new DataTable();
+            ResponseObject data = new ResponseObject();
             _sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("B_Ex_GetPropertyReservations_TB_Reservation_SP", _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -201,9 +203,11 @@ namespace GBSExtranet.Api.ServiceLayer
                     }
                     ListOfModel.Add(ProObj);
                 }
+                data.totalRows = ListOfModel.Count;
                 ListOfModel = ListOfModel.Skip(offset).Take(10).ToList();
+                data.rows = ListOfModel.Cast<object>().ToList();
             }
-            return ListOfModel;
+            return data;
         }
 
         public List<PropertyReservation> GetReservations(string CultureValue)
