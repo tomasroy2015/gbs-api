@@ -1209,6 +1209,7 @@
     <Compile Include="ServiceLayer\PropertyReviewService.cs" />
     <Compile Include="ServiceLayer\PropertyStatisticService.cs" />
     <Compile Include="ServiceLayer\RegionService.cs" />
+    <Compile Include="ServiceLayer\ReservationService.cs" />
     <Compile Include="ServiceLayer\RoomRateAvailabilityService.cs" />
     <Compile Include="ServiceLayer\UserOperationService.cs" />
     <Compile Include="Utility\Encryption64.cs" />
@@ -1247,6 +1248,7 @@
     <Compile Include="ViewModel\PropertyRoom.cs" />
     <Compile Include="ViewModel\PropertyStatistics.cs" />
     <Compile Include="ViewModel\Region.cs" />
+    <Compile Include="ViewModel\Reservation.cs" />
     <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\ResetPassword.cs" />
     <Compile Include="Models\ResponseObject.cs" />

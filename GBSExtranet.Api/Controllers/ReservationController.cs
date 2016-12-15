@@ -11,6 +11,7 @@ using GBSExtranet.Api.ViewModel;
 using System.Web;
 using System.ServiceModel.Channels;
 using Business;
+using System.Data;
 
 namespace GBSExtranet.Api.Controllers
 {
@@ -73,6 +74,76 @@ namespace GBSExtranet.Api.Controllers
                 {
                     var data = new PropertyReservationService().ReservationPromotions(reservationID, culture);
                     return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+        [Route("reservation/getReservationOperation")]
+        [HttpGet]
+        public HttpResponseMessage GetReservationOperation(Int64 reservationID, bool systemAdmin, long userID, string culture) 
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {                  
+                    var data = new ReservationService().GetReservations(reservationID, userID, systemAdmin, culture).FirstOrDefault(f=>f.ReservationID == reservationID);                  
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        } 
+
+        [Route("reservation/getReservationHistory")]
+        [HttpGet]
+        public HttpResponseMessage GetReservationHistory(long reservationID, string culture)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    DataTable ReservationHistory = new DataTable();
+                    BaseService svc = new BaseService();
+                    ReservationHistory = BizApplication.GetUserOperations(svc._context, "Date DESC, ID DESC", culture, null, Convert.ToString(reservationID));
+
+                    List<Reservation> ListOfModel = new List<Reservation>();
+
+                    if (ReservationHistory.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in ReservationHistory.Rows)
+                        {
+                            Reservation Obj = new Reservation();
+
+                            // Obj.ReservationID = Convert.ToInt32(dr["RecordID"]);
+                            Obj.ReservationOwner = dr["UserFullName"].ToString();
+
+                            DateTime dt1 = Convert.ToDateTime(dr["Date"]);
+
+                            Obj.ReservationDate = (dt1.ToString("d"));
+                            Obj.ReservationOperation = dr["OperationTypeName"].ToString();
+
+                            ListOfModel.Add(Obj);
+
+                        }
+                    }
+
+                    return Request.CreateResponse(HttpStatusCode.OK, ListOfModel);
                 }
                 else
                 {
