@@ -16,5 +16,6 @@ namespace GBSExtranet.Api.ViewModel
         public string Name { get; set; }
         public bool MainPhoto { get; set; }
         public string Path { get; set; }
+        public List<PropertyPhotos> AllPhotos { get; set; }
     }
 }

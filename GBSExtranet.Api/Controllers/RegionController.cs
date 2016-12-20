@@ -13,6 +13,10 @@ using GBSExtranet.Api.ViewModel;
 using System.Web;
 using System.ServiceModel.Channels;
 using Business;
+using System.IO;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Web.Configuration;
 
 namespace GBSExtranet.Api.Controllers
 {
@@ -44,14 +48,54 @@ namespace GBSExtranet.Api.Controllers
         }
         [Route("region/addRegion")]
         [HttpPost]
-        public HttpResponseMessage AddRegion(Region region)
+        public async Task<HttpResponseMessage> AddRegion() 
         {
             try
             {
+                
+                //if (!Request.Content.IsMimeMultipartContent())
+                //{
+                //    throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+                //}
+                string fileName = "";
+                var root = HttpContext.Current.Server.MapPath("~/App_Data/Uploadfiles");
+                Directory.CreateDirectory(root);
+                var provider = new MultipartFormDataStreamProvider(root);
+                var result = await Request.Content.ReadAsMultipartAsync(provider);
+                var region = result.FormData["model"];
+                if (region == null)
+                {
+                    throw new HttpResponseException(HttpStatusCode.BadRequest);
+                }  
                 if (this.ModelState.IsValid)
                 {
-                    var result = new RegionService().Create(region);
-                    return Request.CreateResponse(HttpStatusCode.OK, result);
+                   //
+                    var data = JsonConvert.DeserializeObject<Region>(region);
+                                       
+                    var resultData = new RegionService().Create(data);
+                    foreach (var fileData in result.FileData)
+                    {
+                        //TODO: Do something with uploaded file.  
+                        fileName = fileData.Headers.ContentDisposition.FileName;
+                        if (fileName.StartsWith("\"") && fileName.EndsWith("\""))
+                        {
+                            fileName = fileName.Trim('"');
+                        }
+                        if (fileName.Contains(@"/") || fileName.Contains(@"\"))
+                        {
+                            fileName = Path.GetFileName(fileName);
+                        }
+                        string f = Path.GetFileNameWithoutExtension(fileName);
+                        string e = Path.GetExtension(fileName);
+                        string n = f.Replace(f, resultData.ID.ToString());
+                        string file =  n + e;
+                        string sPath =  HttpContext.Current.Server.MapPath(WebConfigurationManager.AppSettings["RegionImageURL"].ToString());
+                        File.Copy(fileData.LocalFileName, Path.Combine(sPath, file)); 
+                        resultData.Image = file;
+                        Tools.ClearFolder(root);
+                        new RegionService().Edit(resultData);
+                    }
+                    return Request.CreateResponse(HttpStatusCode.OK, resultData);
                 }
                 else
                 {
@@ -67,14 +111,54 @@ namespace GBSExtranet.Api.Controllers
 
         [Route("region/editRegion")]
         [HttpPost]
-        public HttpResponseMessage EditRegion(Region region)
+        public async Task<HttpResponseMessage> EditRegion()
         {
             try
             {
+                string fileName = "";
+                var root = HttpContext.Current.Server.MapPath("~/App_Data/Uploadfiles");
+                Directory.CreateDirectory(root);
+                var provider = new MultipartFormDataStreamProvider(root);
+                var result = await Request.Content.ReadAsMultipartAsync(provider);
+                var region = result.FormData["model"];
+                if (region == null)
+                {
+                    throw new HttpResponseException(HttpStatusCode.BadRequest);
+                }
                 if (this.ModelState.IsValid)
                 {
-                    var result = new RegionService().Edit(region);
-                    return Request.CreateResponse(HttpStatusCode.OK, result);
+                    var data = JsonConvert.DeserializeObject<Region>(region);
+                    foreach (var fileData in result.FileData)
+                    {
+                        //TODO: Do something with uploaded file.  
+                        fileName = fileData.Headers.ContentDisposition.FileName;
+                        if (fileName.StartsWith("\"") && fileName.EndsWith("\""))
+                        {
+                            fileName = fileName.Trim('"');
+                        }
+                        if (fileName.Contains(@"/") || fileName.Contains(@"\"))
+                        {
+                            fileName = Path.GetFileName(fileName);
+                        }
+                        string f = Path.GetFileNameWithoutExtension(fileName);
+                        string e = Path.GetExtension(fileName);
+                        string n = f.Replace(f, data.ID.ToString());
+                        string file = n + e;
+                        string sPath = HttpContext.Current.Server.MapPath(WebConfigurationManager.AppSettings["RegionImageURL"].ToString());
+                        if (File.Exists(sPath + file))
+                        {
+                            File.Delete(sPath + file);
+                            File.Copy(fileData.LocalFileName, Path.Combine(sPath, file));
+                        }
+                        else
+                        {
+                            File.Copy(fileData.LocalFileName, Path.Combine(sPath, file));
+                        }
+                        data.Image = file;                      
+                    }
+                    Tools.ClearFolder(root);
+                    var resultData = new RegionService().Edit(data);
+                    return Request.CreateResponse(HttpStatusCode.OK, resultData);
                 }
                 else
                 {

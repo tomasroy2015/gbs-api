@@ -228,6 +228,7 @@
     <Compile Include="Controllers\PropertyCancelController.cs" />
     <Compile Include="Controllers\PropertyFacilitiesController.cs" />
     <Compile Include="Controllers\PropertyInformationController.cs" />
+    <Compile Include="Controllers\PropertyPhotosController.cs" />
     <Compile Include="Controllers\PropertyPolicyController.cs" />
     <Compile Include="Controllers\PropertyReviewController.cs" />
     <Compile Include="Controllers\PropertyStatisticsController.cs" />
@@ -1204,6 +1205,7 @@
     <Compile Include="ServiceLayer\PropertyCancelService.cs" />
     <Compile Include="ServiceLayer\PropertyFacilitiesService.cs" />
     <Compile Include="ServiceLayer\PropertyOperationService.cs" />
+    <Compile Include="ServiceLayer\PropertyPhotoService.cs" />
     <Compile Include="ServiceLayer\PropertyPolicyService.cs" />
     <Compile Include="ServiceLayer\PropertyReservationService.cs" />
     <Compile Include="ServiceLayer\PropertyReviewService.cs" />
@@ -1232,6 +1234,7 @@
     <Compile Include="ViewModel\HotelRateAvailability.cs" />
     <Compile Include="ViewModel\HotelRateAvailabilityViewModel.cs" />
     <Compile Include="ViewModel\Parameter.cs" />
+    <Compile Include="ViewModel\PhotoViewModel.cs" />
     <Compile Include="ViewModel\Promotion.cs" />
     <Compile Include="ViewModel\PromotionViewModel.cs" />
     <Compile Include="ViewModel\PropertyCancellationPolicy.cs" />

@@ -10,6 +10,7 @@ using Business;
 using System.Data;
 using GBSExtranet.Api.Models;
 using GBSExtranet.Repository;
+using System.Web.Configuration;
 
 namespace GBSExtranet.Api.ServiceLayer
 {
@@ -79,7 +80,7 @@ namespace GBSExtranet.Api.ServiceLayer
 
                         RegObj.Active = Convert.ToBoolean(dr["Active"].ToString());
                         RegObj.CountryID = dr["CountryID"].ToString();
-                       
+                        RegObj.Image = "http://167.114.102.159:8081/Images/Region/" + dr["Image"].ToString();
                         list.Add(RegObj);                        
                     }
                 }
@@ -110,9 +111,10 @@ namespace GBSExtranet.Api.ServiceLayer
 
         }
 
-        public bool Create(Region model)
+        public Region Create(Region model)
         {
             bool status = true;
+            long returnID = -1;
             GBSDbContext _db = new GBSDbContext();
             UnitOfWork uow = new UnitOfWork(_db);
             try
@@ -173,9 +175,10 @@ namespace GBSExtranet.Api.ServiceLayer
                 regionObj.Active = model.Active;
                 regionObj.OpDateTime = DateTime.Now;
                 regionObj.OpUserID  = model.OpUserID;
-
+                regionObj.Image = model.Image;
                 regionRepository.Add(regionObj);
                 uow.SaveChanges();
+                model.ID = regionObj.ID;
             }
             catch (Exception ex)
             {
@@ -185,7 +188,7 @@ namespace GBSExtranet.Api.ServiceLayer
             {
                 uow.Dispose();
             }
-            return status;
+            return model;
         }
 
         public bool Edit(Region model) 
@@ -234,6 +237,7 @@ namespace GBSExtranet.Api.ServiceLayer
                 RegionTable.HasCityTax = model.CityTax;
                 RegionTable.Active = model.Active;
                 RegionTable.OpUserID = model.OpUserID;
+                RegionTable.Image = model.Image;
                 uow.SaveChanges();
                 
             }

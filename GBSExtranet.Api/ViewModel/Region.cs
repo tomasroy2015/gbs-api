@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -44,5 +45,6 @@ namespace GBSExtranet.Api.ViewModel
         public bool CityTax { get; set; }
         public long OpUserID { get; set; }
         public bool Active { get; set; }
+        public string Image { get; set; }
     }
 }

@@ -50,5 +50,6 @@ namespace GBSExtranet.Repository
         public string Msgtopdest { get; set; }
         public string Msgtopdest_en { get; set; }
         public string Msgtopdest_ar { get; set; }
+        public string Image { get; set; }
     }
 }

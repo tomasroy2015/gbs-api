@@ -78,6 +78,21 @@ namespace GBSExtranet.Api
             }
             return filteredData;
         }
+        public static void ClearFolder(string FolderName) 
+        {
+            DirectoryInfo dir = new DirectoryInfo(FolderName);
+
+            foreach (FileInfo fi in dir.GetFiles())
+            {
+                fi.Delete();
+            }
+
+            foreach (DirectoryInfo di in dir.GetDirectories())
+            {
+                ClearFolder(di.FullName);
+                di.Delete();
+            }
+        }
         public List<T> Sort_List<T>(string sortDirection, string sortExpression, List<T> data)
         {
 
