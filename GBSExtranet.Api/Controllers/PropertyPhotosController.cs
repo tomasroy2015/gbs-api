@@ -48,5 +48,73 @@ namespace GBSExtranet.Api.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
             }
         }
+
+        [Route("propertyPhotos/getListPhotos")]
+        [HttpGet]
+        public HttpResponseMessage GetListPhotos(int partID, int hotelID)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var data = new PropertyPhotoService().LoadPhoto(partID, hotelID);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+        [Route("propertyPhotos/delete")]
+        [HttpPost]
+        public HttpResponseMessage DeletePhoto(string photoID, long userID)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var data = new PropertyPhotoService().DeletePhotos(photoID, userID);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+        [Route("propertyPhotos/setMainPhoto")]
+        [HttpPost]
+        public HttpResponseMessage SetMainPhoto(string photoID, string recordID, string partID,long userID)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var data = new PropertyPhotoService().MainPhoto(photoID, recordID, photoID, userID);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
     }
 }
