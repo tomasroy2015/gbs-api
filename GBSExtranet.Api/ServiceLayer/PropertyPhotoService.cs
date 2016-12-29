@@ -13,6 +13,7 @@ using System.Text;
 using System.IO;
 using System.Collections;
 using GBSExtranet.Api.Models;
+using System.Drawing.Imaging;
 
 namespace GBSExtranet.Api.ServiceLayer
 {
@@ -165,6 +166,137 @@ namespace GBSExtranet.Api.ServiceLayer
             int ID = Convert.ToInt32(Obj.ID);
 
             return status;
+        }
+        public int UploadOperation(string Operation, int fileCount, string FileName, int PartID, int hotelID,int recordID, long userID) 
+        {
+
+            PropertyPhotoService modelRepo = new PropertyPhotoService();
+            var  HotelPhotoPath = modelRepo.GetParameterValue("HotelPhotoPath");
+            var UploadPath = modelRepo.GetParameterValue("HotelPhotoPath");
+            var PhotoResizeWidt = modelRepo.GetParameterValue("PhotoResizeWidth");
+            var PhotoResizeHeig = modelRepo.GetParameterValue("PhotoResizeHeight");
+            string MaxPhotoCount = "";
+            if (Operation == "Upload")
+            {
+                string NewFileName = "";
+              //  string[] FileNames = FileName.Split(';');
+               // int fileCount = Convert.ToInt16(FileNames.Length) - 1;
+                int part = Convert.ToInt32(PartID);
+                if (part == 1)
+                {
+                    MaxPhotoCount = modelRepo.GetParameterValue("MaxHotelPhotoCount");
+                }
+                else
+                {
+                    MaxPhotoCount = modelRepo.GetParameterValue("MaxRoomPhotoCount");
+                }
+
+                if (fileCount <= Convert.ToInt32(MaxPhotoCount))
+                {
+                    try
+                    {
+                        // TransactionScope ts = new TransactionScope();
+                       // foreach (string Filename in FileNames)
+                        //{
+                        if (FileName.Trim() != "" && FileName != "undefined")
+                            {
+                                string[] FileNam = FileName.Split('.');
+
+                                foreach (string Name in FileNam)
+                                {
+                                    if (Name != "jpg" && Name != "jpeg" && Name != "png")
+                                    {
+                                        NewFileName = Name + ".JPG";
+                                    }
+                                }
+                                string Value = AddImage(part, NewFileName, recordID, userID);
+
+
+                                string imagePath = HttpContext.Current.Server.MapPath("~/" + HotelPhotoPath + hotelID + "/" + NewFileName);
+                                string adminImagePath = HttpContext.Current.Server.MapPath(HotelPhotoPath + hotelID + "/" + NewFileName);
+
+                                //  UploadPath = UploadPath  + id + "/";
+
+                                int PhotoResizeWidth = Convert.ToInt32(PhotoResizeWidt);
+
+                                int PhotoResizeHeight = Convert.ToInt32(PhotoResizeHeig);
+                                //   GetImageFile(Server.MapPath(UploadPath + Filename));
+                                string subFolderParentName = "Hotel";
+                                string subFolderName = Convert.ToString(hotelID);
+                                UploadPath = "~/Upload/";
+                                if (subFolderParentName != "")
+                                {
+                                    UploadPath = UploadPath + "/" + subFolderParentName + "/";
+                                }
+                                if (subFolderName != "")
+                                {
+                                    UploadPath = UploadPath + subFolderName + "/";
+                                }
+                                string Filepaths = HttpContext.Current.Server.MapPath(UploadPath + FileName);
+
+                                System.Drawing.Image Resize = BizUtil.GetImageFile(HttpContext.Current.Server.MapPath(UploadPath + FileName));
+                                System.Drawing.Size Size = new System.Drawing.Size(PhotoResizeWidth, PhotoResizeHeight);
+                                System.Drawing.Image resizedImage = BizUtil.ResizeImage(BizUtil.GetImageFile(HttpContext.Current.Server.MapPath(UploadPath + FileName)), Size);
+                                CreateDirectory(imagePath);
+                                CreateDirectory(adminImagePath);
+                                System.Drawing.Imaging.Encoder encoder = System.Drawing.Imaging.Encoder.Quality;
+                                System.Drawing.Imaging.EncoderParameters encoderParameters = new System.Drawing.Imaging.EncoderParameters(1);
+                                System.Drawing.Imaging.EncoderParameter myEncoderParameter = new System.Drawing.Imaging.EncoderParameter(encoder, 90L);
+                                encoderParameters.Param[0] = myEncoderParameter;
+                                //System.Drawing.Imaging.ImageCodecInfo ImageCodecInfo = new System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders(1);                       
+                                System.Drawing.Imaging.ImageCodecInfo ImageCodecInfo;
+                                ImageCodecInfo = GetEncoderInfo("image/jpeg");
+                                resizedImage.Save(imagePath, ImageCodecInfo, encoderParameters);
+                                resizedImage.Save(adminImagePath, ImageCodecInfo, encoderParameters);
+                            }
+
+
+                        //}
+                        // ts.Complete();
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+            }
+            return hotelID;
+        }
+        private static ImageCodecInfo GetEncoderInfo(String mimeType)
+        {
+            int j;
+            string Encode;
+            ImageCodecInfo[] encoders;
+            encoders = ImageCodecInfo.GetImageEncoders();
+            for (j = 0; j < encoders.Length; ++j)
+            {
+                if (encoders[j].MimeType == mimeType)
+                    //  return encoders[j];
+                    Encode = Convert.ToString(encoders[j]);
+
+                return encoders[j];
+            }
+            return null;
+        }
+        public string CreateDirectory(string UploadPath)
+        {
+            string status = "Success";
+
+
+            var fileInfo = new System.IO.FileInfo(UploadPath);
+            if (!fileInfo.Directory.Exists)
+            {
+                fileInfo.Directory.Create();
+            }
+            return status;
+        }
+        public string GetImageFile(string Path)
+        {
+
+            var val = System.Drawing.Image.FromFile(Path);
+
+            return Convert.ToString(val);
         }
     }
 }
