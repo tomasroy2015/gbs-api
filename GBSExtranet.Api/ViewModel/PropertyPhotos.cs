@@ -11,6 +11,8 @@ namespace GBSExtranet.Api.ViewModel
         public int ID { get; set; }
         public int PartID { get; set; }
         public int RecordID { get; set; }
+        public int? Sort { get; set; }
+        public bool MarkAsDeleted { get; set; }
         public int RoomTypeID { get; set; }
         public string RoomTypeName { get; set; }
         public string Name { get; set; }

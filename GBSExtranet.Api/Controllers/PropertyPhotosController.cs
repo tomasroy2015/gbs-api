@@ -197,5 +197,28 @@ namespace GBSExtranet.Api.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
             }
         }
+
+        [Route("propertyPhotos/savePhotos")]
+        [HttpPost]
+        public HttpResponseMessage SetMainPhoto(List<PropertyPhotos> photos, long userID)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var data = new PropertyPhotoService().SavePhotos(photos, userID);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
     }
 }

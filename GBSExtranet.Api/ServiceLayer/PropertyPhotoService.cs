@@ -72,6 +72,7 @@ namespace GBSExtranet.Api.ServiceLayer
                     HotelObj.PartID = Convert.ToInt32(dr["PartID"]);
                     HotelObj.RecordID = Convert.ToInt32(dr["RecordID"]);
                     HotelObj.Name = dr["Name"].ToString();
+                    HotelObj.Sort = null;
                     if (dr["MainPhoto"].ToString() != "")
                     {
                         HotelObj.MainPhoto = Convert.ToBoolean(dr["MainPhoto"]);
@@ -107,7 +108,17 @@ namespace GBSExtranet.Api.ServiceLayer
             int i = obj.Database.ExecuteSqlCommand("B_Ex_SetAsMainPhoto_TB_Photo_SP @PartID,@RecordID,@ID,@OpUserID", PartIDParameter, RecordIDParameter, IDParameter, OpUserIDParameter);
             return i;
         }
-
+        public bool SavePhotos(List<PropertyPhotos> photos, long userID)
+        {
+            foreach (var photo in photos)
+            {
+                if (photo.Sort!=null && photo.Sort > 0)
+                    UpdateSort(photo.ID.ToString(), photo.Sort.ToString(), userID);
+                if(photo.MarkAsDeleted)
+                    DeletePhotos(photo.ID.ToString(), userID);
+            }
+            return true;
+        }
         public string DeletePhotos(string PhotoID, long userID)
         {
             GBSHotelsEntities obj = new GBSHotelsEntities();
