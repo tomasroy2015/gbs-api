@@ -130,6 +130,7 @@ namespace GBSExtranet.Api.Controllers
                     
                     string fileName = "";
                     var root = HttpContext.Current.Server.MapPath("~/App_Data/Uploadfiles");
+                    //var root = @"C:\Inetpub\FileUploader";
                     Directory.CreateDirectory(root);
                     var provider = new MultipartFormDataStreamProvider(root);
                     var result = await Request.Content.ReadAsMultipartAsync(provider);
@@ -194,7 +195,7 @@ namespace GBSExtranet.Api.Controllers
             }
             catch (Exception ex)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 

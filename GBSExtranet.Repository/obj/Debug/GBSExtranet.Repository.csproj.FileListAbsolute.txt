@@ -64,3 +64,11 @@ E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\bin\De
 E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
 E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb
 E:\GBS Development\angular-gbs-api\GBSExtranet.Api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.dll
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.pdb
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.dll
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.xml
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
+D:\Back Up Files\gbs-api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb

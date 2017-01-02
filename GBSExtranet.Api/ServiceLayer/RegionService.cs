@@ -80,7 +80,7 @@ namespace GBSExtranet.Api.ServiceLayer
 
                         RegObj.Active = Convert.ToBoolean(dr["Active"].ToString());
                         RegObj.CountryID = dr["CountryID"].ToString();
-                        RegObj.Image = "http://167.114.102.159:8081/Images/Region/" + dr["Image"].ToString();
+                        RegObj.Image = WebConfigurationManager.AppSettings["RegionImageURL"].ToString() + dr["Image"].ToString();
                         list.Add(RegObj);                        
                     }
                 }
