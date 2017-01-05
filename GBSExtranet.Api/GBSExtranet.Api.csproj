@@ -226,6 +226,7 @@
     <Compile Include="Controllers\DropdownController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelRateAvailabilityController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\ParameterController.cs" />
     <Compile Include="Controllers\PromotionController.cs" />
     <Compile Include="Controllers\PropertyCancelController.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Controllers\PropertyStatisticsController.cs" />
     <Compile Include="Controllers\RegionController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\RoomRateAvailabilityController.cs" />
     <Compile Include="Controllers\SessionControllerHandler.cs" />
     <Compile Include="Controllers\SessionRouteHandler.cs" />
@@ -1202,6 +1204,7 @@
     <Compile Include="ServiceLayer\EmailService.cs" />
     <Compile Include="ServiceLayer\HotelRateAvailabilityService.cs" />
     <Compile Include="ServiceLayer\HotelRateService.cs" />
+    <Compile Include="ServiceLayer\InvoiceService.cs" />
     <Compile Include="ServiceLayer\ParameterService.cs" />
     <Compile Include="ServiceLayer\PolicyUnitService.cs" />
     <Compile Include="ServiceLayer\PromotionService.cs" />
@@ -1216,6 +1219,7 @@
     <Compile Include="ServiceLayer\RegionService.cs" />
     <Compile Include="ServiceLayer\ReservationService.cs" />
     <Compile Include="ServiceLayer\RoomRateAvailabilityService.cs" />
+    <Compile Include="ServiceLayer\RoomServices.cs" />
     <Compile Include="ServiceLayer\UserOperationService.cs" />
     <Compile Include="Utility\Encryption64.cs" />
     <Compile Include="Utility\ErrorMessage.cs" />
@@ -1236,6 +1240,7 @@
     <Compile Include="ViewModel\HotelPropertyPolicies.cs" />
     <Compile Include="ViewModel\HotelRateAvailability.cs" />
     <Compile Include="ViewModel\HotelRateAvailabilityViewModel.cs" />
+    <Compile Include="ViewModel\InvoiceDetails.cs" />
     <Compile Include="ViewModel\Parameter.cs" />
     <Compile Include="ViewModel\PhotoViewModel.cs" />
     <Compile Include="ViewModel\Promotion.cs" />
@@ -1258,6 +1263,7 @@
     <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\ResetPassword.cs" />
     <Compile Include="Models\ResponseObject.cs" />
+    <Compile Include="ViewModel\Room.cs" />
     <Compile Include="ViewModel\RoomRateAvailability.cs" />
     <Compile Include="ViewModel\TypePrepayment.cs" />
     <Compile Include="ViewModel\User.cs" />

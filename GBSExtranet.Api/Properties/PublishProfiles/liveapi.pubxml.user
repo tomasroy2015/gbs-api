@@ -91,7 +91,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/02/2017 10:54:30</publishTime>
     </File>
     <File Include="bin/GBSExtranet.Api.dll">
-      <publishTime>01/02/2017 11:38:40</publishTime>
+      <publishTime>01/05/2017 19:15:20</publishTime>
     </File>
     <File Include="bin/GBSExtranet.Repository.dll">
       <publishTime>01/02/2017 11:12:36</publishTime>
