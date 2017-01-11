@@ -266,7 +266,7 @@ namespace GBSExtranet.Api.ServiceLayer
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow dr in dt.Rows)
-                {
+                {                  
                     RoomRateAvailability HotelObj = new RoomRateAvailability();
                     HotelObj.DayID = Convert.ToInt32(dr["DayID"]);
                     HotelObj.Day = Convert.ToInt32(dr["Day"]);
@@ -328,6 +328,7 @@ namespace GBSExtranet.Api.ServiceLayer
                             }
                         }
                     }
+                    
                     ListOfModel.Add(HotelObj);
                 }
             }

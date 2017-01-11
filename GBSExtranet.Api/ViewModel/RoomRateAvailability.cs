@@ -14,7 +14,7 @@ namespace GBSExtranet.Api.ViewModel
         public string RoomTypeName { get; set; }
 
         public string CssClass { get; set; }
-
+        public int DayNo { get; set; }
         //For Date
         public string DateID { get; set; }
         public string Date { get; set; }
