@@ -105,5 +105,40 @@ namespace GBSExtranet.Api.ServiceLayer
             }
             return data;
         }
+
+        public List<InvoiceDetails> GetMonthlyRevenue(string Month, string Year, string cultureCode)
+        {
+            List<InvoiceDetails> ListOfModel = new List<InvoiceDetails>();
+            DataTable dt = new DataTable();
+            _sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand("B_GetMonthlyRevenue_Reservation_SP", _sqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Month", Month);
+            cmd.Parameters.AddWithValue("@Year", Year);
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            _sqlConnection.Close();
+
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    InvoiceDetails mrevenue = new InvoiceDetails();
+                    mrevenue.Date = Convert.ToInt32(dr["Date"]);
+                    mrevenue.ReservationDate = dr["ReservationDate"].ToString();
+                    mrevenue.CommissionAmount = Convert.ToInt32(dr["ComissionAmount"]);
+                    mrevenue.PayableAmount = Convert.ToInt32(dr["PayableAmount"]);
+                    mrevenue.GrossRevenue = Convert.ToInt32(dr["GrossRevenue"]);
+                    //mrevenue.PayableAmount = dr["PayableAmount"].ToString();
+                    //mrevenue.ComissionAmount = dr["ComissionAmount"].ToString();
+                    //mrevenue.GrossRevenue = dr["GrossRevenue"].ToString();
+                 
+                    ListOfModel.Add(mrevenue);
+                }
+            }
+            return ListOfModel;
+        }
     }
 }

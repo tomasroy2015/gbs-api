@@ -64,6 +64,55 @@ namespace GBSExtranet.Api.Controllers
             }
         }
 
-       
+        [Route("invoice/getinvoicedetails")]
+        [HttpGet]
+        public HttpResponseMessage GetInvoiceDetails(string invoiceid, string cultureCode)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var data = new InvoiceDetailService().GetInvoiceDetails(invoiceid, cultureCode);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+        [Route("invoice/getmonthlyrevenue")]
+        [HttpGet]
+        public HttpResponseMessage GetMonthlyRevenue(string Month, string Year, string cultureCode)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    string month = "12";
+                    string year = "2015";
+                    //string currentMonth = DateTime.Now.Month.ToString();
+                    //string currentYear = DateTime.Now.Year.ToString();
+                    var data = new InvoiceService().GetMonthlyRevenue(month, year, cultureCode);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
     }
 }

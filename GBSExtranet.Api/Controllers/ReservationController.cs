@@ -156,5 +156,29 @@ namespace GBSExtranet.Api.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
             }
         }
+
+        [Route("reservation/getReservationStatement")]
+        [HttpGet]
+        public HttpResponseMessage GetReservationStatement(string culture, int offset)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    var data = new ReservationService().GetReservationStatement(culture, offset);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
     }
 }

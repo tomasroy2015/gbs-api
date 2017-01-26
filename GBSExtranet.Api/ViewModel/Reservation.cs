@@ -33,5 +33,19 @@ namespace GBSExtranet.Api.ViewModel
         public string CreditCardNumber { get; set; }
         public string ExpirationDate { get; set; }
         public string CVCCode { get; set; }
+
+        public int ID { get; set; }
+
+        public string Name { get; set; }
+
+        public string Surname { get; set; }
+
+        public string ComissionRate { get; set; }
+
+        public string ActualAmount { get; set; }
+
+        public string ComissionAmount { get; set; }
+
+        public string PayableAmounts { get; set; }
     }
 }
