@@ -372,12 +372,12 @@ namespace GBSExtranet.Api.ServiceLayer
         }
         public static object CheckEmptyStringDBParameter(object Value, bool ReturnInteger = false, bool ReturnDate = false, bool ReturnDouble = false, bool ReturnDecimal = false, bool ReturnBoolean = false, bool ReturnLong = false)
         {
-
-            if (Value == string.Empty)
+           
+            if (Value == string.Empty || Value == null)
             {
                 return null;
             }
-
+           
             if (ReturnInteger)
             {
                 return Convert.ToInt32(Value);
