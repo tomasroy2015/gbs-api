@@ -72,3 +72,12 @@ D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.xml
 D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.xml
 D:\Back Up Files\gbs-api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
 D:\Back Up Files\gbs-api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.dll
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.pdb
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\bin\Debug\EntityFramework.dll
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\bin\Debug\EntityFramework.xml
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
+E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb
