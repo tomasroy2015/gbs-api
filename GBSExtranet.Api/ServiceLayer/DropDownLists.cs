@@ -149,10 +149,13 @@ namespace GBSExtranet.Api.ServiceLayer
 
             return ListOfModel;
         }
-        public List<DropDownListsExt> GetAttributes(string AttributeHeaderId)
+        DataTable dt = new DataTable();
+        DataSet ds = new DataSet();
+        List<DropDownListsExt> Header1 = new List<DropDownListsExt>();
+        public DataTable GetAttributes(string AttributeHeaderId)
         {
             // string PropertyConditions = "";
-            DataTable dt = new DataTable();
+           
             _sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("TB_SP_GetAttributes", _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -165,25 +168,26 @@ namespace GBSExtranet.Api.ServiceLayer
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
 
-            sda.Fill(dt);
+            sda.Fill(dt);           
             _sqlConnection.Close();
-
+            List<string> stringList = new List<string>();
             List<DropDownListsExt> AttributesListOfModel = new List<DropDownListsExt>();
-
+           
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow dr in dt.Rows)
                 {
                     DropDownListsExt obj = new DropDownListsExt();
-
                     obj.AttributeId = Convert.ToInt32(dr["ID"].ToString());
                     obj.AttributeName = dr["Name"].ToString();
                     obj.AttributeHeaderId = dr["AttributeHeaderID"].ToString();
-                    AttributesListOfModel.Add(obj);
+                    AttributesListOfModel.Add(obj);                  
+                    Header1.Add(obj);
+                   // ds.Tables.Add(dt.t);
                 }
             }
-
-            return AttributesListOfModel;
+           // stringList.Add(obj.ToString());
+            return dt;
         }
 
         public List<DropDownListsExt> GetBedTypes()

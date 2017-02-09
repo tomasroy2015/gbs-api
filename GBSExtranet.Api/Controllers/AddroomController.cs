@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Data;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -61,26 +62,66 @@ namespace GBSExtranet.Api.Controllers
              //return null;
          }
 
-
+         DataTable dt = new DataTable();
+         DataSet ds = new DataSet();
+         int count = 0;
          [Route("addrooms/AttributeHeaders")]
          [HttpGet]
          public HttpResponseMessage AttributeHeaders()
          {
+             
             
              var AttributeHeaders = new DropDownLists().GetAttributeHeaders();
 
-
+           List<string> stringList = new List<string>();
+             string [] totalhead=new string[200];
              List<DropDownListsExt> Attributes = new List<DropDownListsExt>();
-
+            
              if (AttributeHeaders != null)
              {
                  foreach (var items in AttributeHeaders)
                  {
-                     Attributes = new DropDownLists().GetAttributes(items.AttributeHeaderId);
-                    // return Request.CreateResponse(HttpStatusCode.OK, Attributes);
+                    //Attributes = new DropDownLists().GetAttributes(items.AttributeHeaderId);
+                    // stringList.Add(Attributes.ToString());
+                     dt = new DropDownLists().GetAttributes(items.AttributeHeaderId);                  
+                     ds.Tables.Add(dt);
+                     count++;
+                   
+                 }                
+             }
+             int headerid = 1;
+             List<DropDownListsExt> empList = new List<DropDownListsExt>();
+             for (int i = 0; i < count; i++)
+             {
+                 try
+                 {
+                     foreach (DataRow dr in ds.Tables[i].Rows)
+                     {
+                         DropDownListsExt obj = new DropDownListsExt();
+                         obj.AttributeId = Convert.ToInt32(dr["ID"].ToString());
+                         obj.AttributeName = dr["Name"].ToString();
+                         obj.AttributeHeaderId = dr["AttributeHeaderID"].ToString();
+                         obj.PartID = dr["PartID"].ToString();
+                         if (headerid == 1)
+                         {
+                             obj.AttributeHeaderName = dr["AttributeHeaderName"].ToString();
+                         }
+                         else
+                         {
+                             obj.AttributeHeaderName ="";
+
+                         }
+                         empList.Add(obj);
+                         headerid = headerid + 1;
+                     }
+                     headerid = 1;
+                 }
+                 catch(Exception ex)
+                 {
+
                  }
              }
-             return Request.CreateResponse(HttpStatusCode.OK, Attributes);
+             return Request.CreateResponse(HttpStatusCode.OK, empList);
              //return null;
          }
 

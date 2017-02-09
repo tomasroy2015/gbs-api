@@ -81,5 +81,9 @@ namespace GBSExtranet.Api.ViewModel
         public string HotelRoomID { get; set; }
 
         public string BedTypeNameWithCount { get; set; }
+
+        public string AttributeHeaderName { get; set; }
+
+        public string PartID { get; set; }
     }
 }
