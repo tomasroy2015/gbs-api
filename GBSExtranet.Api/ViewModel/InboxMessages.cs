@@ -26,5 +26,15 @@ namespace GBSExtranet.Api.ViewModel
         public string HotelName { get; set; }
 
         public string UserName { get; set; }
+
+        public string MessageInfo { get; set; }
+
+        public int ReceiverUserID { get; set; }
+
+        public int SenderUserID { get; set; }
+
+        public string CreatedTime { get; set; }
+
+        public int ReplySenderUserID { get; set; }
     }
 }

@@ -55,13 +55,14 @@ namespace GBSExtranet.Api.ServiceLayer
             return status;
         }
 
-        public List<InboxMessages> GetUserEmails(string cultureCode)
+        public List<InboxMessages> GetUserEmails(string UserID, string cultureCode)
         {
             List<InboxMessages> ListOfModel = new List<InboxMessages>();
             DataTable dt = new DataTable();
             _sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("B_Getuseremailmessages_BizTbl_User_SP", _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@UserID", UserID);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.Fill(dt);
             _sqlConnection.Close();
@@ -98,5 +99,56 @@ namespace GBSExtranet.Api.ServiceLayer
             _sqlConnection.Close();
             return status;
         }
+
+        public List<InboxMessages> Getfullmessages(string MessageID, string cultureCode)
+        {
+            List<InboxMessages> ListOfModel = new List<InboxMessages>();
+            DataTable dt = new DataTable();
+            _sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand("B_GetFullmessages_TB_MessageBox_SP", _sqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MessageID", MessageID);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            _sqlConnection.Close();
+
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    InboxMessages inboxObj = new InboxMessages();
+                    inboxObj.ReplySenderUserID = Convert.ToInt32(dr["SenderUserID"]);
+                    inboxObj.HotelName = dr["HotelName"].ToString();
+                    inboxObj.UserName = dr["UserName"].ToString();
+                    inboxObj.Subject = dr["Subject"].ToString();
+                    inboxObj.MessageInfo = dr["MessageInfo"].ToString();
+                    inboxObj.CreatedDate = dr["CreatedDate"].ToString();
+                    inboxObj.CreatedTime = dr["CreatedTime"].ToString();
+
+                    ListOfModel.Add(inboxObj);
+                }
+            }
+            return ListOfModel;
+        }
+
+        //public int Insertreplysendmessage(string SenderID, string ReceiverID, string Subject, string Message, string cultureCode)
+        //{
+        //    int status = 0;
+        //    _sqlConnection.Open();
+        //    SqlCommand cmd = new SqlCommand("B_InsertSendmessages_TB_MessageBox_SP", _sqlConnection);
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.AddWithValue("@SenderID", SenderID);
+        //    cmd.Parameters.AddWithValue("@ReceiverID", ReceiverID);
+        //    cmd.Parameters.AddWithValue("@Subject", Subject);
+        //    cmd.Parameters.AddWithValue("@Message", Message);
+        //    cmd.Parameters.AddWithValue("@cultureCode", cultureCode);
+        //    cmd.Parameters.AddWithValue("@ReadStatus", 0);
+        //    status = cmd.ExecuteNonQuery();
+        //    _sqlConnection.Close();
+        //    return status;
+        //}
+
+
     }
 }

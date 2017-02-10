@@ -223,9 +223,11 @@
     <Compile Include="Controllers\AddonservicesController.cs" />
     <Compile Include="Controllers\AddroomController.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
+    <Compile Include="Controllers\ChangePasswordController.cs" />
     <Compile Include="Controllers\ChildrenPoliciesController.cs" />
     <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\DropdownController.cs" />
+    <Compile Include="Controllers\FirmInformationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelRateAvailabilityController.cs" />
     <Compile Include="Controllers\InboxController.cs" />
@@ -245,6 +247,7 @@
     <Compile Include="Controllers\RoomRateAvailabilityController.cs" />
     <Compile Include="Controllers\SessionControllerHandler.cs" />
     <Compile Include="Controllers\SessionRouteHandler.cs" />
+    <Compile Include="Controllers\SystemSettingsController.cs" />
     <Compile Include="Controllers\UserOperationController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Download.cs" />
@@ -1201,6 +1204,7 @@
     <Compile Include="ServiceLayer\AddonService.cs" />
     <Compile Include="ServiceLayer\AuthorizationService.cs" />
     <Compile Include="ServiceLayer\BaseService.cs" />
+    <Compile Include="ServiceLayer\ChangePasswordServices.cs" />
     <Compile Include="ServiceLayer\ChildrenPolicyService.cs" />
     <Compile Include="ServiceLayer\CommonService.cs" />
     <Compile Include="ServiceLayer\CountryService.cs" />
@@ -1208,6 +1212,7 @@
     <Compile Include="ServiceLayer\DropdownlistServices.cs" />
     <Compile Include="ServiceLayer\DropdownService.cs" />
     <Compile Include="ServiceLayer\EmailService.cs" />
+    <Compile Include="ServiceLayer\FirmInformationService.cs" />
     <Compile Include="ServiceLayer\GetRoomType_Result.cs" />
     <Compile Include="ServiceLayer\HotelRateAvailabilityService.cs" />
     <Compile Include="ServiceLayer\HotelRateService.cs" />
@@ -1229,6 +1234,7 @@
     <Compile Include="ServiceLayer\ReservationService.cs" />
     <Compile Include="ServiceLayer\RoomRateAvailabilityService.cs" />
     <Compile Include="ServiceLayer\RoomServices.cs" />
+    <Compile Include="ServiceLayer\SystemSettingService.cs" />
     <Compile Include="ServiceLayer\UserOperationService.cs" />
     <Compile Include="Utility\Encryption64.cs" />
     <Compile Include="Utility\ErrorMessage.cs" />
@@ -1245,6 +1251,7 @@
     <Compile Include="ViewModel\Country.cs" />
     <Compile Include="ViewModel\DropdownList.cs" />
     <Compile Include="ViewModel\DropDownListsExt.cs" />
+    <Compile Include="ViewModel\FirmInformation.cs" />
     <Compile Include="ViewModel\Hotel.cs" />
     <Compile Include="Models\RequestObject.cs" />
     <Compile Include="ViewModel\HotelChildrenPolicy.cs" />
@@ -1277,6 +1284,7 @@
     <Compile Include="Models\ResponseObject.cs" />
     <Compile Include="ViewModel\Room.cs" />
     <Compile Include="ViewModel\RoomRateAvailability.cs" />
+    <Compile Include="ViewModel\SystemSettings.cs" />
     <Compile Include="ViewModel\TypePrepayment.cs" />
     <Compile Include="ViewModel\User.cs" />
     <Compile Include="ViewModel\UserOperation.cs" />
