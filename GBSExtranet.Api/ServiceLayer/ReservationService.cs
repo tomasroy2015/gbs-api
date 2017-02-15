@@ -119,7 +119,7 @@ namespace GBSExtranet.Api.ServiceLayer
         }
 
 
-        public ResponseObject GetReservationStatement(string CultureValue, int offset)
+        public ResponseObject GetReservationStatement(string hotelID,string CultureValue, int offset)
         {
             List<Reservation> ListOfModel = new List<Reservation>();
             DataTable dt = new DataTable();
@@ -127,7 +127,7 @@ namespace GBSExtranet.Api.ServiceLayer
             _sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("B_GetReservationStatement_Reservation_SP", _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.AddWithValue("@InvoiceID", invoiceid);
+            cmd.Parameters.AddWithValue("@HotelId", hotelID);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.Fill(dt);
             _sqlConnection.Close();

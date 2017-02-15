@@ -18,7 +18,7 @@ namespace GBSExtranet.Api.ServiceLayer
 {
     public class InvoiceService : BaseService
     {
-        public ResponseObject GetInvoices(string CultureValue, int offset)
+        public ResponseObject GetInvoices(int hotelID, string CultureValue, int offset)
         {
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
@@ -31,7 +31,7 @@ namespace GBSExtranet.Api.ServiceLayer
             cmd.Parameters.AddWithValue("@OrderBy", "ID");
             cmd.Parameters.AddWithValue("@PagingSize", int.MaxValue);
             cmd.Parameters.AddWithValue("@PageIndex", 1);
-
+            cmd.Parameters.AddWithValue("@HotelID", hotelID);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.Fill(ds);
             _sqlConnection.Close();

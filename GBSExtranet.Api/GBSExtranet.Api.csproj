@@ -235,6 +235,7 @@
     <Compile Include="Controllers\ParameterController.cs" />
     <Compile Include="Controllers\PromotionController.cs" />
     <Compile Include="Controllers\PropertyCancelController.cs" />
+    <Compile Include="Controllers\PropertyCommissionController.cs" />
     <Compile Include="Controllers\PropertyFacilitiesController.cs" />
     <Compile Include="Controllers\PropertyInformationController.cs" />
     <Compile Include="Controllers\PropertyPhotosController.cs" />
@@ -1223,6 +1224,7 @@
     <Compile Include="ServiceLayer\PolicyUnitService.cs" />
     <Compile Include="ServiceLayer\PromotionService.cs" />
     <Compile Include="ServiceLayer\PropertyCancelService.cs" />
+    <Compile Include="ServiceLayer\PropertyCommissionService.cs" />
     <Compile Include="ServiceLayer\PropertyFacilitiesService.cs" />
     <Compile Include="ServiceLayer\PropertyOperationService.cs" />
     <Compile Include="ServiceLayer\PropertyPhotoService.cs" />
@@ -1266,6 +1268,7 @@
     <Compile Include="ViewModel\PromotionViewModel.cs" />
     <Compile Include="ViewModel\PropertyCancellationPolicy.cs" />
     <Compile Include="ViewModel\PropertyCancelPolicy.cs" />
+    <Compile Include="ViewModel\PropertyCommissionModel.cs" />
     <Compile Include="ViewModel\PropertyFacilities.cs" />
     <Compile Include="ViewModel\PropertyFacilitiesHeader.cs" />
     <Compile Include="ViewModel\PropertyPhotos.cs" />

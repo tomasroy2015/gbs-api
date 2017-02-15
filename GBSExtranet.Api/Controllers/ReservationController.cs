@@ -159,13 +159,13 @@ namespace GBSExtranet.Api.Controllers
 
         [Route("reservation/getReservationStatement")]
         [HttpGet]
-        public HttpResponseMessage GetReservationStatement(string culture, int offset)
+        public HttpResponseMessage GetReservationStatement(string hotelID, string culture, int offset)
         {
             try
             {
                 if (this.ModelState.IsValid)
                 {
-                    var data = new ReservationService().GetReservationStatement(culture, offset);
+                    var data = new ReservationService().GetReservationStatement(hotelID,culture, offset);
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
                 else

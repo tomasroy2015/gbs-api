@@ -30,6 +30,15 @@ namespace GBSExtranet.Api.Controllers
              return Request.CreateResponse(HttpStatusCode.OK, displayDetails);
              //return null;
          }
+         [Route("addonservices/drpchangetype")]
+         [HttpGet]
+         public HttpResponseMessage drpchangetype()
+         {
+             AddonService obj = new AddonService();
+             var displayDetails = obj.Displaydrpchangetype();
+             return Request.CreateResponse(HttpStatusCode.OK, displayDetails);
+             //return null;
+         }
          [Route("addonservices/Deleteaddons")]
          [HttpPost]
          public HttpResponseMessage Deleteaddons(int Id)

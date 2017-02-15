@@ -20,13 +20,13 @@ namespace GBSExtranet.Api.Controllers
     {
         [Route("invoice/getinvoice")]
         [HttpGet]
-        public HttpResponseMessage GetInvoices(string cultureCode, int offset)
+        public HttpResponseMessage GetInvoices(int hotelID,string cultureCode, int offset)
         {
             try
             {
                 if (this.ModelState.IsValid)
                 {
-                    var data = new InvoiceService().GetInvoices(cultureCode, offset);
+                    var data = new InvoiceService().GetInvoices(hotelID,cultureCode, offset);
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
                 else

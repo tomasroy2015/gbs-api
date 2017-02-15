@@ -21,5 +21,29 @@ namespace GBSExtranet.Api.ViewModel
         public string RoomCount { get; set; }
 
         public string Image { get; set; }
+
+        public string TableName { get; set; }
+
+        public string BedId { get; set; }
+
+        public string OptionNo { get; set; }
+
+        public string HotelRoomID { get; set; }
+
+        public string BedTypeID { get; set; }
+
+        public string BedTypeName { get; set; }
+
+        public string Count { get; set; }
+
+        public string BedTypeNameWithCount { get; set; }
+
+        public int rommid { get; set; }
+
+        public string roomname { get; set; }
+
+        public string People { get; set; }
+
+        public string Children { get; set; }
     }
 }

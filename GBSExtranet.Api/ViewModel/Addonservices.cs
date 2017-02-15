@@ -17,5 +17,7 @@ namespace GBSExtranet.Api.ViewModel
         public string HotelId { get; set; }
 
         public int ID { get; set; }
+
+        public string Lanagecode { get; set; }
     }
 }
