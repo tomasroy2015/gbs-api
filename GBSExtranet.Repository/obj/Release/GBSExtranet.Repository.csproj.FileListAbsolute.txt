@@ -52,3 +52,12 @@ D:\Back Up Files\gbs-api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlS
 D:\Back Up Files\gbs-api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
 D:\Back Up Files\gbs-api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.dll
 D:\Back Up Files\gbs-api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.pdb
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Release\GBSExtranet.Repository.pdb
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Release\EntityFramework.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Release\EntityFramework.xml
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\All Source Code\gbs-api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+D:\All Source Code\gbs-api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\obj\Release\GBSExtranet.Repository.pdb

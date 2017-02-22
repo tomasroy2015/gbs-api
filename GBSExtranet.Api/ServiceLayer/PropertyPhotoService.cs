@@ -41,7 +41,7 @@ namespace GBSExtranet.Api.ServiceLayer
                 foreach (DataRow dr in dt.Rows)
                 {
                     PropertyPhotos HotelObj = new PropertyPhotos();
-                    HotelObj.RoomID = Convert.ToInt32(dr["ID"]);
+                    HotelObj.RoomID = Convert.ToInt32(dr["HotelRoomID"]);
                     HotelObj.RoomTypeID = Convert.ToInt32(dr["RoomTypeID"]);
                     HotelObj.RoomTypeName = dr["RoomTypeName"].ToString();
                     ListOfModel.Add(HotelObj);

@@ -81,3 +81,12 @@ E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\bin\
 E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
 E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
 E:\Bala\GBS Extranet Latest Updates\GBS Extranet API\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Debug\GBSExtranet.Repository.pdb
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.xml
+D:\All Source Code\gbs-api\GBSExtranet.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\All Source Code\gbs-api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.csprojResolveAssemblyReference.cache
+D:\All Source Code\gbs-api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.dll
+D:\All Source Code\gbs-api\GBSExtranet.Repository\obj\Debug\GBSExtranet.Repository.pdb
