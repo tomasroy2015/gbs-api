@@ -145,6 +145,46 @@ namespace GBSExtranet.Api.ServiceLayer
                     invoiceObj.ActualAmount = dr["ActualAmount"].ToString();
                     invoiceObj.PayableAmounts = dr["PayableAmount"].ToString();
                     invoiceObj.ComissionAmount = dr["ComissionAmount"].ToString();
+                    invoiceObj.CheckInDate = dr["CheckInDate"].ToString();
+                    invoiceObj.CheckOutDate = dr["CheckOutDate"].ToString();
+                    ListOfModel.Add(invoiceObj);
+                }
+                data.totalRows = ListOfModel.Count;
+                ListOfModel = ListOfModel.Skip(offset).Take(20).ToList();
+                data.rows = ListOfModel.Cast<object>().ToList();
+            }
+            return data;
+        }
+        public ResponseObject GetReservationStatementByDate(string hotelID, DateTime StartDate, DateTime Enddate, string CultureValue, int offset)
+        {
+            List<Reservation> ListOfModel = new List<Reservation>();
+            DataTable dt = new DataTable();
+            ResponseObject data = new ResponseObject();
+            _sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand("B_GetReservationStatementBYDate_Reservation_SP", _sqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@HotelId", hotelID);
+            cmd.Parameters.AddWithValue("@StartDate", StartDate);
+            cmd.Parameters.AddWithValue("@Enddate", Enddate);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            _sqlConnection.Close();
+
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    Reservation invoiceObj = new Reservation();
+                    invoiceObj.ID = Convert.ToInt32(dr["ID"]);
+                    invoiceObj.Name = dr["Name"].ToString();
+                    invoiceObj.Surname = dr["Surname"].ToString();
+                    invoiceObj.ComissionRate = dr["ComissionRate"].ToString();
+                    invoiceObj.ActualAmount = dr["ActualAmount"].ToString();
+                    invoiceObj.PayableAmounts = dr["PayableAmount"].ToString();
+                    invoiceObj.ComissionAmount = dr["ComissionAmount"].ToString();
+                    invoiceObj.CheckInDate = dr["CheckInDate"].ToString();
+                    invoiceObj.CheckOutDate = dr["CheckOutDate"].ToString();
                     ListOfModel.Add(invoiceObj);
                 }
                 data.totalRows = ListOfModel.Count;

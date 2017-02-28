@@ -25,13 +25,14 @@ namespace GBSExtranet.Api.ServiceLayer
             return i;
             
         }
-        public List<Addonservices> Displayaddonsdetails()
+        public List<Addonservices> Displayaddonsdetails(int HotelID)
         {
             List<Addonservices> ListOfModel = new List<Addonservices>();
             DataTable dt = new DataTable();
             _sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("B_Getaddonservices_TB_Addons_SP", _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@HotelID", HotelID);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.Fill(dt);
             _sqlConnection.Close();

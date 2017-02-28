@@ -12,6 +12,7 @@ using System.Web;
 using System.ServiceModel.Channels;
 using Business;
 using System.Data;
+using System.Globalization;
 
 namespace GBSExtranet.Api.Controllers
 {
@@ -166,6 +167,32 @@ namespace GBSExtranet.Api.Controllers
                 if (this.ModelState.IsValid)
                 {
                     var data = new ReservationService().GetReservationStatement(hotelID,culture, offset);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+        [Route("reservation/getReservationStatementByDate")]
+        [HttpGet]
+        public HttpResponseMessage GetReservationStatementByDate(string hotelID, string StartDate, string Enddate, string culture, int offset)
+        {
+            try
+            {
+                if (this.ModelState.IsValid)
+                {
+                    //DateTime StartDate1 = Convert.ToDateTime(StartDate);
+                    //DateTime Enddate1 = Convert.ToDateTime(Enddate);
+                    DateTime StartDate1 = DateTime.ParseExact(StartDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    DateTime Enddate1 = DateTime.ParseExact(Enddate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    var data = new ReservationService().GetReservationStatementByDate(hotelID, StartDate1, Enddate1, culture, offset);
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
                 else

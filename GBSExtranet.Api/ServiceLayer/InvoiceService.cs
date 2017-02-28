@@ -106,15 +106,16 @@ namespace GBSExtranet.Api.ServiceLayer
             return data;
         }
 
-        public List<InvoiceDetails> GetMonthlyRevenue(string Month, string Year, string cultureCode)
+        public List<InvoiceDetails> GetMonthlyRevenue(int HotelID, string currentMonth, string currentYear, string cultureCode)
         {
             List<InvoiceDetails> ListOfModel = new List<InvoiceDetails>();
             DataTable dt = new DataTable();
             _sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("B_GetMonthlyRevenue_Reservation_SP", _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Month", Month);
-            cmd.Parameters.AddWithValue("@Year", Year);
+            cmd.Parameters.AddWithValue("@Month", currentMonth);
+            cmd.Parameters.AddWithValue("@Year", currentYear);
+            cmd.Parameters.AddWithValue("@HotelID", HotelID);
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.Fill(dt);

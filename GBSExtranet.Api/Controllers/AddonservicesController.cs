@@ -23,10 +23,10 @@ namespace GBSExtranet.Api.Controllers
          }
          [Route("addonservices/Displayaddons")]
          [HttpGet]
-         public HttpResponseMessage Displayaddons()
+         public HttpResponseMessage Displayaddons(int HotelID)
          {
              AddonService obj = new AddonService();
-             var displayDetails = obj.Displayaddonsdetails();
+             var displayDetails = obj.Displayaddonsdetails(HotelID);
              return Request.CreateResponse(HttpStatusCode.OK, displayDetails);
              //return null;
          }

@@ -23,7 +23,7 @@ namespace GBSExtranet.Api.ServiceLayer
             DataTable dt1 = new DataTable();
            
             _sqlConnection.Open();
-            SqlCommand cmd = new SqlCommand("[TB_SP_GetHotelRooms]", _sqlConnection);
+            SqlCommand cmd = new SqlCommand("TB_SP_GetHotelRoomsDisplay", _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Culture", cultureCode);
             cmd.Parameters.AddWithValue("@OrderBy", "HotelRoomID");
@@ -144,18 +144,18 @@ namespace GBSExtranet.Api.ServiceLayer
                           //string option = option1 + " or " + option2 + " or " + option3;
                           var count = 1;
                           string option="";
-                          
-                          for(int i=Roomdetname.Length;i>1;i--)
-                          {
-                           if(count==1)
-                        {
-                            option = Roomdetname[Roomdetname.Length - i];
-                        }
-                        else
-                        {
-                             option +="or "+Roomdetname[Roomdetname.Length- i];
 
-                        }
+                          for (int i = Roomdetname.Length; i > 1; i--)
+                          {
+                              if (count == 1)
+                              {
+                                  option = Roomdetname[Roomdetname.Length - i];
+                              }
+                              else
+                              {
+                                  option += "or " + Roomdetname[Roomdetname.Length - i];
+
+                              }
                            count = count + 1;
                           }
                           BedText = Roomdetname[Roomdetname.Length -1];
