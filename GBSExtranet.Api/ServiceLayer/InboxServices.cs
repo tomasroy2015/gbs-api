@@ -119,8 +119,8 @@ namespace GBSExtranet.Api.ServiceLayer
                 {
                     InboxMessages inboxObj = new InboxMessages();
                     inboxObj.ReplySenderUserID = Convert.ToInt32(dr["SenderUserID"]);
-                    inboxObj.HotelName = dr["HotelName"].ToString();
-                    inboxObj.UserName = dr["UserName"].ToString();
+                    inboxObj.FirmName = dr["FirmName"].ToString();
+                    inboxObj.FirmID = dr["FirmID"].ToString();
                     inboxObj.Subject = dr["Subject"].ToString();
                     inboxObj.MessageInfo = dr["MessageInfo"].ToString();
                     inboxObj.CreatedDate = dr["CreatedDate"].ToString();

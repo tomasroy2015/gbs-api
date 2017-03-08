@@ -9,6 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace GBSExtranet.Api.ServiceLayer
 {
@@ -135,6 +136,18 @@ namespace GBSExtranet.Api.ServiceLayer
                           HotelObj.Image = dr["Name"].ToString();
                           HotelObj.People = dr["MaxPeopleCount"].ToString();
                           HotelObj.Children = dr["MaxChildrenCount"].ToString();
+                          HotelObj.HotelID = dr["HotelID"].ToString();
+                          if (dr["RoomPhotoName"].ToString() != "" && dr["RoomPhotoName"].ToString() != null)
+                          {
+                              HotelObj.RoomPhotoName = "https://gdsbooking.com/Photo/Hotel/" + dr["HotelID"].ToString() + "/" + dr["RoomPhotoName"].ToString();
+                              //HotelObj.RoomPhotoName = dr["RoomPhotoName"].ToString();
+                             // HotelObj.RoomPhotoName = "http://www.gbsextranet.com/Photo/Hotel/" + dr["HotelID"].ToString() + "/" + dr["RoomPhotoName"].ToString();
+                          }
+                          else
+                          {
+                              HotelObj.RoomPhotoName = "/images/image_not_found-hotel-.jpg";
+                          }
+                        
                           string overalldetails = BedText;
                           string[] Roomdetname = overalldetails.Split(new[] { RoomID }, StringSplitOptions.None);
                           //marks = CurrentUrl.Split(roomid[i]);
@@ -183,7 +196,23 @@ namespace GBSExtranet.Api.ServiceLayer
         }
 
 
+        public int DeleteHotelRoom(int HotelRoomID)
+        {
+            int status = 0;
+         
+            _sqlConnection.Open();
+            Int64 OpUserID = Convert.ToInt64(0);
+            SqlCommand cmd = new SqlCommand("TB_SP_DeleteHotelRoom", _sqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@HotelRoomID", HotelRoomID);
+            cmd.Parameters.AddWithValue("@OpUserID", OpUserID);
 
+
+            status = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+            return status;
+
+        }
         
     }
 }

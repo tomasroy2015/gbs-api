@@ -45,5 +45,9 @@ namespace GBSExtranet.Api.ViewModel
         public string People { get; set; }
 
         public string Children { get; set; }
+
+        public string HotelID { get; set; }
+
+        public string RoomPhotoName { get; set; }
     }
 }

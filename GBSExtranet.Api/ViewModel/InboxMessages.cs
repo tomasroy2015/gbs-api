@@ -36,5 +36,9 @@ namespace GBSExtranet.Api.ViewModel
         public string CreatedTime { get; set; }
 
         public int ReplySenderUserID { get; set; }
+
+        public string FirmName { get; set; }
+
+        public string FirmID { get; set; }
     }
 }

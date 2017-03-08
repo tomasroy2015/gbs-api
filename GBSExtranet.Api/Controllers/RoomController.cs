@@ -40,6 +40,20 @@ namespace GBSExtranet.Api.Controllers
                  return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
              }
          }
+         [Route("roomdetails/Deleterooms")]
+         [HttpPost]
+         public HttpResponseMessage Deleterooms(int Id)
+         {
+             int i = 1;
+
+             i = new RoomServices().DeleteHotelRoom(Id);
+                // i = obj.DeleteHotelRoom(HotelRoomID, this);
+         
+            
+            
+             return Request.CreateResponse(HttpStatusCode.OK,i);
+         }
+
     }
 }
 
