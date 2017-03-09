@@ -139,13 +139,13 @@ namespace GBSExtranet.Api.ServiceLayer
                           HotelObj.HotelID = dr["HotelID"].ToString();
                           if (dr["RoomPhotoName"].ToString() != "" && dr["RoomPhotoName"].ToString() != null)
                           {
-                              HotelObj.RoomPhotoName = "https://gdsbooking.com/Photo/Hotel/" + dr["HotelID"].ToString() + "/" + dr["RoomPhotoName"].ToString();
+                              HotelObj.RoomPhotoName = "https://api.gbsextranet.com/Photo/Hotel/" + dr["HotelID"].ToString() + "/" + dr["RoomPhotoName"].ToString();
                               //HotelObj.RoomPhotoName = dr["RoomPhotoName"].ToString();
                              // HotelObj.RoomPhotoName = "http://www.gbsextranet.com/Photo/Hotel/" + dr["HotelID"].ToString() + "/" + dr["RoomPhotoName"].ToString();
                           }
                           else
                           {
-                              HotelObj.RoomPhotoName = "/images/image_not_found-hotel-.jpg";
+                              HotelObj.RoomPhotoName = "https://api.gbsextranet.com/Photo/image_not_found.jpg";
                           }
                         
                           string overalldetails = BedText;
